@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="@dimen/d0"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/d10">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:id="@+id/ll_whish_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#f5f5f5"
+        android:orientation="vertical"
+        android:padding="@dimen/d10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:background="@drawable/gift_song"
+                android:layout_marginRight="10dp"
+                >
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#ff2121"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="赠送人:"
+                    android:textSize="15sp"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#282828"
+                    />
+
+                <EditText
+                    android:id="@+id/son_name"
+                    android:layout_width="@dimen/d0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d10"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:hint="请输入您的姓名"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:maxLength="6"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:background="@null"
+                    android:textColor="#000000"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="wrap_content"
+                android:background="@drawable/son_jiyu_send"
+                android:paddingBottom="@dimen/d6"
+                android:paddingLeft="@dimen/d10"
+                android:layout_height="33dp"
+                android:paddingRight="@dimen/d10"
+                android:paddingTop="@dimen/d6"
+                android:text="发送"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:background="@drawable/gift_song"
+                >
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#ff2121"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="赠送的礼物:"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#282828"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    />
+
+                <TextView
+                    android:id="@+id/son_wu"
+                    android:layout_width="@dimen/d0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d10"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

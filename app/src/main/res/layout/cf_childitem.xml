@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/person_select"
+    android:layout_height="wrap_content">
+
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cf_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            fontPath="fonts/SourceHanSansCN-Regular.ttf"
+            android:text="又一健身女神宣布结婚真是狼才女貌啊"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cf_user_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#999999"
+            android:layout_marginTop="5dp"
+            fontPath="fonts/SourceHanSansCN-Medium.ttf"
+            android:text="逍遥客 2018-04-01  23:22:12"
+            />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="11dp"
+                android:layout_height="10dp"
+                android:background="@mipmap/cf_pin"
+                android:layout_gravity="center"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/cf_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="12"
+                android:layout_marginLeft="3dp"
+                android:maxLength="3"
+                android:paddingBottom="1dp"
+                fontPath="fonts/SourceHanSansCN-Medium.ttf"
+                />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:background="@mipmap/cf_dianzan"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/cf_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="12"
+                android:layout_marginLeft="3dp"
+                android:maxLength="3"
+                fontPath="fonts/SourceHanSansCN-Medium.ttf"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/cf_image"
+        android:layout_width="122dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="13dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="13dp"
+        />
+</android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"
+        />
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:layout_marginBottom="8dp"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        >
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="3dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="11dp"
+            android:background="#f79133"
+            />
+        <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        fontPath="fonts/SourceHanSansCN-Regular.ttf"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#333333"
+        android:text="特别推荐"
+        />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/head_two_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginLeft="13dp"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            android:layout_marginTop="13dp"
+            android:drawablePadding="6dp"
+            android:paddingRight="15dp"
+            android:textColor="#999999"
+            android:drawableRight="@mipmap/home_two_right"
+            android:text="查看更多"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_two"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"/>
+
+</android.support.v7.widget.LinearLayoutCompat>

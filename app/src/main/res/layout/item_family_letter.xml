@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_height="61dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="#0e050a"
+            android:gravity="center|left"
+            android:textSize="17sp"
+            android:text="难忘的一次遇见"
+            android:layout_marginLeft="15dp"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            tools:ignore="MissingPrefix"
+            />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_looknum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="#999999"
+            android:layout_marginLeft="15dp"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            tools:ignore="MissingPrefix"
+            android:text="浏览量50"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="#999999"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            tools:ignore="MissingPrefix"
+            android:text="2017-02-03  22:11"
+            android:layout_marginLeft="11dp"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"
+        android:layout_marginLeft="15dp"
+        />
+
+</android.support.v7.widget.LinearLayoutCompat>

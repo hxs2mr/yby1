@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.itislevel.lyl">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <!-- Required -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <permission
+        android:name="com.itislevel.lyl.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- <uses-permission android:name="android.permission.GET_TASKS"/> -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FLAG_ACTIVITY_NEW_TASK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="com.itislevel.lyl.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        tools:replace="label,allowBackup"
+        android:theme="@style/AppTheme"
+        >
+
+        <!--百度定位-->
+        <!-- 声明service组件 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="NyjEy8ohHHQw1AGaWpOuD9grOLUOk17G" >
+        </meta-data>
+        <!-- 即时通讯 融云 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.itislevel.lyl.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+        <!-- 即时通讯 融云 -->
+
+        <activity android:name=".mvp.ui.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.ui.main.MainActivity"
+             android:theme="@style/DefaultCityPickerTheme"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".mvp.ui.test.TestActivity" />
+        <activity android:name=".mvp.ui.user.LoginActivity" />
+        <activity android:name=".mvp.ui.user.RegisterActivity" />
+        <activity android:name=".mvp.ui.user.CompleteUserInfoActivity" />
+        <activity android:name=".mvp.ui.user.ResetPasswordActivity" />
+        <activity android:name=".mvp.ui.funsharing.FunsharingHomeActivity" />
+        <activity android:name=".mvp.ui.funsharing.FunshingMultipleActivity" />
+        <activity android:name=".mvp.ui.test.TestPlayerActivity" />
+        <activity android:name=".mvp.ui.property.childfragment.historicalbill.HistoricalBillActivity"/>
+        <activity android:name=".mvp.ui.main.customer.CustomerPhoneActivity" />
+        <!-- 融云的 回话列表 -->
+        <activity
+            android:name=".mvp.ui.main.customer.CustomerOnlineActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.itislevel.lyl"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 融云的 会话界面 -->
+        <activity
+            android:name=".mvp.ui.main.customer.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.itislevel.lyl"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 自定义广播接收器 -融云 -->
+        <receiver
+            android:name=".mvp.receiver.SealNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 必选： SDK 核心功能 -->
+        <!-- 第三方相关,向第三方推送服务请求 token 的服务 -->
+        <service
+            android:name="io.rong.push.core.PushRegistrationService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!-- 处理 push 消息相关的服务 -->
+        <service
+            android:name="io.rong.push.core.MessageHandleService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!-- push服务 -->
+        <service
+            android:name="io.rong.push.PushService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process="io.rong.push"> <!-- push进程，可以改名 -->
+        </service>
+
+        <!-- push 相关事件接收器 -->
+        <receiver
+            android:name="io.rong.push.PushReceiver"
+            android:process="io.rong.push">
+
+            <!-- 此处进程可以改名，名称需要和PushService所在进程统一 -->
+
+
+            <!-- 心跳事件 -->
+            <intent-filter>
+                <action android:name="io.rong.push.intent.action.HEART_BEAT" />
+            </intent-filter>
+            <!-- 网络变动事件 -->
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- 部分用户事件 -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 必选： SDK 核心功能 -->
+
+
+        <!-- 支付宝开始 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 支付宝 结束 -->
+        <!-- 相册 start -->
+        <activity
+            android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
+            android:exported="true"
+            android:theme="@style/Theme_Light_Gallery" />
+        <!-- android:theme="@style/Theme_Light.Default" -->
+        <!-- 拍照以后的 裁剪界面的主题设置无效 -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:theme="@style/AppTheme" />
+        <!-- Theme_Light_Gallery -->
+        <!-- android:theme="@style/Theme_Light.Default" -->
+        <!-- 相册 end -->
+
+
+        <!-- 分享 start -->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a6e7997f29d98318600012c" />
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@style/tcent"/>
+        <activity android:name=".mvp.ui.family.FamilyLetterActivity" />
+        <activity android:name=".mvp.ui.property.PropertyAllTonActivity" />
+        <activity android:name=".mvp.ui.property.PropertLoginActivity" />
+        <activity android:name=".mvp.ui.property.payrecord.PayRecordDetailActivity" />
+        <activity android:name=".mvp.ui.property.repair.PropertyRepairActivity" />
+        <activity android:name=".mvp.ui.property.collection.ProCollectionActivity" />
+        <activity android:name=".mvp.ui.property.repair.RepairDetailActivity" />
+        <activity android:name=".mvp.ui.property.repair.RepairAllPinActivity" />
+        <activity android:name=".mvp.ui.main.dynamic.childfragment.message.MessageshouActivity" />
+        <activity android:name=".mvp.ui.property.repair.RepairAddCommentActivity" />
+        <activity android:name=".mvp.ui.property.payrecord.PropertyPayRecordActivity" />
+        <activity android:name=".mvp.ui.property.bill.PropertyBillActivity" />
+        <activity android:name=".mvp.ui.property.houselist.PropertyHouseListActivity" />
+        <activity android:name=".mvp.ui.property.homelist.PropertyHomeListActivity" />
+        <activity android:name=".mvp.ui.property.complaint.PropertyComplatintActivity"  android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity android:name=".mvp.ui.property.homelist.PropertyHomeListDetailActivity" />
+        <activity android:name=".mvp.ui.property.ProperttPersonActivity" />
+
+        <activity android:name=".mvp.ui.main.home.homeright.HomRightActivity" />
+        <activity android:name=".mvp.ui.main.cwebfragactivity.CWebActivity"  android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity android:name=".mvp.ui.main.cwebfragactivity.CWebAllPinActivity"  android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity android:name=".mvp.ui.family.writer_letter.FamilyLetterWriterActivity"  android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <!-- 分享 end -->
+        <activity android:name=".mvp.ui.user.UpdateUserInfoActivity" />
+        <activity android:name=".mvp.ui.property.complaint.complintdetail.ComplaintDetailActivity" />
+        <activity android:name=".mvp.ui.main.dynamic.childfragment.DynamicReceiveGiftActivity" />
+        <activity android:name=".mvp.ui.user.UpdateHeaderActivity" />
+        <activity android:name=".mvp.ui.user.UpdatePasswordActivity" />
+        <activity android:name=".mvp.ui.about.AboutActivity" />
+        <activity android:name=".mvp.ui.mygift.MyGiftActivity" />
+        <activity android:name=".mvp.ui.myaddress.MyAddressActivity" />
+        <activity android:name=".mvp.ui.mymessage.MyMessageActivity" />
+        <activity android:name=".mvp.ui.setting.SettingActivity" />
+        <activity android:name=".mvp.ui.address.ProvinceActivity" />
+        <activity android:name=".mvp.ui.location.Location_CityPickerActivity" />
+        <activity android:name=".mvp.ui.address.CityActivity" />
+        <activity android:name=".mvp.ui.address.CountyActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroublesolutionActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroublesolutionListActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroublesolutionSelectActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroubleNormalAddActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroubleAdviserActivity_back" />
+        <activity android:name=".mvp.ui.funsharing.FunsharingAddActivity" />
+        <activity android:name=".mvp.ui.funsharing.FunsharingMyActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingExpensesActivity" />
+
+        <activity android:name=".mvp.ui.property.PropertyHomeActvity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingExpensesRecordActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingWaterQueryActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingExpensesPayActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingPropertyQeruyActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingPropertyActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingPropertyListActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingPropertyOrderActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingCallsCostActivity" />
+        <activity android:name=".mvp.ui.housekeep.HouseKeepActivity" />
+        <activity android:name=".mvp.ui.housekeep.HouseKeepDetailActivity" />
+        <activity android:name=".mvp.ui.team.TeamHomeActivity" />
+        <activity android:name=".mvp.ui.team.TeamListActivity" />
+        <activity
+            android:name=".mvp.ui.blessing.BlessingHomeActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".mvp.ui.dynamicmyperson.Dynamic_MypersonActivity"
+            android:windowSoftInputMode="adjustResize"
+            />
+        <activity android:name=".mvp.ui.family.FamilyHomeActivity" />
+        <activity android:name=".mvp.ui.special.SpecialHomeActivity" />
+        <activity android:name=".mvp.ui.special.SpecialGiftActivity" />
+        <activity android:name=".mvp.ui.special.SpecialSpecialActivity" />
+        <activity android:name=".mvp.ui.special.SpecialGiftListActivity" />
+        <activity android:name=".mvp.ui.special.SpecialSpecialListActivity" />
+        <activity android:name=".mvp.ui.myteam.MyTeamActivity" />
+        <activity android:name=".mvp.ui.user.QRCodeActivity" />
+        <activity android:name=".mvp.ui.team.TeamAgreementActivity" />
+        <activity android:name=".mvp.ui.team.TeamSupplementActivity" />
+        <activity android:name=".mvp.ui.team.TeamWaitingForVerifyActivity" />
+        <activity android:name=".mvp.ui.team.TeamListMyActivity" />
+        <activity android:name=".mvp.ui.funsharing.FunsharingListActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroubleAdviserMyActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroubleNormalMyActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroubleAdviserDescActivity" />
+        <activity android:name=".mvp.ui.troublesolution.TroubleAdviserAddActivity" />
+        <activity android:name=".mvp.ui.pay.PayInfoActivity" />
+        <activity android:name=".mvp.ui.mygift.MyGiftListActivity" />
+        <activity android:name=".mvp.ui.blessing.BlessingAddActivity" />
+        <activity android:name=".mvp.ui.blessing.BlessingDetailActivity" />
+        <activity android:name=".mvp.ui.blessing.BlessingMyActivity" />
+        <activity android:name=".mvp.ui.blessing.BlessingSendRecordActivity" />
+        <activity android:name=".mvp.ui.myteam.TeamAnswerActivity" />
+        <activity android:name=".mvp.ui.family.FamilyAddActivity" />
+        <activity android:name=".mvp.ui.family.FamilyMySendGiftRecordActivity" />
+        <activity android:name=".mvp.ui.family.FamilyAddedActivity" />
+        <activity android:name=".mvp.ui.family.FamilyReceiveSacrificeActivity" />
+        <activity android:name=".mvp.ui.family.FamilyReceiveBlessActivity" />
+        <activity android:name=".mvp.ui.family.FamilyDetailActivity" />
+        <activity android:name=".mvp.ui.blessing.BlessReceiveBlessGiftActivity" />
+        <activity android:name=".mvp.ui.blessing.BlessReceiveBlessYuActivity" />
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.itislevel.lyl" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.itislevel.lyl.DataProvider"
+            android:exported="true" />
+
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+
+                <category android:name="com.itislevel.lyl" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.itislevel.lyl" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.itislevel.lyl" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        <receiver
+            android:name=".mvp.receiver.PushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.itislevel.lyl" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".mvp.receiver.MyPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.itislevel.lyl" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/> -->
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="8ffd8a9e89e7ed6b95b617ae"
+            android:value="com.itislevel.lyl" />
+
+        <activity
+            android:name=".mvp.ui.family.FamilyBlessYuListActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".mvp.ui.family.FamilyGiftListActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingPropertyDetailActivity" />
+        <activity android:name=".mvp.ui.setting.AccountSafeActivity" />
+        <activity android:name=".mvp.ui.setting.HelpFeedbackActivity" />
+        <activity android:name=".mvp.ui.funsharing.FunsharingDetailActivity" />
+        <activity android:name=".mvp.ui.setting.AccountSafePreActivity" />
+        <activity android:name=".mvp.ui.setting.FacebackActivity" />
+        <activity android:name=".mvp.ui.setting.ProbleAndFadebackActivity" />
+        <activity android:name=".mvp.ui.special.SpecialGiftDetailActivity" />
+        <activity android:name=".mvp.ui.special.SpecialCartActivity" />
+        <activity android:name=".mvp.ui.special.SpecialConfirmDownOrderActivity" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".mvp.ui.special.SpecialOrderActivity" />
+        <activity android:name=".mvp.ui.special.OrderDetailActivity" />
+        <activity android:name=".mvp.ui.special.OrderServiceActivity" />
+        <activity android:name=".mvp.ui.special.OrderRefundDetailActivity" />
+        <activity android:name=".mvp.ui.special.OrderRefundShenQingActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingPropertyQeruyListActivity" />
+        <activity android:name=".mvp.ui.setting.OperationmanualActivity" />
+        <activity android:name=".mvp.ui.setting.CommonproblemActivity" />
+        <activity android:name=".mvp.ui.user.UseAppAgreementActivity" />
+        <activity android:name=".mvp.ui.team.TeamUseAgreementActivity" />
+        <activity android:name=".mvp.ui.livingexpensess.LivingArgeementActivity" />
+        <activity android:name=".mvp.ui.test.ScrollerRecyclerviewActivity" />
+        <activity android:name=".mvp.ui.family.FamilyReceiveGiftActivity" />
+        <activity android:name=".mvp.ui.blessing.BlessReceiveGiftActivity" />
+        <activity android:name=".mvp.ui.test.TestXiaoshiPinActivity"></activity>
+
+
+        <!--短视频录制开始 TCVideoPreprocessActivity -->
+        <activity
+            android:name="com.itislevel.lyl.widget.videorecord.TCVideoRecordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".widget.videorecord.shortvideo.editor.TCVideoPreprocessActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".widget.videorecord.shortvideo.editor.TCVideoEditerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".widget.videorecord.shortvideo.joiner.TCVideoJoinerPreviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!--TCVideoPreviewActivity-->
+        <activity
+            android:name="com.itislevel.lyl.widget.videorecord.videopreview.TCVideoPreviewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".widget.videorecord.shortvideo.editor.bubble.TCWordEditActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan"
+             />
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1"/>
+        <!--短视频录制结束-->
+        <!--android热更新-->
+        <activity
+
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+    </application>
+
+</manifest>

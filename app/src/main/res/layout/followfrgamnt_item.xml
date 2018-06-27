@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_marginTop="15dp"
+    android:layout_height="wrap_content">
+
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_header"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:background="@mipmap/test"
+        />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff7800"
+            android:maxLines="1"
+            android:textSize="15sp"
+            android:text="小老公"
+            />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:text="今天12:00"
+            android:maxLines="1"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:layout_marginLeft="10dp"
+            android:text="来自："
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/form_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:text="乐趣分享"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:paddingRight="5dp"
+        android:textSize="15sp"
+        android:text="想咋个玩就咋个玩，一个“乱”子了得"
+        android:layout_marginLeft="78dp"
+        />
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/ninegrid_imgs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:paddingTop="10dp"
+        android:paddingRight="@dimen/d10">
+
+    </com.lzy.ninegrid.NineGridView>
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="78dp"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/liulan_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#999999"
+        android:textSize="10sp"
+        android:layout_gravity="center"
+        android:text="浏览120次"
+        />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_like_num"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:background="@mipmap/follow_item_dian_no"
+        />
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="17dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="17dp"
+        android:id="@+id/tv_comment_num"
+        android:background="@mipmap/follow_item_liao"
+        />
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/tv_share"
+        android:layout_width="17dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="17dp"
+        android:layout_marginRight="15dp"
+        android:background="@mipmap/follow_item_fen"
+        />
+
+</android.support.v7.widget.LinearLayoutCompat>
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="1dp"
+        android:background="#dcdcdc"
+        />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/fbl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:paddingRight="@dimen/d5"
+        android:layout_marginTop="7dp"
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start">
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_comment"
+        android:layout_marginTop="@dimen/d5"
+        android:layout_marginLeft="78dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="12dp"
+        android:orientation="horizontal"
+        >
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_comment_input"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="评论"
+        android:textColorHint="#ffffff"
+        android:padding="5dp"
+        android:background="@drawable/follow_item_edittext"
+        android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.ContentFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:textSize="13sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="15dp"
+                android:padding="3dp"
+                android:text="发送"
+                android:visibility="gone"
+                android:background="@drawable/follow_fa_button"
+                />
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/song2_iv"
+                android:layout_width="22dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/follow_fa"
+                />
+        </android.support.v7.widget.ContentFrameLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+    <FrameLayout
+        android:id="@+id/fl_pannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></FrameLayout>
+</android.support.v7.widget.LinearLayoutCompat>

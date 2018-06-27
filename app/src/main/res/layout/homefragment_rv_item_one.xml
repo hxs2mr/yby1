@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/home_rv_one_shape"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.ContentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<android.support.v7.widget.AppCompatTextView
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#ffffff"
+    />
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_rv_one_shape"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:elevation="7dp"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                >
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="18dp"
+                    android:background="@mipmap/home_rv_one"
+                    android:layout_height="18dp"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    android:text="今日头条"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <com.itislevel.lyl.mvp.ui.main.home.notice.ENoticeView
+                android:id="@+id/noticeview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                >
+            </com.itislevel.lyl.mvp.ui.main.home.notice.ENoticeView>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+    </android.support.v7.widget.ContentFrameLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

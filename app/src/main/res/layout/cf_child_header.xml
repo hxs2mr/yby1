@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.ContentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.youth.banner.Banner
+            android:id="@+id/cf_banner"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"/>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_gravity="center|bottom"
+            android:orientation="horizontal"
+            android:background="@drawable/banner_head_shape"
+            android:alpha="0.9"
+            android:visibility="gone"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="12dp"
+            >
+        <com.itislevel.lyl.mvp.ui.main.home.notice.ENoticeView
+            android:id="@+id/cf_noticeview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#282828"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:gravity="center"
+            >
+        </com.itislevel.lyl.mvp.ui.main.home.notice.ENoticeView>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.ContentFrameLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

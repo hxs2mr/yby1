@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+<android.support.v7.widget.AppCompatTextView
+    android:id="@+id/cf_item_notice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#282828"
+    android:textSize="15sp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:text="家居物品，轻松打造ins风客厅"
+    />
+</android.support.v7.widget.LinearLayoutCompat>

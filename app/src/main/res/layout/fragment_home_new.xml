@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.ContentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/home_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/home_tollbar"
+            android:layout_width="match_parent"
+            android:background="#8588918c"
+            app:contentInsetStart="0dp"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                >
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                app:contentInsetStart="0dp"
+                >
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/home_qr"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center|bottom"
+                    android:background="@drawable/home_qr_select"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/home_location_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:background="@mipmap/home_location"
+                        android:layout_gravity="center"
+                        />
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/home_location_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="7dp"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:text="定位中"
+                        android:layout_gravity="center"
+                        />
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/home_location_iv"
+                        android:layout_width="12dp"
+                        android:layout_height="14dp"
+                        android:background="@mipmap/home_down"
+                        android:layout_gravity="center"
+                        />
+                </android.support.v7.widget.LinearLayoutCompat>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/home_search"
+                    android:layout_gravity="bottom"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/home_search_select"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <android.support.v7.widget.ContentFrameLayout
+                    android:id="@+id/home_right"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/home_liao"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/home_liao"
+                        />
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/home_right_number"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="top|right"
+                        android:maxLength="2"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:visibility="gone"
+                        android:background="@drawable/home_top_right"
+                        />
+                </android.support.v7.widget.ContentFrameLayout>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.v7.widget.ContentFrameLayout>
+</android.support.v7.widget.LinearLayoutCompat>

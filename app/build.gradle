@@ -1,0 +1,347 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        resConfigs "zh-rCN"//配置 只使用简体中文
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            //abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+
+            //指定所用cpu架构 可有效降低apk体积,但是就适用其他cpu了
+            abiFilters 'armeabi', 'armeabi-v7a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "8ffd8a9e89e7ed6b95b617ae", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+    //use legacy for android 6.0 适配 环信的通信
+//    useLibrary 'org.apache.http.legacy'
+    splits {
+        abi {
+            enable true
+            reset()
+           // include 'armeabi-v7a'
+            universalApk false //打包一个通用版本
+//            include  'armeabi ,'x86', 'armeabi', 'armeabi-v7a'
+        }
+    }
+    signingConfigs {
+
+        release {
+            //加载资源
+            Properties properties = new Properties()
+            InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream()
+            properties.load(inputStream)
+
+            //读取文件
+            def sdkDir = properties.getProperty('keystore.path')
+            storeFile file(sdkDir)
+
+            //读取字段
+            def key_keyAlias = properties.getProperty('keystore.alias')
+            def key_keyPassword = properties.getProperty('keystore.password')
+            def key_storePassword = properties.getProperty('keystore.alias_password')
+
+            storePassword key_storePassword
+            keyAlias key_keyAlias
+            keyPassword key_keyPassword
+
+            //“resConfigs” 属性将会在构建过程中移除所有本地化资源
+//            resConfigs "en"
+        }
+    }
+    dexOptions {
+        incremental true
+        preDexLibraries true
+        maxProcessCount 8
+        javaMaxHeapSize "4g"
+    }
+
+    configurations {
+        all*.exclude module: 'photoview'  //去除重复依赖库
+        all*.exclude module: 'zxing'  //去除重复依赖库
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
+    sourceSets {
+        main {
+//            jni.srcDirs = []
+            jniLibs.srcDirs = ['src/main/libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            ndk {
+                abiFilters = ["armeabi-v7a"]
+            }
+            signingConfig signingConfigs.release
+
+            minifyEnabled false
+            shrinkResources false//去掉不用资源
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //Other parameters
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+
+        }
+        debug {
+            ndk {
+                abiFilters = ["armeabi-v7a"]
+            }
+            signingConfig signingConfigs.release
+
+            //调试 临时 测试  模拟发布 环境
+//            minifyEnabled true
+//            shrinkResources true//去掉不用资源
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//
+//            //Other parameters
+//            debuggable false
+//            jniDebuggable false
+//            renderscriptDebuggable false
+//            pseudoLocalesEnabled false
+//            zipAlignEnabled true
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        encoding = 'UTF-8'
+    }
+}
+configurations.all {
+    resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+//    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+//        def requested = details.requested
+//        if (requested.group == 'com.android.support') {
+//            if (!requested.name.startsWith("multidex")) {
+//                details.useVersion '26.+'
+//            }
+//        }
+//    }
+}
+
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.jar'], dir: 'libs/upload')
+
+    // 导入短视频SDK aar
+
+    //    compile(name: 'LiteAVSDK_UGC', ext: 'aar')
+
+    // 导入腾讯云直播SDK jar
+
+    //    compile fileTree(includes: ['*.jar'], dir: 'src/main/jniLibs')
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //    implementation 'com.android.support:support-v4:26.1.0'
+
+    //noinspection GradleCompatible
+    api 'com.android.support:support-v4:26.1.0'
+    testImplementation 'junit:junit:4.12'
+
+    //    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //base
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    api rootProject.ext.dependencies["cardview-v7"]
+    api rootProject.ext.dependencies["constraint-ayout"]
+
+    //ui
+    api rootProject.ext.dependencies["glide-transformations"]
+    api rootProject.ext.dependencies["switchbutton"]
+    api rootProject.ext.dependencies["loadingview"]
+    api rootProject.ext.dependencies["gifview"]
+
+    //侧滑菜单
+
+    //    implementation rootProject.ext.dependencies["flowingdrawer"]
+    api rootProject.ext.dependencies["nineoldandroids"]
+
+    //    implementation rootProject.ext.dependencies["bottom-navigation"]
+
+    //    implementation rootProject.ext.dependencies["phoenix"]
+    api rootProject.ext.dependencies["statusbarutil"]
+    api rootProject.ext.dependencies["tastytoast"]
+    api rootProject.ext.dependencies["banner"]
+    api rootProject.ext.dependencies["recyclerview-adapter"]
+    api rootProject.ext.dependencies["recyclerview-item-swipe"]
+    api rootProject.ext.dependencies["flycodialog"]
+    api rootProject.ext.dependencies["circleimageview"]
+
+    //swipeback
+
+    //    implementation rootProject.ext.dependencies["swipebacklayout"]
+    api project(':swipebacklayout')
+
+    //下拉刷新
+    api rootProject.ext.dependencies["smartrefreshlayout"]
+    api rootProject.ext.dependencies["smartrefreshheader"]
+
+    //分割线
+    api rootProject.ext.dependencies["flexibledivider"]
+
+    //flexbox 流式布局
+    api rootProject.ext.dependencies["flexbox"]
+
+    //跑马灯
+    api rootProject.ext.dependencies["marqueeview"]
+
+    //popwindow
+    api rootProject.ext.dependencies["custompopwindow"]
+
+    //动态权限
+    api rootProject.ext.dependencies["rxpermissions"]
+
+    //分享
+    api rootProject.ext.dependencies["tencent-share"]
+
+    //    implementation rootProject.ext.dependencies["badgeview"]
+
+    //省市县 三级联动效果
+    api rootProject.ext.dependencies["pickerview"]
+
+    //dialog
+
+    //    implementation rootProject.ext.dependencies["dialogplus"]
+
+    //视频播放
+
+    //    implementation rootProject.ext.dependencies["gsyVideoPlayer-java"]
+
+    //    implementation rootProject.ext.dependencies["gsyVideoPlayer-arm"]
+
+    //    implementation rootProject.ext.dependencies["GSYVideoPlayer"]
+
+    //通用工具类
+
+    //    implementation rootProject.ext.dependencies["rxtools"]
+
+    //rx
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+    api 'com.squareup.retrofit2:converter-scalars:2.3.0'
+
+    //相册选择照片
+
+    //        implementation rootProject.ext.dependencies["rxgalleryfinal"]
+
+    //network
+
+    //    compile rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["retrofit-converter-gson"]
+    api rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+
+    //    compile rootProject.ext.dependencies["okhttp"]
+    api rootProject.ext.dependencies["okhttp-logging-interceptor"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["glide-okhttp3-integration"]
+
+    //di butterknife
+    api rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    compileOnly rootProject.ext.dependencies["annotation"]
+    api rootProject.ext.dependencies["dagger"]
+    api rootProject.ext.dependencies["jpush"]
+    api rootProject.ext.dependencies["jcore"]
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+
+    //other
+    api rootProject.ext.dependencies["multidex"]
+    api rootProject.ext.dependencies["logger"]
+    api rootProject.ext.dependencies["fragmentation"]
+
+    //腾讯buggly 配置  应用升级功能集成
+    api rootProject.ext.dependencies["crashreport"]
+    api rootProject.ext.dependencies["nativecrashreport"]
+
+    //canary
+    debugImplementation rootProject.ext.dependencies["blockcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["blockcanary-no-op"]
+    debugImplementation rootProject.ext.dependencies["leakcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
+    implementation project(':ninegridview')
+    implementation project(':IMKit')
+    implementation project(':IMLib')
+    implementation project(':rxgalleryfinal')
+
+    //    implementation files('libs/alipaySdk-20170922.jar')
+    implementation project(path: ':rxgalleryfinal')
+    implementation project(':rxtools')
+    implementation files('src/main/libs/open_sdk_r5788_lite.jar')
+    implementation files('src/main/libs/SocialSDK_QQ_Full.jar')
+    implementation files('src/main/libs/SocialSDK_WeiXin_Full.jar')
+    implementation files('src/main/libs/umeng_social_api.jar')
+    implementation files('src/main/libs/umeng_social_net.jar')
+    implementation files('src/main/libs/umeng_social_shareboard.jar')
+    implementation files('src/main/libs/umeng_social_tool.jar')
+    implementation project(':floatingview')
+
+    //    implementation project(':UpMarqueeView')
+    implementation files('src/main/libs/MiPush_SDK_Client_3_2_2.jar')
+
+    //    implementation project(':notify')
+    implementation project(':notify')
+    implementation project(':UpMarqueeView')
+    implementation project(':badgeview')
+
+    //    implementation files('src/main/libs/upload/cos-android-sdk-V5.4.3.jar')
+
+    //    implementation files('src/main/libs/upload/fastjson-1.1.62.android.jar')
+
+    //    implementation files('src/main/libs/upload/okhttp-3.8.1.jar')
+
+    //    implementation files('src/main/libs/upload/okio-1.13.0.jar')
+
+    //    implementation files('src/main/libs/upload/qcloud-foundation.1.3.0.jar')
+
+    //    implementation files('src/main/libs/upload/xstream-1.4.7.jar')
+    api files('src/main/libs/liteavsdk.jar')
+    api files('src/main/libs/upload/xstream-1.4.7.jar')
+    api files('src/main/libs/upload/qcloud-foundation.1.3.0.jar')
+    api files('src/main/libs/upload/cos-android-sdk-V5.4.3.jar')
+
+    //loading依赖
+    api 'com.wang.avi:library:2.1.3'
+
+    //角标
+    api 'me.leolin:ShortcutBadger:1.1.21@aar'
+    implementation files('src/main/libs/BaiduLBS_Android.jar')
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/person_select"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/one_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_eno_item"
+            android:textColor="#ff7800"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLength="2"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="热文"
+            />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/one_title_content"
+        android:layout_width="wrap_content"
+        android:gravity="center|left"
+        android:layout_gravity="center"
+        fontPath="fonts/NotoSansHans-DemiLight.ttf"
+        android:layout_marginLeft="3dp"
+        android:paddingRight="10dp"
+        android:textColor="#333333"
+        android:maxLength="15"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:text="OMG!!家政服务既然这么方便啦！"
+        android:layout_height="wrap_content" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/two_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_eno_item"
+            android:textColor="#ff7800"
+            android:maxLength="2"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="头条"
+            />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/two_title_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:gravity="center|left"
+        fontPath="fonts/NotoSansHans-DemiLight.ttf"
+        android:layout_marginLeft="3dp"
+        android:maxLines="1"
+        android:maxLength="15"
+        android:text="你的健康你做主   放心生活更贴心"
+        android:layout_height="wrap_content" />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/no_more_title"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:textColor="#ff7a00"
+        android:textSize="11sp"
+        android:text="了解更多"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+</android.support.v7.widget.LinearLayoutCompat>
