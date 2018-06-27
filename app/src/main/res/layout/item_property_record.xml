@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/d3"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/TxtWrapWrap16"
+            android:layout_marginLeft="@dimen/d10"
+            android:text="2018-01-11" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/d8">
+
+
+            <ImageView
+                android:id="@+id/iv_type"
+                android:layout_width="@dimen/d50"
+                android:layout_height="@dimen/d50"
+                android:layout_marginRight="@dimen/d10"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_property_property" />
+
+            <LinearLayout
+                android:layout_width="@dimen/d0"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name_and_phone"
+                        style="@style/TxtWrapWrap16"
+                        android:textColor="@color/colorNav"
+                        android:text="物业费 133****7777 小*" />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        style="@style/TxtWrapWrap16"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/colorNav"
+                        android:text="￥50.00" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/TxtWrapWrap14"
+                    android:layout_marginTop="@dimen/d2"
+                    android:text="2018-01-11 13:40:48" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/d10"
+    >
+
+    <View
+        android:id="@+id/msg_tip_red"
+        android:layout_width="@dimen/d10"
+        android:layout_height="@dimen/d10"
+        android:background="@drawable/shape_bg_msg"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TxtWrapWrap18"
+        android:text="新消息提示1:"
+        android:layout_toRightOf="@id/msg_tip_red"
+        android:layout_marginRight="@dimen/d10"
+        android:textColor="@color/colorNav" />
+
+    <TextView
+        android:id="@+id/tv_problem"
+        android:layout_toRightOf="@id/tv_title"
+        style="@style/TxtWrapWrap18"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="顾客提问顾客提问顾客提问顾客提问-假的"
+        android:textColor="@color/colorPrimary" />
+
+</RelativeLayout>

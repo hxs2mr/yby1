@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/d10"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="@dimen/d15">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_header"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@mipmap/icon_default_header_circle" />
+    <TextView
+        android:id="@+id/tv_nickname"
+        style="@style/BaseFontSize18"
+        android:layout_width="@dimen/d180"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginTop="@dimen/d10"
+        android:layout_toRightOf="@id/iv_header"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:lines="1"
+        android:text="itisi"
+        android:textColor="#ff7800"
+        />
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/BaseFontSize14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nickname"
+        android:layout_marginLeft="@dimen/d10"
+        android:textSize="11sp"
+        android:layout_marginTop="@dimen/d2"
+        android:layout_toRightOf="@id/iv_header"
+        android:text="10分钟前"
+        />
+
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/share_guan_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:background="@drawable/share_item_shape"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingRight="5dp"
+        >
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/guan_zhu_image"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:padding="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/share_guan_add"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/guan_zhu_tv"
+            android:layout_width="wrap_content"
+            android:text="关注"
+            android:textColor="#ff7a00"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+</RelativeLayout>

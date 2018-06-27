@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d10">
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/TxtMatchWrap18"
+            android:gravity="center"
+            android:text="物品状态"
+            android:textColor="@color/colorNav" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/d50">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d45"
+        android:textSize="@dimen/txt18"
+        android:background="@color/colorRed"
+        android:gravity="center"
+        android:padding="@dimen/d5"
+        android:text="确定"
+        android:textColor="@color/colorWhite" />
+</LinearLayout>

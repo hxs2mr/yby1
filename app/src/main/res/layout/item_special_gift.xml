@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/d1"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="vertical"
+   >
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/d180"
+        android:layout_height="@dimen/d180"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_img_load_pre" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/d180"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d3"
+        android:layout_marginTop="@dimen/d3"
+        android:text="纯棉洗脸家用毛巾"
+        android:layout_marginLeft="@dimen/d10"
+        android:textColor="@color/colorNav"
+        android:textSize="@dimen/txt18" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="@dimen/d180"
+        android:layout_height="wrap_content"
+        android:text="￥28.8"
+        android:textColor="@color/colorRed"
+        android:layout_marginLeft="@dimen/d10"
+        android:textSize="@dimen/txt17" />
+</LinearLayout>

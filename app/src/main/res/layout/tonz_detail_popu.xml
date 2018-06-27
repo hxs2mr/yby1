@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        app:contentInsetStart="0dp"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/p_tondetal_back"
+                android:layout_width="50dp"
+                android:paddingTop="3dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/home_qr"
+                    android:layout_width="11dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/left_black"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/home_location_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:paddingTop="3dp"
+                android:textSize="18sp"
+                android:text="物业通知"
+                android:layout_gravity="center"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="50dp"
+                android:layout_height="wrap_content"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.Toolbar>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:elevation="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="30dp"
+            android:background="@drawable/p_home_shape"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pd_title"
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                fontPath="fonts/SourceHanSansCN-Light.ttf"
+                android:text="国庆假期"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pd_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:lineSpacingExtra="3dp"
+                android:lineSpacingMultiplier="1.2"
+                android:gravity="left"
+                fontPath="fonts/SourceHanSansCN-Light.ttf"
+                android:text="国庆放假期间（10月1日-10月7日），受供
+应商及快递公司放假影响，部分商品发货会
+出现延误，为保证良好的购物，急件请谨慎
+下单。"
+                />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pd_qu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:maxLines="1"
+            android:gravity="center"
+            fontPath="fonts/SourceHanSansCN-Light.ttf"
+            android:text="龙城小区"
+            />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pd_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:gravity="center"
+                fontPath="fonts/SourceHanSansCN-Light.ttf"
+                android:text="2017年9月27日"
+                />
+            
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

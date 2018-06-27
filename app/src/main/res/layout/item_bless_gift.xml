@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    >
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/gift_back"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:background="@mipmap/back_im"
+        android:layout_gravity="right|center"
+        />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/d40"-->
+        <!--android:background="@color/colorNav"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_temp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableLeft="@mipmap/icon_like"-->
+            <!--android:text="￥"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:gravity="center"-->
+            <!--android:drawablePadding="@dimen/d10"-->
+            <!--android:textSize="@dimen/txt18"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/d10"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_totalprice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="0"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:gravity="center"-->
+            <!--android:drawablePadding="@dimen/d10"-->
+            <!--android:textSize="@dimen/txt18"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@id/tv_temp"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_send"-->
+            <!--android:layout_width="@dimen/d70"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignBaseline="@+id/tv_totalprice"-->
+            <!--android:layout_alignBottom="@+id/tv_totalprice"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:gravity="center"-->
+            <!--android:text="发送1"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/txt18" />-->
+
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d40"
+        android:background="#ffffff"
+        android:layout_marginBottom="5dp"
+        >
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/tv_iv"
+            android:visibility="invisible"
+            android:layout_width="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/icon_cart"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_count_temp"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="("
+            android:textColor="#666666"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_iv"
+            />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_count_temp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_iv"
+            android:layout_toEndOf="@+id/tv_count"
+            android:gravity="center"
+            android:text=")"
+            android:textColor="#666666"
+            android:textSize="17sp"
+            android:visibility="invisible" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计:"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@id/tv_temp"
+            />
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_totalprice"
+            android:layout_alignBottom="@+id/tv_totalprice"
+            android:layout_toStartOf="@+id/tv_totalprice"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="￥"
+            android:textColor="#fa8f13"
+            android:textSize="@dimen/txt18" />
+
+        <TextView
+            android:id="@+id/tv_totalprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginRight="10dp"
+            android:textColor="#fa8f13"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:drawablePadding="@dimen/d10"
+            android:textSize="@dimen/txt18"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_send"
+            />
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="送礼物"
+            android:background="#ff7a00"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt18"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

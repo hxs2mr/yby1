@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/BaseFontSize18"
+        android:layout_marginLeft="@dimen/d50"
+        android:layout_marginRight="@dimen/d50"
+        android:layout_marginTop="@dimen/d150"
+        android:text="很抱歉，您未能通过审核！"
+        android:textColor="@color/colorNav"
+        android:padding="@dimen/d10"
+        android:background="@drawable/shape_et_focus"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        style="@style/BaseFontSize18"
+        android:layout_marginLeft="@dimen/d50"
+        android:layout_marginRight="@dimen/d50"
+        android:layout_marginTop="@dimen/d120"
+        android:text="恭喜您已注册成功！我们的客服代表将于24小时内与您取得联系，请您保持预留电化畅通，谢谢！"
+        android:textColor="@color/colorNav"
+        android:padding="@dimen/d10"
+        android:background="@drawable/shape_et_focus"
+        android:visibility="gone"
+        />
+
+
+    <Button
+        android:id="@+id/btn_waiting_verify"
+        style="@style/BaseFontSize18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d50"
+        android:layout_marginRight="@dimen/d50"
+        android:layout_marginTop="@dimen/d150"
+        android:background="@drawable/shape_btn_login"
+        android:visibility="gone"
+        android:text="等待审核！"
+        android:textColor="@color/colorWhite" />
+
+
+</android.support.v7.widget.LinearLayoutCompat>

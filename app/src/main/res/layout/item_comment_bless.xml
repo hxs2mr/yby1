@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+    <!--android:paddingLeft="@dimen/d10"-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_add_comment"-->
+        <!--style="@style/TxtMatchWrap17"-->
+        <!--android:textColor="@color/colorNav"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:lineSpacingExtra="@dimen/d05"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:paddingRight="@dimen/d10"-->
+        <!--tools:text="itisi"/>-->
+
+    <LinearLayout
+        android:id="@+id/bless_item_shuo_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+   >
+
+        <TextView
+            android:id="@+id/tv_comment_nickname"
+            style="@style/TxtWrapWrap17"
+            android:text=""
+            android:textColor="#034b71" />
+
+        <TextView
+            style="@style/TxtWrapWrap17"
+            android:layout_marginRight="@dimen/d5"
+            android:text=":"
+            android:textColor="@color/colorNav" />
+
+        <TextView
+            android:id="@+id/tv_comment_content"
+            style="@style/TxtWrapWrap17"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="#666666" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_replay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/ninegrid_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.lzy.ninegrid.NineGridView>
+
+</LinearLayout>

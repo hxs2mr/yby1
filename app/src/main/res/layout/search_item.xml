@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    style="@style/BorderLess"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/toushu_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="15dp"
+        android:maxLines="1"
+        fontPath="fonts/NotoSansHans-DemiLight.ttf"
+        android:text="家电维修"
+        />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/toushu_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_gravity="center"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            android:paddingRight="15dp"
+            android:text="家电维修"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:background="#e8e8e8"
+        />
+</android.support.v7.widget.LinearLayoutCompat>

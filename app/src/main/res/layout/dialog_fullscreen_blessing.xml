@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:background="#ffffff"
+    >
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/d20"
+        android:layout_marginTop="@dimen/d20"
+        android:src="@mipmap/icon_bless_close" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_below="@id/iv_close"
+       >
+
+       <TextView
+           android:layout_width="@dimen/d0"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:id="@+id/tv_bless_add"
+           style="@style/TextBorderLess18"
+           android:drawableTop="@mipmap/icon_bless_add"
+           android:drawablePadding="@dimen/d10"
+           android:gravity="center"
+           android:text="发布喜事"
+           android:textSize="13sp"
+           android:textColor="#282828"
+            />
+
+       <TextView
+           android:id="@+id/tv_bless_my"
+           android:layout_width="@dimen/d0"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           style="@style/TextBorderLess18"
+           android:drawablePadding="@dimen/d10"
+           android:drawableTop="@mipmap/icon_bless_record"
+           android:gravity="center"
+           android:textSize="13sp"
+           android:textColor="#282828"
+           android:text="我的喜事" />
+
+       <TextView
+           android:id="@+id/tv_send_record"
+           android:layout_width="@dimen/d0"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           style="@style/TextBorderLess18"
+           android:drawablePadding="@dimen/d10"
+           android:drawableTop="@mipmap/icon_bless_send_gift_record"
+           android:gravity="center"
+           android:textSize="13sp"
+           android:textColor="#282828"
+           android:text="送礼记录" />
+
+   </LinearLayout>
+</RelativeLayout>

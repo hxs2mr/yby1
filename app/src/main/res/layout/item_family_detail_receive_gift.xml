@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="65dp"
+    android:layout_height="65dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    android:background="@drawable/shape_tv_bless_tab_normal"
+
+    >
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_img_load_pre"
+        />
+    <TextView
+        android:id="@+id/tv_goodsname"
+        android:layout_width="@dimen/d55"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt12"
+        android:text="蚂蚁上树"
+        android:textColor="@color/colorNav"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt12"
+        android:maxLength="5"
+        android:text="小王"
+        android:textColor="@color/colorNav"
+        />
+</LinearLayout>

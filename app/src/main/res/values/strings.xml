@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">友帮友</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--底部导航-->
+    <string-array name="bottomMenu">
+        <item name="nav_home">首页</item>
+        <item name="nav_customer">关注</item>
+        <item name="nav_dynamic">动态</item>
+        <item name="nav_mine">我的</item>
+
+    </string-array>
+
+    <string name="nav_home">首页</string>
+    <string name="nav_customer">客服</string>
+    <string name="nav_mine">我的</string>
+
+    <!--首页菜单-->
+    <string name="home_funsharing">乐趣分享</string>
+    <string name="home_troublesolution">烦恼解答</string>
+    <string name="home_livingexpenses">物业缴费</string>
+    <string name="home_housekeepingservice">家政服务</string>
+    <string name="home_consultantteam">顾问团队</string>
+    <string name="home_specialgifts">礼品特产</string>
+    <string name="home_familyworship">亲情祭祀</string>
+    <string name="home_weddingblessing">喜事祝福</string>
+
+    <!--烦恼解答-->
+    <string name="trouble_lawsuit">官司咨询</string>
+    <string name="trouble_renovation">装修咨询</string>
+    <string name="trouble_emotion">情感咨询</string>
+    <string name="trouble_education">教育咨询</string>
+    <string name="trouble_marriage">婚姻咨询</string>
+    <string name="trouble_tax">税务咨询</string>
+    <string name="trouble_sickness">病痛咨询</string>
+
+    <!--生活交费-->
+    <string name="living_water">水费</string>
+    <string name="living_electric">电费</string>
+    <string name="living_gas">燃气费</string>
+    <string name="living_closed_tv">闭路电视费</string>
+    <string name="living_property">物业缴费</string>
+    <string name="living_phone_credit">手机充值</string>
+
+    <!--顾问团队-->
+    <string name="team_dispute">纠纷律师</string>
+    <string name="team_emotion">情感顾问</string>
+    <string name="team_tax">税务会计</string>
+    <string name="team_renovation">装修工程</string>
+    <string name="team_parenting">育儿教师</string>
+    <string name="team_sickness">病痛医生</string>
+    <string name="team_enterprise">企业管理</string>
+    <string name="team_pharmacist">药师</string>
+
+    <!--礼品特产-->
+    <string name="special_gift">礼品区</string>
+    <string name="special_special">特产区</string>
+
+    <string name="special_daily_use">日化</string>
+    <string name="special_clothes">服饰</string>
+    <string name="special_beauty">美妆</string>
+    <string name="special_bag">箱包</string>
+
+
+
+
+
+
+
+    <!--<string name="app_name">腾讯视频云</string>-->
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+
+    <string name="btn_cancel">取消</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_return">返回</string>
+
+    <string name="video_decoding">视频正在解码中，请稍等...</string>
+    <string name="video_generating">视频生成中...</string>
+    <string name="video_edit">编辑视频</string>
+    <string name="video_join">视频合成</string>
+    <string name="video_drag_sort">视频将按照列表顺序进行合成，您可以长按拖动进行片段顺序调整。</string>
+    <string name="video_join_preview">片段合成预览</string>
+    <string name="video_preview">视频预览</string>
+    <string name="video_only_save">仅保存</string>
+    <string name="video_save_and_publish">保存并发布</string>
+    <string name="video_edit_segment">请拖拽两侧滑块选择剪裁区域</string>
+    <string name="video_repeate_segment">设置重复的片段</string>
+    <string name="video_reverse">开启视频倒放</string>
+
+    <string name="vod_ffplay">ffplay</string>
+    <string name="vod_exo">exo</string>
+    <string name="delete">删除</string>
+    <string name="music_empty">空空如也</string>
+    <string name="music_loading">正在加载本地音乐...</string>
+    <string name="title_activity_rtmp_room_demo">RtmpRoomDemoActivity</string>
+    <string name="title_activity_test_test_test_acvitity">TestTestTestAcvitity</string>
+
+    <string name="rtmproom_room_iterm_members">%1$d 人在房间里...</string>
+    <string name="video_editer_set_speed">设置慢速片段</string>
+    <string name="video_editer_bubble">气泡字幕</string>
+    <string name="video_pre_process">视频预处理</string>
+
+
+</resources>

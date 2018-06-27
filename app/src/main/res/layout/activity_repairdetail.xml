@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    android:layout_height="match_parent">
+    <include layout="@layout/toolbar_layout" android:visibility="gone" />
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:paddingTop="10dp"
+        app:contentInsetStart="0dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/p_p_back"
+                android:layout_width="50dp"
+                android:paddingTop="3dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/person_select"
+                android:layout_gravity="center"
+                >
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/home_qr"
+                    android:layout_width="11dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="bottom"
+                    android:background="@mipmap/left_black"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/home_location_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:paddingTop="3dp"
+                android:textSize="17sp"
+                android:text="详情"
+                android:layout_gravity="center"
+                fontPath="fonts/SourceHanSansCN-Regular.ttf"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                />
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/share_button"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@mipmap/cf_share"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="bottom"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.Toolbar>
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/fabu_time"
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/look_num"
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="#e8e8e8" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="头像"
+                android:textColor="#282828"
+                android:textSize="16sp" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/head_image"
+                android:layout_width="36dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/test" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="#e8e8e8" />
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="联系人"
+                android:textColor="#282828"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="傻逼"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/person_select"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="17dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/rd_phone" />
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="#e8e8e8" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="服务区域"
+                android:textColor="#282828"
+                android:textSize="16sp" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/service_space"
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:text="云岩、南明、小河"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+
+            android:background="#e8e8e8" />
+
+        <android.support.v7.widget.AppCompatTextView
+            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center|left"
+            android:text="维修范围"
+            android:textColor="#282828"
+            android:textSize="16sp" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/fbl_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_start">
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="居住地址"
+                android:textColor="#282828"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/address"
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F5F5F5" />
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="#fbfaf4"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:text="认证"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@mipmap/repair_renzhen"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="身份认证"
+                    android:textColor="#ff7a00"
+                    android:textSize="11sp" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f0e5d4" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:text="认证"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="99%电话接通率"
+                    android:textColor="#ff7a00"
+                    android:textSize="11sp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F5F5F5" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/SourceHanSansCN-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务描述"
+                android:textColor="#282828"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/more_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/more_text"
+                    fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="1.2dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:scaleType="fitXY"
+                    android:maxLines="5"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textSize="15sp"
+                    />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/more_linear_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/more_onclik"
+                        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="展开更多"
+                        android:textColor="#fa9b44"
+                        android:textSize="14sp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/more_onclik_image"
+                        android:layout_width="11dp"
+                        android:layout_height="6dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@mipmap/repair_detail_xia" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F5F5F5"
+            />
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                >
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/SourceHanSansCN-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:text="评价"
+                android:textColor="#282828"
+                android:textSize="16sp" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/total_fen_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:text="总分"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/re_pin_fen"
+                    fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#fa9b44"
+                    android:text="8.0"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
+                </android.support.v7.widget.LinearLayoutCompat>
+            </android.support.v7.widget.LinearLayoutCompat>
+
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/re_pin_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/re_pin_linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/re_pin_image1"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    >
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/re_pin_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#282828"
+                        android:textSize="15sp"
+                        android:maxLength="9"
+                        android:maxLines="1"
+                        android:text="asd"
+                        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                        />
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_marginTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <android.support.v7.widget.AppCompatRatingBar
+                            android:id="@+id/re_pin_ratingBar1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/myRatingBar"
+                            android:layout_gravity="center"
+                            android:isIndicator="true"
+                            android:rating="1.6"
+                            android:stepSize="1"
+                            android:numStars="5"
+                            />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/re_pin_time1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:textColor="#999999"
+                            android:layout_marginRight="15dp"
+                            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                            android:gravity="center|right"
+                            android:text="12分钟前"
+                            android:layout_height="wrap_content" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/re_pin_coment1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="14dp"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        android:text="asdasdasdasdasasd"
+                        />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e8e8e8"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    />
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/re_pin_linear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/re_pin_image2"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        />
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        >
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/re_pin_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#282828"
+                            android:textSize="15sp"
+                            android:maxLength="9"
+                            android:maxLines="1"
+                            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                            />
+
+                        <android.support.v7.widget.LinearLayoutCompat
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <android.support.v7.widget.AppCompatRatingBar
+                                android:id="@+id/re_pin_ratingBar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/myRatingBar"
+                                android:layout_gravity="center"
+                                android:isIndicator="true"
+                                android:stepSize="1"
+                                android:numStars="5"
+                                />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/re_pin_time2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:textColor="#999999"
+                                android:layout_marginRight="15dp"
+                                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                                android:gravity="center|right"
+                                android:layout_height="wrap_content" />
+                        </android.support.v7.widget.LinearLayoutCompat>
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/re_pin_coment2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingRight="14dp"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#F5F5F5"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</android.support.v4.widget.NestedScrollView>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/ll_whish_parent"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+       >
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <android.support.v7.widget.ContentFrameLayout
+                android:id="@+id/pin_framelayout"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/cf_edit_shape"
+                android:focusable="false"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/son_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="我要评论"
+                    android:textSize="14sp"
+                    android:paddingLeft="33dp"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:background="@null"
+                    android:textColor="#000000"
+                    />
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center|left"
+                    android:background="@mipmap/cf_bi"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </android.support.v7.widget.ContentFrameLayout>
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/cf_bottom_sc_linear"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/shou_image"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/cf_sc"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/shou_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#999999"
+                    android:layout_gravity="center"
+                    android:maxLength="3"
+                    android:text="收藏"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/cf_bottom_pin_linear"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:background="@drawable/person_select"
+                >
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/cd_pin_image"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/pin_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#ff7a00"
+                    android:layout_gravity="center"
+                    android:maxLength="2"
+                    android:text="0"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/call_phone"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="7dp"
+            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+            android:background="#fb963a"
+            android:text="电话"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@mipmap/white_phone"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

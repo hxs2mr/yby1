@@ -1,0 +1,77 @@
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0"
+        android:layout_marginTop="@dimen/d26"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_special_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_gift" />
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:layout_marginTop="@dimen/d5"
+                android:text="@string/special_gift" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_special_special"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_special" />
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:layout_marginTop="@dimen/d5"
+                android:text="@string/special_special" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayEEE"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d20"
+            android:layout_marginTop="@dimen/d10"
+            android:padding="@dimen/d10"
+            android:text="李**,电话155****5555于2017年12月7日 17:47:52兑换到毛巾一块!"
+            android:textColor="@color/colorNavAct" />
+    </LinearLayout>
+</android.support.v7.widget.LinearLayoutCompat>
+

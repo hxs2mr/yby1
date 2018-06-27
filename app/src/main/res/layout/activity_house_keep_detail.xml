@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+              >
+
+                <ImageView
+                    android:id="@+id/iv_company_img"
+                    android:layout_width="@dimen/d180"
+                    android:layout_height="@dimen/d180"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/icon_img_load_pre" />
+
+                <TextView
+                    android:id="@+id/tv_company_name"
+                    style="@style/TxtWrapWrap17"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/d10"
+                    android:padding="@dimen/d10"
+                    android:visibility="gone"
+                    android:text="黔西南天天家政服务有限公司"
+                    android:textColor="@color/colorBtn"
+
+                    />
+                <TextView
+                    style="@style/TxtWrapWrap18"
+                    android:layout_marginBottom="@dimen/d10"
+                    android:layout_marginTop="@dimen/d10"
+                    android:text="公司简介"
+                    fontPath="fonts/NotoSansCJK-Regular.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:layout_gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_company_desc"
+                    style="@style/TxtWrapWrap17"
+                    android:lineSpacingExtra="1.2dp"
+                    fontPath="fonts/NotoSansCJK-Regular.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/colorNav" />
+                <com.lzy.ninegrid.NineGridView
+                    android:id="@+id/ninegrid_share"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                   />
+
+                <android.support.v7.widget.ContentFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f5f5f5"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffff"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:clipChildren="false"
+                        >
+                        <com.itislevel.lyl.widget.LoopViewPager
+                            android:id="@+id/loopviewpager"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="150dp"
+                            />
+                    </LinearLayout>
+                </android.support.v7.widget.ContentFrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/d10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TxtWrapWrap18"
+                        android:text="手机:"
+                        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                        tools:ignore="MissingPrefix"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        style="@style/BorderLess"
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="155****5555"
+                        android:textColor="#333333"
+                        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                        tools:ignore="MissingPrefix"
+                        android:textSize="@dimen/txt18" />
+
+                    <TextView
+                        android:id="@+id/tv_call"
+                        style="@style/TxtWrapWrap17"
+                        android:layout_marginBottom="@dimen/d2"
+                        android:layout_marginRight="@dimen/d10"
+                        android:background="@drawable/shape_btn_login"
+                        android:paddingBottom="@dimen/d3"
+                        android:paddingLeft="@dimen/d8"
+                        android:paddingRight="@dimen/d8"
+                        android:paddingTop="@dimen/d3"
+                        android:text="立即拨打"
+                        android:textColor="@color/colorWhite"
+
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#e8e8e8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/d10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TxtWrapWrap18"
+                        android:text="联系人:"
+                        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                        tools:ignore="MissingPrefix"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/tv_company_contact"
+                        style="@style/BorderLess"
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                        tools:ignore="MissingPrefix"
+                        android:text="蓝经历"
+                        android:maxLines="1"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/txt18" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#e8e8e8" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/d10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TxtWrapWrap18"
+                        android:text="地址:"
+                        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                        tools:ignore="MissingPrefix"
+                        android:textColor="@color/colorNav" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        style="@style/BorderLess"
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="wrap_content"
+                        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                        tools:ignore="MissingPrefix"
+                        android:layout_weight="1"
+                        android:text="贵州省兴义市丰源街11号"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/txt18" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.LinearLayoutCompat>

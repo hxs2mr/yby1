@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:id="@+id/xiaoxi_linear"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/dynamic_xiaoxi_shape"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+            android:src="@mipmap/test1"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="2条新消息"
+            android:layout_gravity="center|right"
+            />
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="7dp"
+            android:layout_height="12dp"
+            android:background="@mipmap/xiaoxi_right"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,26 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/d10">
+
+        <!--android:textColor="@color/colorBtn"-->
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/txt20"
+            android:padding="@dimen/d5"
+            android:layout_marginRight="@dimen/d10"
+            android:text="内容区域内容区域内容区域内" />
+
+    </LinearLayout>
+

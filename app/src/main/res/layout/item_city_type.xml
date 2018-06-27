@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/person_select"
+    android:layout_height="43dp">
+
+    
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/frist_linear"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/show_color"
+            android:layout_width="2dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="#ff7a00"
+            android:visibility="invisible"
+            />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/qu_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:paddingLeft="15dp"
+        android:textSize="17sp"
+        android:textColor="#282828"
+        android:text="南明区"
+        />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f5f5f5"
+        />
+</android.support.v7.widget.LinearLayoutCompat>

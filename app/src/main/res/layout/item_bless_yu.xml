@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_bless_yu_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/d10">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/close_circle"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/d10"
+        android:layout_marginBottom="@dimen/d5"
+        android:layout_marginTop="@dimen/d5"
+        />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/fbl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d5"
+        android:paddingRight="@dimen/d5"
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:flexWrap="wrap"
+        app:justifyContent="center"
+        >
+
+        <TextView
+            android:id="@+id/tv_bless_temp"
+            style="@style/TxtWrapWrap18"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_marginTop="@dimen/d3"
+            android:background="@drawable/shape_et_focus"
+            android:padding="@dimen/d2"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="生活如意，事业高升"
+            android:textColor="#ff7a00" />
+        <TextView
+            android:id="@+id/tv_bless_temp1"
+            style="@style/TxtWrapWrap18"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_marginTop="@dimen/d3"
+            android:background="@drawable/shape_et_focus"
+            android:padding="@dimen/d2"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="事业有成，美梦成真"
+            android:textColor="#ff7a00" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/fbl_parent2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d5"
+        android:paddingRight="@dimen/d5"
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:flexWrap="wrap"
+        app:justifyContent="center"
+        >
+
+        <TextView
+            android:id="@+id/tv_bless_temp3"
+            style="@style/TxtWrapWrap18"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_marginTop="@dimen/d3"
+            android:background="@drawable/shape_et_focus"
+            android:padding="@dimen/d2"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="福气东来，鸿运通天"
+            android:textColor="#ff7a00" />
+        <TextView
+            android:id="@+id/tv_bless_temp4"
+            style="@style/TxtWrapWrap18"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_marginTop="@dimen/d3"
+            android:background="@drawable/shape_et_focus"
+            android:padding="@dimen/d2"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="生意兴隆，事业高升"
+            android:textColor="#ff7a00" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="@dimen/d10">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d10"
+            android:layout_weight="1"
+            android:background="#e8e8e8"
+            android:hint="送上祝福语"
+            android:maxLines="1"
+            android:padding="@dimen/d3" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fa8f13"
+            android:paddingBottom="@dimen/d6"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d10"
+            android:paddingTop="@dimen/d6"
+            android:text="发送"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>

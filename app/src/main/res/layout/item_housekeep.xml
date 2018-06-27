@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="63dp"
+    android:background="@drawable/person_select"
+    android:orientation="vertical"
+>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:id="@+id/tv_title"
+       android:layout_width="@dimen/d0"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        style="@style/BorderLess"
+        android:textSize="17sp"
+        android:layout_weight="1"
+        android:textColor="#333333"
+        android:layout_marginLeft="15dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginRight="@dimen/d10"
+        tools:text="贵州省某某某家政公司"
+        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/tv_commein"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="进入"
+        android:paddingBottom="5dp"
+        android:paddingRight="18dp"
+        android:paddingLeft="18dp"
+        android:textSize="17sp"
+        android:paddingTop="5dp"
+        android:layout_marginRight="@dimen/d10"
+        android:background="@drawable/shape_btn_login"
+        android:textColor="@color/colorWhite"
+        android:layout_gravity="center"
+        />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+</LinearLayout>

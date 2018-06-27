@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/d10"
+    android:paddingTop="@dimen/d13"
+    android:visibility="visible">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+
+    <!--&gt;-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_comment_img"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@mipmap/icon_img" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_comment_face"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/d10"-->
+    <!--android:src="@mipmap/icon_face" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/d10"
+        android:paddingTop="@dimen/d10">
+        <!--android:background="@drawable/selector_et_border_normal"-->
+
+        <!--android:imeOptions="actionNext"   下一个配合android:nextFocusForward属性一起使用-->
+        <!--android:imeOptions="actionSearch" 搜索-->
+        <!--android:imeOptions="actionDone" enter-->
+        <!--android:imeOptions="actionGo" 前往-->
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="@dimen/d0"
+            android:layout_height="@dimen/d34"
+            android:layout_marginRight="@dimen/d10"
+            android:layout_weight="1"
+            android:background="@drawable/shape_et_input"
+            android:hint="评论..."
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:maxLines="3"
+            android:paddingBottom="@dimen/d2"
+            android:paddingLeft="@dimen/d3"
+            android:paddingRight="@dimen/d3"
+            android:paddingTop="@dimen/d2" />
+
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_tv_bless_tab_select"
+            android:gravity="center"
+            android:paddingBottom="@dimen/d5"
+            android:paddingLeft="@dimen/d15"
+            android:paddingRight="@dimen/d15"
+            android:paddingTop="@dimen/d5"
+            android:text="发送"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>

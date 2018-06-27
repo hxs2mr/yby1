@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.setting.SettingActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <TextView
+        android:id="@+id/tv_fadeback"
+        style="@style/TxtMatchWrap18"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d10"
+        android:text="问题反馈" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d1"
+        android:background="@color/colorGrayEEE" />
+
+    <TextView
+        android:id="@+id/tv_online"
+        style="@style/TxtMatchWrap18"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d10"
+        android:text="在线客服" />
+
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrayEEE"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d0"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:layout_marginBottom="@dimen/d100"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                >
+
+                <Button
+                    android:id="@+id/btn_my_consult"
+                    style="@style/BaseFontSize14"
+                    android:layout_width="@dimen/d130"
+                    android:layout_height="@dimen/d35"
+                    android:layout_marginRight="@dimen/d20"
+                    android:background="@drawable/shape_btn_login"
+                    android:text="我的咨询"
+                    android:textColor="@color/colorWhite"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_team_reg"
+                    style="@style/BaseFontSize14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/d35"
+                    android:layout_marginRight="@dimen/d20"
+                    android:background="@drawable/shape_btn_login"
+                    android:text="顾问在线注册"
+                    android:textColor="@color/colorWhite"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <com.cxmax.library.FloatingView
+        android:id="@+id/float_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ad5"
+        app:draggable="false" />
+</FrameLayout>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="70dp"
+ >
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/song2_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:background="@mipmap/song2_iv_no"
+        />
+    <TextView
+        android:id="@+id/tv_share"
+        style="@style/TxtWrapWrap18"
+        android:layout_marginRight="5dp"
+        android:drawableLeft="@mipmap/icon_share"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_toLeftOf="@id/song2_iv"
+        />
+
+    <TextView
+        android:id="@+id/tv_comment_num"
+        style="@style/TxtWrapWrap18"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/tv_share"
+        android:drawableLeft="@mipmap/icon_comment"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_like_num"
+        style="@style/TxtWrapWrap18"
+        android:paddingTop="3dp"
+        android:paddingLeft="10dp"
+        android:layout_toLeftOf="@id/tv_comment_num"
+        android:drawableLeft="@mipmap/icon_like"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:drawablePadding="3dp"
+        android:text="0"
+        android:textColor="#ffffff"/>
+
+
+</RelativeLayout>

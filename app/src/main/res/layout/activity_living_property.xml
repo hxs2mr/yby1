@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGrayEEE"
+    >
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/d20"
+        android:paddingRight="@dimen/d20"
+        android:paddingTop="@dimen/d60"
+        android:paddingBottom="@dimen/d60"
+        android:layout_marginTop="@dimen/d10"
+        >
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:text="所在小区 :"
+
+            />
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:text="美的林城时代"
+
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_property_query"
+        style="@style/BaseFontSize18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d50"
+        android:layout_marginRight="@dimen/d50"
+        android:layout_marginTop="@dimen/d30"
+        android:background="@drawable/shape_btn_login"
+        android:text="查询信息"
+        android:textColor="@color/colorWhite" />
+</android.support.v7.widget.LinearLayoutCompat>

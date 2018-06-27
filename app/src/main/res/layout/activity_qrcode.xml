@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.user.QRCodeActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/d60"
+        android:layout_marginLeft="@dimen/d30"
+        android:layout_marginRight="@dimen/d30"
+        android:layout_marginTop="@dimen/d60"
+        android:background="@drawable/qe_back_shape"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/d10"
+            >
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_header"
+                android:layout_width="@dimen/d60"
+                android:layout_height="@dimen/d60"
+                android:layout_marginRight="@dimen/d10"
+                android:background="@drawable/qe_back_shape"
+                android:src="@mipmap/icon_img_load_pre" />
+
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                style="@style/TxtWrapWrap18"
+                android:layout_marginTop="@dimen/d2"
+                android:layout_toRightOf="@id/iv_header"
+                android:text="itisi小苏" />
+
+            <TextView
+                android:id="@+id/tv_regist_num"
+                style="@style/TxtWrapWrap17"
+                android:layout_below="@id/tv_nickname"
+                android:layout_marginTop="@dimen/d2"
+                android:layout_toRightOf="@id/iv_header"
+                android:text="20171117" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/icon_qrcode"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="扫一扫上面的二维码图案，加我"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            />
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

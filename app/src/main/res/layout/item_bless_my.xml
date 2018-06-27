@@ -1,0 +1,138 @@
+<com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:contentView="@+id/content"
+    app:leftMenuView="@+id/left"
+    app:rightMenuView="@+id/right">
+    <!--<LinearLayout-->
+    <!--android:id="@+id/left"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/holo_blue_dark"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="20dp">-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="分享" />-->
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:orientation="vertical"
+
+       >
+
+        <include layout="@layout/partial_item_header_notime" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/BaseFontSize18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d10"
+            android:text="奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸"
+            android:textColor="@color/colorNav" />
+
+        <com.lzy.ninegrid.NineGridView
+            android:id="@+id/ninegrid_imgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d10"
+            android:layout_marginTop="@dimen/d15"
+            android:visibility="gone"
+            >
+
+        </com.lzy.ninegrid.NineGridView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/d10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布时间:"
+                android:textSize="@dimen/txt14" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d6"
+                android:text="2017-12-23"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/txt14" />
+
+            <TextView
+                style="@style/TxtWrapWrap17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d10"
+                android:text="浏览量:"
+                android:textSize="@dimen/txt14" />
+            <TextView
+                android:id="@+id/tv_look_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d6"
+                android:text="0"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/txt14"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d10"
+                android:text="收到礼物:"
+                android:textSize="@dimen/txt14" />
+
+            <TextView
+                android:id="@+id/tv_gift_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d6"
+                android:text="0"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/txt14" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/d100"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorRed"
+            android:textSize="@dimen/txt18"
+            android:padding="@dimen/d10"
+            android:text="删除"
+            android:textColor="@color/colorWhite" />
+        <!--<TextView-->
+        <!--android:id="@+id/right_menu_2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@android:color/holo_orange_dark"-->
+        <!--android:padding="20dp"-->
+        <!--android:text="收藏" />-->
+    </LinearLayout>
+</com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>

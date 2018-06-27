@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_test_back" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar_layout" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="逝者安息,流芳百世"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d0"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--com.itislevel.lyl.widget.GifImageView-->
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/iv_bianpao_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="148dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/icon_family_bianpao_no"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/d0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!--单人-->
+                        <LinearLayout
+                            android:id="@+id/ll_family_detail_single"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_single_name"
+                                android:layout_width="103dp"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:background="@drawable/shape_tv_bless_select"
+                                android:text="灰太狼"
+                                android:layout_gravity="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt18"
+                                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                                tools:ignore="MissingPrefix" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:paddingBottom="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/iv_single_header"
+                                    android:layout_width="76dp"
+                                    android:layout_height="110dp"
+                                    android:layout_gravity="center"
+                                    android:scaleType="fitXY" />
+                                <ImageView
+                                    android:id="@+id/iv_family_single_frame"
+                                    android:layout_width="95dp"
+                                    android:layout_height="128dp"
+                                    android:layout_gravity="center"
+                                    android:scaleType="centerCrop" />
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                        <!--双人-->
+                        <LinearLayout
+                            android:id="@+id/ll_family_detail_double"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_double_name1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/d80"
+                                    android:background="@drawable/shape_tv_bless_select"
+                                    android:paddingBottom="@dimen/d2"
+                                    android:paddingLeft="@dimen/d15"
+                                    android:paddingRight="@dimen/d15"
+                                    android:paddingTop="@dimen/d2"
+                                    android:text="灰太狼"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/txt18" />
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/iv_double_header1"
+                                        android:layout_width="76dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="fitXY"
+                                        android:layout_marginTop="4dp"
+                                        android:src="@mipmap/icon_img_load_pre" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_family_double1_frame"
+                                        android:layout_width="95dp"
+                                        android:layout_height="128dp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="centerCrop" />
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d20"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_double_name2"
+                                    android:minWidth="@dimen/d80"
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_tv_bless_select"
+                                    android:paddingBottom="@dimen/d2"
+                                    android:paddingLeft="@dimen/d15"
+                                    android:paddingRight="@dimen/d15"
+                                    android:paddingTop="@dimen/d2"
+                                    android:text="灰太狼"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/txt18" />
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:paddingRight="5dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_height="wrap_content">
+
+
+                                    <ImageView
+                                        android:id="@+id/iv_double_header2"
+                                        android:layout_width="76dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="4dp"
+                                        android:src="@mipmap/icon_img_load_pre"
+                                        android:scaleType="fitXY" />
+                                    <ImageView
+                                        android:id="@+id/iv_family_double2_frame"
+                                        android:layout_width="95dp"
+                                        android:layout_height="128dp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="centerCrop" />
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="166dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+
+                          <android.support.v7.widget.RecyclerView
+                              android:visibility="gone"
+                                android:id="@+id/recycler_blessyu"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorFamilyPrimary"
+                                >
+
+                            </android.support.v7.widget.RecyclerView>
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_gift"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/shape_family_wupin"
+                                android:padding="@dimen/d3">
+                            </android.support.v7.widget.RecyclerView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/iv_bianpao_right"
+                        android:layout_width="55dp"
+                        android:layout_height="148dp"
+                        android:layout_gravity="top"
+                        android:layout_marginBottom="@dimen/d10"
+                        android:background="@mipmap/icon_family_bianpao_right_no" />
+
+                </LinearLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:scrollbars="none"
+                            android:background="@color/bg_edittext_color"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:id="@+id/ll_blessyy_parent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/bg_edittext_color"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_blessyu_temp"
+                                    android:layout_width="match_parent"
+                                    android:textSize="14sp"
+                                    android:background="@color/bg_edittext_color"
+                                    android:textColor="#666666"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:layout_marginTop="@dimen/d3"
+                                    android:text="逝者也矣，生者如斯"
+                                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                                    tools:ignore="MissingPrefix"
+                                    android:padding="@dimen/d3"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/d3"
+                            android:layout_marginTop="@dimen/d3"
+                            android:visibility="gone"
+                            android:background="@color/colorFamilySecond">
+
+                        </android.support.v7.widget.RecyclerView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/music_onclick"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="top|right"
+                        android:background="@mipmap/music_on"
+                        />
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/tv_send_bless"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/shape_family_wupin"
+                android:padding="@dimen/d3"
+                android:textSize="16sp"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:text="赠送寄语"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorWhite" />
+            <TextView
+                android:id="@+id/tv_jitai"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="38dp"
+                android:background="@drawable/shape_family_wupin"
+                android:gravity="center"
+                android:text="祭祀信"
+                android:padding="@dimen/d3"
+                android:textSize="16sp"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_gift_region"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_height="38dp"
+                android:background="@drawable/shape_family_wupin"
+                android:padding="@dimen/d2"
+                android:text="赠送祭品"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</FrameLayout>

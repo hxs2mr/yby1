@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.setting.SettingActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorWhite">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d10"
+            android:text="已拥有的礼品卷" />
+
+        <TextView
+            android:id="@+id/tv_voucher"
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:padding="@dimen/d10"
+            android:textColor="#666666"
+            android:text="3张待使用" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d10"
+            android:text="现有积分点数" />
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/d10"
+            android:textColor="#666666"
+            android:textSize="15sp"
+            android:text="618点"
+
+            />
+    </RelativeLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.livingexpensess.LivingPropertyDetailActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="@dimen/d10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="缴费金额:" />
+
+            <TextView
+                android:id="@+id/tv_pay_free"
+                style="@style/TxtWrapWrap18"
+                android:layout_alignParentRight="true"
+                android:text="￥150.0" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:background="@color/colorGrayEEE" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="姓名:" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TxtWrapWrap18"
+                android:layout_alignParentRight="true"
+                android:text="小敏" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="用户单位编号:" />
+
+            <TextView
+                android:id="@+id/tv_pay_ordernum"
+                style="@style/TxtWrapWrap18"
+                android:layout_alignParentRight="true"
+                android:text="20151515151512113256" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="交费单位:" />
+
+            <TextView
+                android:id="@+id/tv_pay_unit"
+                style="@style/TxtWrapWrap18"
+                android:layout_alignParentRight="true"
+                android:text="兴义电网有限责任公司" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="缴费时间:" />
+
+            <TextView
+                android:id="@+id/tv_pay_time"
+                style="@style/TxtWrapWrap18"
+                android:layout_alignParentRight="true"
+                android:text="2018-01-12 10:45:03" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="缴费状态:" />
+
+            <TextView
+                android:id="@+id/tv_pay_status"
+                style="@style/TxtWrapWrap18"
+                android:layout_alignParentRight="true"
+                android:text="缴费成功"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.LinearLayoutCompat>

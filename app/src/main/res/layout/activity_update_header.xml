@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGrayEEE"
+    tools:context="com.itislevel.lyl.mvp.ui.setting.SettingActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="@dimen/d200"
+        android:layout_height="@dimen/d200"
+        android:src="@mipmap/icon_img_load_pre"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/d80"
+        android:layout_gravity="center"
+        />
+
+</android.support.v7.widget.LinearLayoutCompat>

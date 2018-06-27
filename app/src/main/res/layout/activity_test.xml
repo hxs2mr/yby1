@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.test.TestActivity"
+
+    >
+
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test open activity"
+
+        />
+
+    <TextView
+        style="@style/TxtWrapWrap17"
+        android:text="评论-测试匡匡"
+        android:background="@drawable/selector_et_border_normal"
+        android:padding="@dimen/d2"
+
+        />
+
+    <EditText
+        style="@style/TxtWrapWrap17"
+        android:hint="评论-测试匡匡"
+        android:background="@drawable/selector_et_border_normal"
+        android:padding="@dimen/d2"
+         />
+
+    <Button
+        android:id="@+id/rxtest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rx_test"
+        />
+
+    <TextView
+        android:id="@+id/tv_test_partial_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试部分可点击的"
+        />
+    <Button
+        android:id="@+id/test_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test_video"
+        />
+
+    <Button
+        android:id="@+id/btn_qrcode_gene"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test_qrcode_generator"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_qrcode_gene_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        />
+
+
+
+</android.support.v7.widget.LinearLayoutCompat>

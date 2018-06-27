@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_layout"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d260">
+
+
+            <ImageView
+                android:id="@+id/iv_goodsimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_img_load_pre" />
+
+            <ImageView
+                android:id="@+id/iv_detail_back"
+                android:visibility="gone"
+                style="@style/BorderLess"
+                android:layout_width="@dimen/d50"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/d40"
+                android:scaleType="center"
+                android:src="@mipmap/icon_back" />
+
+            <ImageView
+                android:id="@+id/iv_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/d10"
+                android:layout_marginRight="@dimen/d10"
+                android:src="@mipmap/icon_cart_alpha" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_goodsname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/d10"
+            android:text="纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾纯棉热毛巾"
+            android:textColor="@color/colorNav"
+            android:textSize="@dimen/txt17" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d8"
+            android:text="￥0.0"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/txt20"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_youfei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/d10"
+            android:text="快递费:0.00" />
+
+        <TextView
+            android:id="@+id/tv_goodsrem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/d10"
+            tools:text="商品介绍"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d10"
+            android:drawableLeft="@mipmap/icon_circle_gou"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/d10"
+
+            android:text="7天无理由退款" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_duihuan"
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorCartr1"
+                android:gravity="center"
+                android:padding="@dimen/d10"
+                android:text="兑换"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt18" />
+
+            <TextView
+                android:id="@+id/tv_cart"
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorCartr2"
+                android:gravity="center"
+                android:padding="@dimen/d10"
+                android:text="加入购物车"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt18" />
+
+            <TextView
+                android:id="@+id/tv_goumai"
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="@dimen/d10"
+                android:text="立即购买"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt18" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>
+

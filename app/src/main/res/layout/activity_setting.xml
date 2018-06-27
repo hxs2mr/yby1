@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.setting.SettingActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/tv_account_safe_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        tools:ignore="MissingPrefix">
+
+        <TextView
+            android:id="@+id/tv_account_safe"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#282828"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="账户与安全"
+            android:textSize="17sp"
+            android:orientation="horizontal"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/d8"
+            tools:ignore="NewApi" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="9dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/person_left"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/tv_healp_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        tools:ignore="MissingPrefix">
+        <TextView
+            android:id="@+id/tv_healp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="17sp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:text="帮助与反馈"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            android:padding="@dimen/d8"
+            tools:ignore="MissingPrefix,NewApi" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="9dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/person_left"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/tv_clear_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        tools:ignore="MissingPrefix">
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="17sp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:text="清楚缓存"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            android:padding="@dimen/d8"
+            tools:ignore="MissingPrefix,NewApi" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/app_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#cccccc"
+            android:textSize="17sp"
+            />
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="9dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/person_left"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+    <Button
+        android:id="@+id/btn_logout"
+        style="@style/BaseFontSize18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginRight="@dimen/d10"
+        android:layout_marginTop="@dimen/d30"
+        android:background="@drawable/shape_btn_login"
+        android:text="退出登录"
+        android:textColor="@color/colorWhite" />
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"/>
+    <!--<TextView-->
+        <!--android:id="@+id/tv_time_order"-->
+        <!--style="@style/TxtWrapWrap18"-->
+        <!--android:layout_marginLeft="@dimen/d10"-->
+        <!--android:layout_marginRight="@dimen/d10"-->
+        <!--android:padding="@dimen/d5"-->
+        <!--android:textColor="@color/colorRed"-->
+        <!--android:text="1.2017-12-19 16:12" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_problem_time"
+        style="@style/TxtWrapWrap18"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginRight="@dimen/d10"
+        android:padding="@dimen/d5"
+        android:textColor="@color/colorRed"
+        android:text="2018-03-01 15:24:36"
+        android:layout_marginBottom="@dimen/d5"
+        />
+
+        <TextView
+            android:id="@+id/tv_problem_username"
+            style="@style/TxtWrapWrap18"
+            android:layout_marginLeft="@dimen/d10"
+            android:layout_marginRight="@dimen/d10"
+            android:padding="@dimen/d5"
+            android:textColor="@color/colorBtn"
+            android:text="某某提问:"
+            />
+
+    <TextView
+        android:id="@+id/tv_problem"
+        style="@style/TxtMatchWrap18"
+        android:background="@color/colorSplitLine"
+        android:padding="@dimen/d10"
+        android:layout_margin="@dimen/d10"
+        android:text="问题"
+        android:textColor="@color/colorNav" />
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/ninegrid_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10">
+
+    </com.lzy.ninegrid.NineGridView>
+
+
+
+    <TextView
+        android:id="@+id/tv_answer_temp"
+        style="@style/TxtWrapWrap18"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginRight="@dimen/d10"
+        android:padding="@dimen/d5"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="顾问回复:"
+        />
+
+    <TextView
+        android:id="@+id/tv_answer"
+        style="@style/BaseFontSize18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSplitLine"
+        android:padding="@dimen/d10"
+        android:layout_margin="@dimen/d10"
+        android:text="回复"
+        android:textColor="@color/colorNav" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_replay_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        >
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="@dimen/d0"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="回复"
+            android:padding="@dimen/d5"
+            android:background="@drawable/shape_et_normal"
+            />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_pannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

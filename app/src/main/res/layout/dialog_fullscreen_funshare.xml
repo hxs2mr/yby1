@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    >
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/d20"
+        android:layout_marginTop="@dimen/d20"
+        android:src="@mipmap/close_circle" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_below="@id/iv_close"
+       android:layout_marginTop="5dp"
+       >
+       <TextView
+           android:layout_width="@dimen/d0"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:id="@+id/tv_share"
+           style="@style/TextBorderLess18"
+           android:textSize="13sp"
+           android:textColor="#282828"
+           android:drawableTop="@mipmap/icon_share_add"
+           android:drawablePadding="@dimen/d10"
+           android:gravity="center"
+           android:text="我要分享"
+            />
+
+       <TextView
+           android:id="@+id/tv_share_my"
+           android:layout_width="@dimen/d0"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           style="@style/TextBorderLess18"
+           android:drawablePadding="@dimen/d10"
+           android:drawableTop="@mipmap/icon_share_my"
+           android:gravity="center"
+           android:textSize="13sp"
+           android:textColor="#282828"
+           android:text="我的分享" />
+
+   </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/toolbar_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <include
+            layout="@layout/toolbar_layout" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/tv_select_addr"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_all"
+        android:layout_marginBottom="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:drawableRight="@mipmap/icon_right_arrow"
+        android:padding="@dimen/d10"
+        android:text="请选择收货地址"
+        android:textSize="@dimen/txt18" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_select_addr"
+        android:layout_marginBottom="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="@dimen/d10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收货人:"
+                android:textColor="@color/colorNav"
+                android:textSize="@dimen/txt18" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周末"
+                android:textColor="@color/colorNav"
+                android:textSize="@dimen/txt18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系电话:"
+                android:textColor="@color/colorNav"
+                android:textSize="@dimen/txt18" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="13555555555"
+                android:textColor="@color/colorNav"
+                android:textSize="@dimen/txt18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收货地址:"
+                android:textColor="@color/colorNav"
+                android:textSize="@dimen/txt18" />
+
+            <TextView
+                android:id="@+id/tv_addr_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="贵州省贵阳市南明区花果园国际金融中心2栋1416大四放大放大发"
+                android:textColor="@color/colorNav"
+                android:drawableRight="@mipmap/icon_right_arrow"
+                android:drawablePadding="@dimen/d10"
+                android:textSize="@dimen/txt18" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_addr">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d45"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计金额"
+            android:textColor="@color/colorNav" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d10"
+            android:layout_marginRight="@dimen/d10"
+            android:text="￥0.00"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/txt20" />
+
+        <TextView
+            android:id="@+id/tv_order"
+            android:layout_width="@dimen/d100"
+            android:layout_height="@dimen/d45"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="确认订单"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+</RelativeLayout>
+

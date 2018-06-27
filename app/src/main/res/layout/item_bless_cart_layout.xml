@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/clear_all_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            >
+            
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="13dp"
+                android:layout_height="17dp"
+                android:background="@mipmap/clear_all"
+                />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:text="清空购物车"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_gravity="center"
+            />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/cart_back"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:padding="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/back_im"
+            android:layout_gravity="right|center"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:minHeight="@dimen/d150">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/d10"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+        <TextView
+            android:id="@+id/tv_count_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/d10"
+            android:gravity="center"
+            android:text="合计:"
+            android:textColor="#8c666666"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/d10"
+            android:layout_toRightOf="@id/tv_count_temp"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#666666"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/d5"
+            android:gravity="center"
+            android:text="件"
+            android:textColor="#666666"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d10"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center"
+            android:text="￥"
+            android:textColor="#fa8f13"
+            android:textSize="@dimen/txt18" />
+
+        <TextView
+            android:id="@+id/tv_totalprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_temp"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#fa8f13"
+            android:layout_marginRight="15dp"
+            android:textSize="@dimen/txt18" />
+
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="@dimen/d70"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#ff7a00"
+            android:gravity="center"
+            android:text="购买"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt18" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</LinearLayout>

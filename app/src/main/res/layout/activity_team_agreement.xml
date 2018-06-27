@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="@dimen/d10">
+
+        <TextView
+            style="@style/BaseFontSize18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:background="@drawable/shape_et_focus"
+            android:padding="@dimen/d8"
+            android:text="顾问团队整体介绍：预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置预留上传图片位置" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            >
+
+            <TextView
+                android:id="@+id/tv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="《"
+                android:textSize="@dimen/txt15" />
+
+            <TextView
+                android:id="@+id/tv_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_left"
+                android:text="友邦友会员协议"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt15" />
+
+            <TextView
+                android:id="@+id/rv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_agreement"
+                android:text="》"
+
+                android:textSize="@dimen/txt15" />
+
+            <RadioButton
+                android:id="@+id/rb_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="已阅读"
+                android:textSize="@dimen/txt13"
+
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.LinearLayoutCompat>

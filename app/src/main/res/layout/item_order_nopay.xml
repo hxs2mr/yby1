@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/d5">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="right"
+        android:padding="@dimen/d5"
+        android:text="待付款"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/txt18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d100"
+        android:orientation="horizontal"
+        android:background="@color/colorGrayEEE"
+        android:padding="@dimen/d5">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/d100"
+            android:layout_height="@dimen/d100"
+            android:layout_marginRight="@dimen/d10"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_img_load_pre" />
+
+        <LinearLayout
+            android:layout_width="@dimen/d0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_goodsname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/d60"
+                android:ellipsize="end"
+                android:maxLines="4"
+                tools:text="纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品纯棉商品"
+                android:textColor="@color/colorNav" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="@dimen/d0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="￥18.8"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/txt20" />
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x1" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_goods_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="right"
+        android:text="共1件商品 合计￥18.8"
+        android:textColor="@color/colorNav"
+        android:textSize="@dimen/txt18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d1"
+        android:background="@color/colorGrayEEE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:padding="@dimen/d10">
+
+        <TextView
+            android:id="@+id/tv_contcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系卖家"
+            android:background="@drawable/shape_order_tv_normal"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d10"
+            android:paddingTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5"
+            android:textSize="@dimen/txt16"
+            android:textColor="@color/colorNav"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消订单"
+            android:background="@drawable/shape_order_tv_normal"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d10"
+            android:paddingTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5"
+            android:layout_marginLeft="@dimen/d8"
+            android:layout_marginRight="@dimen/d8"
+            android:textSize="@dimen/txt16"
+            android:textColor="@color/colorNav"
+            />
+
+        <TextView
+            android:id="@+id/tv_go_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="付款"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/shape_order_tv_select"
+            android:paddingLeft="@dimen/d20"
+            android:paddingRight="@dimen/d20"
+            android:paddingTop="@dimen/d5"
+            android:paddingBottom="@dimen/d5"
+            android:textSize="@dimen/txt16"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

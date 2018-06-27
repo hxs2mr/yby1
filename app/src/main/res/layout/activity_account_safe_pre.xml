@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.setting.SettingActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/tv_phone_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@drawable/person_select"
+        android:orientation="horizontal"
+        android:padding="@dimen/d3">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d10"
+            android:text="手机号" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/d10"
+            android:textColor="#999999"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:textSize="16sp"
+            android:paddingRight="10dp"
+            tools:text="15555555555" />
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="9dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/person_left"
+            android:layout_marginRight="10dp"
+            android:layout_height="15dp" />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d1"
+        android:background="@color/colorGrayEEE"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d3">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:padding="@dimen/d10"
+            android:text="注册号" />
+
+        <TextView
+            android:id="@+id/tv_usernum"
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#999999"
+            android:padding="@dimen/d10"
+            android:textSize="16sp"
+            android:text="itisinum" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

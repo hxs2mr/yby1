@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt10"
+        android:gravity="center"
+        android:text="贡品" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/d25"
+        android:layout_height="@dimen/d25"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:src="@mipmap/icon_img_load_pre" />
+</LinearLayout>

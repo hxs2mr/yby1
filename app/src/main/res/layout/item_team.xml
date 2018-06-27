@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/d10"
+    android:layout_marginTop="@dimen/d10"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="@dimen/d80"
+        android:layout_height="@dimen/d100"
+        android:src="@mipmap/icon_img_load_pre"
+        android:scaleType="centerCrop"
+        />
+
+
+    <LinearLayout
+        android:layout_width="@dimen/d0"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/d10"
+        >
+        <TextView
+            android:id="@+id/tv_name"
+           style="@style/TxtWrapWrap18"
+            android:text="贵州省***法律顾问"
+            android:textColor="@color/colorBtn"
+            />
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/TxtWrapWrap18"
+            android:text="查看简介"
+            android:layout_marginTop="@dimen/d10"
+            android:layout_marginBottom="@dimen/d10"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/tv_view_count"
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="已咨询人数：65"
+                android:textColor="@color/colorNav"
+                />
+            <TextView
+                android:id="@+id/tv_go_advice"
+                style="@style/TxtWrapWrap18"
+                android:background="@drawable/shape_btn_login"
+                android:textColor="@color/colorWhite"
+                android:text="我要咨询"
+                android:paddingLeft="@dimen/d10"
+                android:paddingTop="@dimen/d2"
+                android:paddingRight="@dimen/d10"
+                android:paddingBottom="@dimen/d2"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/txt16"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorNav"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/d5"
+        android:text="亲情祭祀"
+        android:padding="@dimen/d3"
+        android:layout_height="wrap_content" />
+</LinearLayout>

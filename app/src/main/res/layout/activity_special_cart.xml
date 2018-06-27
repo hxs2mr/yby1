@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:id="@+id/toolbar_all"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <include
+            layout="@layout/toolbar_layout" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_all">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d45"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/d10">
+
+        <ImageView
+            android:id="@+id/iv_checkall"
+            android:layout_width="@dimen/d25"
+            android:layout_height="@dimen/d25"
+            android:src="@mipmap/icon_radio_normal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/d5"
+            />
+        <TextView
+            android:id="@+id/tv_checkall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/d8"
+            android:gravity="center"
+            android:text="全选"
+            android:textSize="@dimen/txt18" />
+
+        <LinearLayout
+            android:layout_width="@dimen/d0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全选"
+                android:textColor="@color/colorNav"
+                android:textSize="@dimen/txt18" />
+
+            <TextView
+                android:id="@+id/tv_totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d5"
+                android:layout_marginRight="@dimen/d10"
+                android:text="￥0.00"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/txt18" />
+
+            <TextView
+                android:id="@+id/tv_jiesuan"
+                android:layout_width="@dimen/d120"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="结算(0)"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt18" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

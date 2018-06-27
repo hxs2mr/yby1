@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/d150"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_advise"
+        style="@style/TxtMatchWrap18"
+        android:layout_marginTop="@dimen/d3"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="顾问咨询"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/d5"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_normal"
+        style="@style/TxtMatchWrap18"
+        android:layout_marginBottom="@dimen/d3"
+        android:layout_marginTop="@dimen/d3"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="普通咨询"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/d5"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_circle"
+        style="@style/TxtMatchWrap18"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="咨询圈"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/d5"
+        />
+
+</LinearLayout>

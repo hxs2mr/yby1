@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d200"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/d35"
+    android:layout_marginLeft="@dimen/d15"
+    android:layout_marginRight="@dimen/d15"
+    >
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/close_circle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/d15"
+        android:layout_marginRight="@dimen/d45"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="注册成功"
+        style="@style/BaseFontSize18"
+        android:layout_marginTop="@dimen/d35"
+        />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="@dimen/d50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="赠送10元代金卷已到您的零钱"
+        android:layout_centerHorizontal="true"
+        style="@style/BaseFontSize18"
+
+        />
+</RelativeLayout>
+

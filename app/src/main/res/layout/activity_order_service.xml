@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d120"
+        android:orientation="horizontal"
+        android:padding="@dimen/d10"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/d100"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_img_load_pre" />
+
+        <TextView
+            android:id="@+id/tv_goodsname"
+            android:layout_width="@dimen/d0"
+            android:layout_height="@dimen/d100"
+            android:layout_marginLeft="@dimen/d10"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            tools:text="纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾纯棉洗脸家用毛巾"
+            android:textColor="@color/colorNav" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_tuikuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d10">
+
+        <ImageView
+            android:id="@+id/iv_tuikuan"
+            android:layout_width="@dimen/d25"
+            android:layout_height="@dimen/d25"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d10"
+            android:src="@mipmap/icon_tuikuan_close" />
+
+        <TextView
+            android:id="@+id/tv_tuikuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_tuikuan"
+            android:text="仅退款"
+            android:textColor="@color/colorNav"
+            android:textSize="@dimen/txt18" />
+
+        <TextView
+            android:id="@+id/tv_tuikuan_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tuikuan"
+            android:layout_toRightOf="@id/iv_tuikuan"
+            android:text="未收到货(包含未签收),或已于商家协商同意" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_tuihuo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d5"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d10">
+
+        <ImageView
+            android:id="@+id/iv_tuihuo"
+            android:layout_width="@dimen/d25"
+            android:layout_height="@dimen/d25"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d10"
+            android:src="@mipmap/icon_tuikuan_close" />
+
+        <TextView
+            android:id="@+id/tv_tuihuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_tuihuo"
+            android:text="退货退款"
+            android:textColor="@color/colorNav"
+            android:textSize="@dimen/txt18" />
+
+        <TextView
+            android:id="@+id/tv_tuihuo_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tuihuo"
+            android:layout_toRightOf="@id/iv_tuihuo"
+            android:text="未收到货(包含未签收),或已于商家协商同意" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

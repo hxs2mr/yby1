@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.main.MainActivity">
+
+    <include layout="@layout/toolbar_layout"
+        android:visibility="gone"
+        />
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0"
+        android:layout_weight="1" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d1"
+        android:background="@color/colorGrayde"
+        />
+    <LinearLayout
+        android:id="@+id/main_botoom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayfa"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:paddingBottom="@dimen/d3"
+        android:paddingTop="2dp">
+
+        <LinearLayout
+            android:id="@+id/ll_nav_home"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_nav_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@mipmap/nav_home_act" />
+
+
+            <TextView
+                android:id="@+id/tv_nav_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/nav_home_act"
+                android:layout_marginTop="@dimen/d3"
+                android:text="@string/nav_home"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorNavAct"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_nav_customer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_nav_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@mipmap/nav_customer" />
+
+            <TextView
+                android:id="@+id/tv_nav_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:drawableTop="@mipmap/nav_customer"
+                android:layout_marginTop="4dp"
+                android:text="资讯"
+                android:textColor="@color/colorNav"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_nav_dynamic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_nav_dynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@mipmap/nav_customer" />
+            <android.support.v7.widget.ContentFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/tv_nav_dynamic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/nav_dynamic"
+                    android:layout_marginTop="2dp"
+                    android:text="动态"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/colorNav"
+                    android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/customer_number"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/home_customer_shape"
+                        android:textColor="#ffffff"
+                        android:text="0"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:visibility="gone"
+                        android:maxLength="2"
+                        />
+
+            </android.support.v7.widget.ContentFrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_nav_mine"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_nav_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@mipmap/nav_mine" />
+
+            <TextView
+                android:id="@+id/tv_nav_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/nav_mine"
+                android:layout_marginTop="@dimen/d3"
+                android:text="@string/nav_mine"
+                android:gravity="center"
+                android:textColor="@color/colorNav"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.LinearLayoutCompat>

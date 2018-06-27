@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/partial_item_header" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/BaseFontSize18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        fontPath="fonts/NotoSansHans-DemiLight.ttf"
+        android:text="奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸"
+        android:textColor="@color/colorNav"
+        tools:ignore="MissingPrefix" />
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/ninegrid_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10">
+
+    </com.lzy.ninegrid.NineGridView>
+
+    <include layout="@layout/item_like_comment"
+        />
+
+
+
+
+
+
+</LinearLayout>

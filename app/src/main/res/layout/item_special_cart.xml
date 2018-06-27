@@ -1,0 +1,141 @@
+<com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:contentView="@+id/content"
+    app:leftMenuView="@+id/left"
+    app:rightMenuView="@+id/right">
+    <!--<LinearLayout-->
+    <!--android:id="@+id/left"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/holo_blue_dark"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="20dp">-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="分享" />-->
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d100"
+        android:orientation="horizontal"
+        android:padding="@dimen/d10">
+
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="@dimen/d25"
+            android:layout_height="@dimen/d25"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/d10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_radio_normal" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/d80"
+            android:layout_height="@dimen/d80"
+            android:layout_marginRight="@dimen/d10"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_img_load_pre" />
+
+        <LinearLayout
+            android:layout_width="@dimen/d0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_goodsname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/d10"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="内容区域内容区域内容区域内容区域内容区域内容区域"
+                android:textColor="@color/colorNav"
+                android:textSize="@dimen/txt14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d0"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥28.8"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/txt18" />
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/d0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/iv_jian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_cart_del" />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d10"
+                        android:layout_marginRight="@dimen/d10"
+                        android:text="8"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/txt18" />
+
+                    <ImageView
+                        android:id="@+id/iv_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_cart_add" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/d100"
+        android:background="@color/colorRed"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/d10"
+            android:text="删除"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt18" />
+        <!--<TextView-->
+        <!--android:id="@+id/right_menu_2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@android:color/holo_orange_dark"-->
+        <!--android:padding="20dp"-->
+        <!--android:text="收藏" />-->
+    </LinearLayout>
+</com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>

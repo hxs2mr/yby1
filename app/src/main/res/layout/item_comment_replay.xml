@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="2dp"
+    android:orientation="horizontal">
+    <!--android:paddingLeft="@dimen/d10"-->
+
+    <TextView
+        android:id="@+id/tv_add_comment"
+        android:background="@color/colorWhite"
+        android:lineSpacingExtra="@dimen/d05"
+        android:gravity="center_vertical"
+        fontPath="fonts/NotoSansHans-DemiLight.ttf"
+        android:paddingRight="@dimen/d10"
+        android:textSize="15sp"
+        style="@style/TxtMatchWrap17"
+        android:textColor="#034b71"
+        tools:text="itisi"
+        tools:ignore="MissingPrefix" />
+    <!--android:lineSpacingMultiplier="1"-->
+
+
+    <TextView
+        android:id="@+id/tv_from_username"
+        android:visibility="gone"
+        style="@style/TxtWrapWrap17"
+        android:text="itisi"
+        android:textSize="15sp"
+        android:textColor="#666666" />
+
+    <TextView
+        style="@style/TxtWrapWrap17"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/d1"
+        android:textSize="15sp"
+        android:layout_marginRight="@dimen/d1"
+        android:text="回复"
+        android:textColor="#666666" />
+    <TextView
+        android:id="@+id/tv_to_username"
+        android:visibility="gone"
+        style="@style/TxtWrapWrap17"
+        android:text="二木"
+        android:textSize="15sp"
+        android:textColor="#034b71" />
+
+    <TextView
+        style="@style/TxtWrapWrap17"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/d5"
+        android:text=":"
+        android:textColor="@color/colorNav" />
+
+    <TextView
+        android:id="@+id/tv_replay"
+        android:visibility="gone"
+        android:textSize="15sp"
+        style="@style/TxtWrapWrap17"
+        android:text="他乡遇故知"
+        android:textColor="#666666" />
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/ninegrid_replay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.lzy.ninegrid.NineGridView>
+
+
+</LinearLayout>

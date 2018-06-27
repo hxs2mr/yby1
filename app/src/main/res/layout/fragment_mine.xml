@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.main.mine.MineFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:layout_marginTop="@dimen/d15"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d10">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_header"
+            android:layout_width="@dimen/d55"
+            android:layout_height="@dimen/d55"
+            android:layout_marginRight="@dimen/d10"
+            android:src="@mipmap/icon_default_header_circle" />
+
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            style="@style/TxtWrapWrap18"
+            android:layout_marginTop="@dimen/d2"
+            android:layout_toRightOf="@id/iv_header"
+            android:text="友帮友" />
+
+        <TextView
+            android:id="@+id/tv_regist_num"
+            style="@style/TxtWrapWrap17"
+            android:layout_below="@id/tv_nickname"
+            android:layout_marginTop="@dimen/d2"
+            android:layout_toRightOf="@id/iv_header"
+            android:text="20171117" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right_arrow"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="@dimen/d30"
+            android:layout_height="@dimen/d30"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d30"
+            android:layout_toLeftOf="@id/iv_right_arrow"
+            android:src="@mipmap/icon_qrcode" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:background="@color/colorWhite"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_gift"
+            style="@style/TxtMatchWrap18"
+            android:drawableLeft="@mipmap/icon_mine_gift"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/d10"
+            android:text="我的礼品卷" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:background="@color/colorWhite"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_mymessage"
+            style="@style/TxtMatchWrap18"
+            android:drawableLeft="@mipmap/icon_mine_message"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/d10"
+            android:text="我的消息" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_parent_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:background="@color/colorWhite"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_team"
+            android:layout_width="@dimen/d38"
+            android:layout_height="@dimen/d48"
+            android:src="@mipmap/icon_mine_team"
+            android:scaleType="center"
+            android:layout_gravity="center_vertical"
+            />
+
+        <!--android:drawableLeft="@mipmap/icon_mine_team"-->
+
+        <TextView
+            android:id="@+id/tv_myteam"
+            style="@style/TxtWrapWrap18"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/d12"
+            android:paddingBottom="@dimen/d10"
+            android:paddingRight="@dimen/d10"
+
+            android:text="我是顾问" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:background="@color/colorWhite"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/TxtMatchWrap18"
+            android:drawableLeft="@mipmap/icon_mine_location"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/d10"
+
+            android:text="我的收货地址" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:background="@color/colorWhite"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_about"
+            style="@style/TxtMatchWrap18"
+            android:drawableLeft="@mipmap/icon_mine_about"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/d10"
+            android:text="关于友帮友" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:background="@color/colorWhite"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_setting"
+            style="@style/TxtMatchWrap18"
+            android:drawableLeft="@mipmap/icon_mine_setting"
+            android:drawablePadding="@dimen/d10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/d10"
+            android:text="设置" />
+    </LinearLayout>
+
+
+</LinearLayout>

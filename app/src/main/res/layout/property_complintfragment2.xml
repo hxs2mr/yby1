@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:orientation="horizontal"
+        >
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:textSize="16sp"
+            android:textColor="#282828"
+            android:layout_margin="13dp"
+            android:background="@drawable/location_edit_shape"
+            android:hint="搜索内容"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/search"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d30"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_btn_happy_search"
+            android:gravity="center"
+            android:paddingLeft="@dimen/d20"
+            android:paddingRight="@dimen/d20"
+            android:text="搜索"
+            android:visibility="gone"
+            android:textColor="@color/colorWhite" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        >
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/search_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="搜索历史"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/complint_horst_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:background="@mipmap/clear_all"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/recyclerview"
+    android:paddingTop="10dp"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    />
+</android.support.v7.widget.LinearLayoutCompat>

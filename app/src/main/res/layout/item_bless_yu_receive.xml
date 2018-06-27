@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:padding="@dimen/d10">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TxtWrapWrap18"
+        android:layout_marginRight="@dimen/d2"
+        android:text="小康"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        style="@style/TxtWrapWrap18"
+        android:layout_marginRight="@dimen/d2"
+        android:text=":"
+        android:textColor="@color/colorNav" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/TxtWrapWrap18"
+        android:layout_marginRight="@dimen/d2"
+        android:text="马上年马上年底了马上年底了马上年底了马上年底了马上年底了马上年底了马上年底了马上年底了底了"
+        android:textColor="@color/colorNav" />
+
+</LinearLayout>

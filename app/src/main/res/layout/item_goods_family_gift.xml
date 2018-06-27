@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_margin="@dimen/d2"
+    android:padding="@dimen/d2"
+    android:id="@+id/liwu_linear_header"
+    android:background="@drawable/shape_tv_bless_tab_normal"
+    android:orientation="vertical">
+    <!--android:background="@color/colorFamilySecond"-->
+    <!--android:background="@drawable/shape_tv_bless_tab_normal"-->
+
+    <ImageView
+        android:id="@+id/iv_gift"
+        android:layout_width="@dimen/d60"
+        android:layout_height="@dimen/d60"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_img_load_pre" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/d80"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="15sp"
+        android:text="蛋糕"
+        android:layout_marginTop="@dimen/d1"
+        android:paddingBottom="10dp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_marginTop="10dp"
+        android:layout_width="@dimen/d80"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:paddingBottom="10dp"
+        android:text="￥18.8" />
+</LinearLayout>

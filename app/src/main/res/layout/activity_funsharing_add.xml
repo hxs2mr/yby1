@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="@dimen/d10">
+
+
+            <EditText
+                android:id="@+id/et_content"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="说点什么吧..."
+                android:lines="6" />
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/d5"></android.support.v7.widget.RecyclerView>
+        <FrameLayout
+            android:id="@+id/fl_pannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></FrameLayout>
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/d20"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="@dimen/d10">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_img_video"-->
+        <!--android:layout_width="@dimen/d60"-->
+        <!--android:layout_height="@dimen/d60"-->
+        <!--android:src="@mipmap/icon_img_add_temp" />-->
+
+        <!--</LinearLayout>-->
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

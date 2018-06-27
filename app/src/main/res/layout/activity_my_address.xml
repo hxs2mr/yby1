@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.setting.SettingActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:orientation="horizontal"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d20">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:padding="@dimen/d9"
+                android:text="收货人"
+                android:textSize="17sp"
+                android:textColor="#282828" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/d40"
+                android:textColor="#282828"
+                android:textSize="17sp"
+                android:background="@null"
+                android:gravity="center|right"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                tools:text="itisi" />
+       </LinearLayout>
+
+        <!--android:focusable="false"-->
+        <!--android:focusableInTouchMode="false"-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:background="@color/colorGrayEEE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d20">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:padding="@dimen/d9"
+                android:text="联系电话"
+                android:textSize="17sp"
+                android:textColor="#282828"
+             />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/d40"
+                android:background="@null"
+                android:textSize="17sp"
+                android:gravity="center|right"
+                android:textColor="#282828"
+                android:maxLength="11"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                tools:text="15555555555"
+                 />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10">
+
+        <LinearLayout
+            android:id="@+id/select_privce_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:padding="@dimen/d8"
+                android:text="所在地区"
+                android:textSize="17sp"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#282828"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/our_city"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                tools:ignore="MissingPrefix"
+                android:textSize="17sp"
+                android:textColor="#282828"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                android:background="@null"
+                android:layout_marginRight="5dp"
+                android:maxLines="1"
+                android:textColorHint="#8c282828"
+                android:hint="请选择"
+                />
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="7dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/icon_right_arrow"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:background="@color/colorGrayEEE" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_detail_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="55dp"
+                android:textSize="14sp"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColorHint="#666666"
+                android:background="@null"
+                android:hint="请填写详细地址"
+                android:padding="@dimen/d7" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d10">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:padding="@dimen/d8"
+                android:text="设为默认："
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="@color/colorNav" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb_setting_default_addr"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="@dimen/d80"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="15sp"
+                android:textColor="#282828"
+                android:checked="true"
+                app:kswAnimationDuration="300"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                app:kswThumbMarginBottom="-8dp"
+                app:kswThumbMarginLeft="-5dp"
+                app:kswThumbMarginRight="-5dp"
+                app:kswThumbMarginTop="-2.5dp"
+                app:kswThumbRangeRatio="1.4" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/d30"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        android:paddingTop="@dimen/d30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="缴费金额：" />
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="￥66.66" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="缴费单位：" />
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="贵阳e时代" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="缴费单号：" />
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="20171117000520023454" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="户名：" />
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="李*静" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="住址：" />
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="一栋一单元4号" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="到期时间：" />
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="2017-12-07" />
+
+        </LinearLayout>
+        ·
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="@dimen/d10">
+
+        <RadioButton
+            android:id="@+id/rb_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我已阅读并同意" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《" />
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="友帮友缴费服务协议"
+            android:textColor="@color/colorNavAct"
+            style="@style/BorderLess"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="》" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_property_pay"
+        style="@style/BaseFontSize18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d50"
+        android:layout_marginRight="@dimen/d50"
+        android:layout_marginTop="@dimen/d30"
+        android:background="@drawable/shape_btn_login"
+        android:text="立即缴费"
+        android:textColor="@color/colorWhite" />
+</android.support.v7.widget.LinearLayoutCompat>

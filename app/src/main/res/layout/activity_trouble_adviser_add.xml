@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.user.LoginActivity">
+    >
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d10"
+            android:paddingTop="@dimen/d20">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:visibility="gone"
+                style="@style/TxtWrapWrap18"
+                android:layout_marginBottom="@dimen/d10"
+                android:text="贵州省****法律顾问"
+                android:textColor="@color/colorBtn" />
+
+
+            <TextView
+                android:id="@+id/tv_desc"
+                style="@style/TxtWrapWrap17"
+                android:layout_below="@id/tv_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/d10"
+                android:text="(收费5元/次)"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_desc"
+                android:background="@drawable/shape_border_gray"
+                android:padding="@dimen/d3"
+                android:gravity="left"
+                android:hint="说说你的烦恼吧"
+                android:lines="5" />
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_content"
+                android:layout_marginTop="@dimen/d10"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/d5"></android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d40"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/d10"
+                android:background="@drawable/shape_btn_login"
+                android:layout_below="@id/recyclerView"
+                android:text="确认提交"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_pannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+</android.support.v7.widget.LinearLayoutCompat>

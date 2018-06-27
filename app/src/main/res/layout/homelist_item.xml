@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/person_select"
+    android:layout_height="98dp">
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/p_ton_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/p_home_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/p_title1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="#282828"
+                    android:textSize="16sp"
+                    android:maxLength="9"
+                    android:maxLines="1"
+                    android:text="龙城小区放假通知"
+                    fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/p_comment1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:text="各位业主大家好"
+                    fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                    />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/p_home_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text="8栋2单元2楼105"
+                fontPath="fonts/MicrosoftYaHei.ttf"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

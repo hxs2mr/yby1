@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/partial_item_header" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/BaseFontSize18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        android:text="奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸"
+        android:textColor="@color/colorNav" />
+
+    <TextView
+        android:id="@+id/tv_del_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:layout_marginTop="@dimen/d10"
+        android:layout_marginLeft="@dimen/d10"
+        android:padding="@dimen/d3"
+        android:text="删除"
+        android:visibility="gone"
+        android:textColor="@color/colorBtn" />
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/ninegrid_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10">
+
+    </com.lzy.ninegrid.NineGridView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:layout_marginTop="@dimen/d10"
+        android:paddingRight="@dimen/d10" />
+
+    <TextView
+        android:id="@+id/tv_comment_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginRight="@dimen/d10"
+        android:background="@drawable/shape_tv_comment"
+        android:padding="@dimen/d5"
+        android:text="评论" />
+
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.itislevel.lyl.mvp.ui.setting.SettingActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <!--<TextView-->
+        <!--style="@style/TxtWrapWrap18"-->
+        <!--android:text="关于老友乐介绍"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/d30"-->
+        <!--android:layout_marginBottom="@dimen/d15"-->
+        <!--/>-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        >
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/about_kehu_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客户电话"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="8dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/login_ok"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/about_kehu_xian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线客户"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="8dp"
+                android:textColor="#ff7a00"
+                android:layout_gravity="center"
+                android:background="@drawable/home_eno_item"
+                />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:background="#f5f5f5"
+                android:layout_height="10dp" />
+        <TextView
+            android:layout_marginTop="50dp"
+           style="@style/TxtWrapWrap17"
+            android:padding="@dimen/d5"
+            android:textColor="#282828"
+            android:layout_marginRight="20dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_marginLeft="20dp"
+            android:lineSpacingExtra="5dp"
+            android:textSize="15sp"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            android:text="     友邦友网络科技有限公司是由贵州施达集团（贵州省名企业100强之一）投资的，是一家专注于互联网信息服务，软件开发，设计、制作、代理各类广告的企业。
+推出的“友帮友”APP是以解决家务事为主，为大众消除孤独、缓解情绪、健康生活服务的互联网平台。“友帮友”APP中的乐趣分享、祭祀、生活缴费、家政服务、烦恼解答等贯穿了生活中的方方面面。
+我们全心致力于服务大众，向广大用户提供多元化的互动和服务。“打造全国知名家务事服务平台”是友邦友网络科技有限公司的目标"
+            tools:ignore="MissingPrefix" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v7.widget.LinearLayoutCompat>

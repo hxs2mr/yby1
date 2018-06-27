@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/d10">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="申请类型：" />
+
+            <Spinner
+                android:id="@+id/sp_type"
+                android:layout_width="@dimen/d150"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:background="@color/colorGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/d10">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="姓名：" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="@dimen/d150"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                tools:text="想静静" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:background="@color/colorGray" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/d10">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="电话号码：" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="@dimen/d150"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                tools:text="15555555555" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:background="@color/colorGray" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/d10">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="身份证号码：" />
+
+
+            <EditText
+                android:id="@+id/et_idnumber"
+                android:layout_width="@dimen/d220"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                tools:text="522222222222222222" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:background="@color/colorGray" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/d10">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="相片：" />
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="@dimen/d100"
+                android:layout_height="@dimen/d100"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_img_add_temp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="@dimen/d10">
+
+            <TextView
+                style="@style/TxtWrapWrap18"
+                android:text="工作经历：" />
+
+            <EditText
+                android:id="@+id/et_desc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d150"
+                android:gravity="left"
+                android:hint="工作经历"
+                android:padding="@dimen/d2"
+                android:background="@drawable/shape_border_gray"
+                android:layout_marginTop="@dimen/d2"
+                android:maxLines="5" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="@dimen/d5"
+               android:layout_marginTop="@dimen/d15"
+               android:orientation="horizontal"
+               >
+               <TextView
+                   style="@style/TxtWrapWrap18"
+                   android:text="资质证书：" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="最少一张,最多九张"
+                   android:textColor="@color/shadow80"
+                   />
+           </LinearLayout>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_aptitude"-->
+                <!--android:layout_width="@dimen/d150"-->
+                <!--android:layout_height="@dimen/d150"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:src="@mipmap/icon_img_add_temp" />-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="@dimen/d5"
+                android:padding="@dimen/d5"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v4.widget.NestedScrollView>

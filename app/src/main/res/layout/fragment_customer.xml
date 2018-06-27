@@ -1,0 +1,117 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d130"
+            android:layout_marginBottom="@dimen/d10"
+            android:layout_marginTop="@dimen/d7"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_customer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d40"
+                android:layout_marginRight="@dimen/d50"
+                android:background="@drawable/shape_btn_min_customer_phone"
+                android:paddingLeft="@dimen/d15"
+                android:paddingRight="@dimen/d15"
+                android:text="客服电话"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btn_customer_online"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d40"
+                android:background="@drawable/shape_btn_min_customer_online"
+                android:paddingLeft="@dimen/d15"
+                android:paddingRight="@dimen/d15"
+                android:text="在线客服"
+                android:textColor="@color/colorBtn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d0"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/d15"
+            android:paddingRight="@dimen/d15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d0"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TxtWrapWrap18"
+                    android:layout_marginBottom="@dimen/d5"
+                    android:maxLines="5"
+                    android:textStyle="bold"
+                    android:text="公司简介:" />
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_company_desc"
+                        style="@style/TxtWrapWrap17"
+                        android:ellipsize="end"
+                        android:text="友邦友网络科技有限公司是由贵州施达集团（贵州省名企业100强之一）投资的，是一家专注于互联网信息服务，软件开发，设计、制作、代理各类广告的企业。
+推出的“友帮友”APP是以解决家务事为主，为大众消除孤独、缓解情绪、健康生活服务的互联网平台。“友帮友”APP中的乐趣分享、祭祀、生活缴费、家政服务、烦恼解答等贯穿了生活中的方方面面。
+我们全心致力于服务大众，向广大用户提供多元化的互动和服务。“打造全国知名家务事服务平台”是友邦友网络科技有限公司的目标
+" />
+                </android.support.v4.widget.NestedScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/d10">
+
+                <TextView
+                    style="@style/TxtWrapWrap18"
+                    android:layout_marginBottom="@dimen/d10"
+                    android:maxLines="5"
+                    android:text="公司地址:" />
+
+                <TextView
+                    android:id="@+id/tv_company_addr"
+                    style="@style/TextBorderLess17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="贵州省黔西南州兴义市机场大道凤凰城商务楼1楼
+" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.cxmax.library.FloatingView
+        android:id="@+id/float_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ad2"
+        app:draggable="false" />
+</FrameLayout>

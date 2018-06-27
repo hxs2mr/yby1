@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlackAL"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:alpha="0.7"
+    android:paddingLeft="@dimen/d30"
+    android:paddingRight="@dimen/d30"
+    android:paddingBottom="@dimen/d45"
+    android:paddingTop="@dimen/d45"
+   >
+
+    <ImageView
+        android:id="@+id/iv_url"
+        android:layout_width="@dimen/d150"
+        android:layout_height="@dimen/d150"
+        android:src="@mipmap/icon_img_load_pre" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/d150"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="@dimen/d10"
+        android:gravity="center"
+        android:textSize="@dimen/txt18"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="感谢一生" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="@dimen/d150"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="@dimen/d10"
+        android:gravity="center"
+        android:textSize="@dimen/txt18"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:ellipsize="end"
+        android:text="itisi" />
+
+
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_bless_yu_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGrayEEE">
+    <include layout="@layout/toolbar_layout" />
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@mipmap/close_circle"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:layout_marginRight="@dimen/d10"-->
+    <!--android:layout_marginBottom="@dimen/d5"-->
+    <!--android:layout_marginTop="@dimen/d5"-->
+    <!--/>-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/fbl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d5"
+        android:paddingRight="@dimen/d5"
+        android:paddingTop="@dimen/d10"
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:flexWrap="wrap"
+        android:background="#ffffff"
+        app:justifyContent="center">
+
+        <TextView
+            android:id="@+id/tv_family_temp"
+            style="@style/TxtWrapWrap18"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_order_tv_select"
+            android:padding="@dimen/d2"
+            android:text="逝者也矣，生者如斯"
+            android:textSize="@dimen/txt18"
+            android:textColor="@color/colorNav" />
+
+        <!--<TextView-->
+        <!--style="@style/TxtWrapWrap18"-->
+        <!--android:layout_marginRight="@dimen/d10"-->
+        <!--android:layout_marginTop="@dimen/d5"-->
+        <!--android:background="@drawable/shape_tv_bless_tab_select"-->
+        <!--android:padding="@dimen/d5"-->
+        <!--android:text="生活如意"-->
+        <!--android:textColor="@color/colorWhite" />-->
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_liji_send"
+        style="@style/BaseFontSize18"
+        android:layout_width="@dimen/d150"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginRight="@dimen/d10"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/d20"
+        android:layout_marginTop="@dimen/d30"
+        android:background="@drawable/shape_btn_login"
+        android:layout_centerHorizontal="true"
+        android:text="发送祭语"
+        android:textColor="@color/colorWhite" />
+
+    <LinearLayout
+        android:id="@+id/ll_whish_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#f5f5f5"
+        android:orientation="vertical"
+        android:padding="@dimen/d10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:background="@drawable/gift_song"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginRight="10dp"
+                >
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#ff2121"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="赠送人:"
+                    android:textSize="15sp"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#282828"
+                    />
+
+                <EditText
+                    android:id="@+id/son_name"
+                    android:layout_width="@dimen/d0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d10"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:hint="请输入您的姓名"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:maxLength="6"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:background="@null"
+                    android:textColor="#000000"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="wrap_content"
+                android:background="@drawable/son_jiyu_send"
+                android:paddingBottom="@dimen/d6"
+                android:paddingLeft="@dimen/d10"
+                android:layout_height="33dp"
+                android:paddingRight="@dimen/d10"
+                android:paddingTop="@dimen/d6"
+                android:text="发送"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:minHeight="35dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:background="@drawable/gift_song"
+                >
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#ff2121"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="赠送祭语:"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#282828"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    />
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="@dimen/d0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d10"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:hint="请输入祭语"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

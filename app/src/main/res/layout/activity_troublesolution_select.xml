@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    tools:context="com.itislevel.lyl.mvp.ui.user.LoginActivity">
+    >
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/d30"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d50"
+            android:layout_marginTop="@dimen/d60"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d40"
+                android:background="@drawable/shape_btn_troublesolution"
+                android:layout_marginRight="@dimen/d20"
+                android:text="普通解答"
+                android:textColor="@color/colorWhite"
+                android:paddingLeft="@dimen/d20"
+                android:paddingRight="@dimen/d20"
+                />
+
+            <Button
+                android:id="@+id/btn_adviser"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d40"
+                android:background="@drawable/shape_btn_login"
+                android:text="顾问解答"
+                android:textColor="@color/colorWhite"
+                android:paddingLeft="@dimen/d20"
+                android:paddingRight="@dimen/d20"
+
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:layout_marginBottom="@dimen/d20"
+            android:layout_marginTop="@dimen/d20"
+            android:background="@color/colorGrayEEE" />
+        <TextView
+            style="@style/TxtMatchWrap18"
+            android:layout_marginTop="@dimen/d20"
+            android:layout_marginBottom="@dimen/d20"
+            android:text="1.选择普通解答，您提交的问题所有人都可见，与他人建立连接、交流，所有人为您出谋划策，请根据您的需要和隐私进行选择"
+            android:textColor="@color/colorNavAct" />
+        <TextView
+            style="@style/TxtMatchWrap18"
+            android:text="2.选择顾问解答，我们将第一时间为您推送一流顾问团队，为您一对一解答问题，为确保服务质量，我们将收取您5元顾问解答费。"
+            android:textColor="@color/colorNavAct" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

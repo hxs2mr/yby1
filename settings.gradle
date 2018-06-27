@@ -1,0 +1,1 @@
+include ':app', ':swipebacklayout', ':ninegridview', ':IMLib', ':IMKit', ':rxgalleryfinal', ':rxtools', ':floatingview', ':notify', ':UpMarqueeView', ':badgeview', ':new_zxing'

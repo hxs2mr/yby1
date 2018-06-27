@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayEEE"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/d15"
+        android:background="@color/colorWhite"
+        android:paddingBottom="@dimen/d2"
+        android:paddingLeft="@dimen/d10"
+        android:paddingTop="@dimen/d2">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/d8"
+            android:text="头像" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_header"
+            android:layout_width="@dimen/d40"
+            android:layout_height="@dimen/d40"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/d20"
+            android:src="@mipmap/icon_default_header_circle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        android:paddingBottom="@dimen/d2"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        android:paddingTop="@dimen/d2">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d8"
+            android:text="昵称" />
+
+        <EditText
+            android:id="@+id/et_nickname"
+            android:layout_width="@dimen/d180"
+            android:layout_height="@dimen/d40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="right|center"
+            android:background="@null"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:paddingLeft="@dimen/d5"
+            android:paddingRight="@dimen/d5"
+            tools:text="itisi" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        android:paddingBottom="@dimen/d2"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        android:paddingTop="@dimen/d2">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d8"
+            android:text="姓名" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="@dimen/d180"
+            android:layout_height="@dimen/d40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:layout_marginRight="@dimen/d10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="right|center"
+            android:background="@null"
+
+            android:paddingLeft="@dimen/d5"
+            android:paddingRight="@dimen/d5"
+            tools:text="itisi" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        android:paddingBottom="@dimen/d2"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        android:paddingTop="@dimen/d2">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d8"
+            android:text="性别" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            style="@style/BaseFontSize18"
+            android:layout_width="@dimen/d180"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d10"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:gravity="right"
+            android:text="男"
+           />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        android:paddingBottom="@dimen/d2"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        android:paddingTop="@dimen/d2">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d8"
+            android:text="身份证" />
+
+        <EditText
+            android:id="@+id/et_idcard"
+            style="@style/BaseFontSize18"
+            android:layout_width="@dimen/d220"
+            android:layout_height="@dimen/d40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d10"
+            android:maxLines="1"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="right|center"
+            android:background="@null"
+            android:paddingLeft="@dimen/d5"
+            android:paddingRight="@dimen/d5"
+            android:text="522221111111111103"
+            android:lines="1"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/TxtWrapWrap18"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        android:paddingBottom="@dimen/d2"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        android:paddingTop="@dimen/d2">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d8"
+            android:text="出生年月" />
+
+        <TextView
+            android:id="@+id/tv_birthday"
+            style="@style/BaseFontSize18"
+            android:layout_width="@dimen/d180"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d10"
+            android:gravity="right"
+            tools:text="0"
+            android:textColor="@color/colorNav" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+
+        android:paddingLeft="@dimen/d10">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d10"
+            android:text="手机号" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/et_phoen"
+            style="@style/BaseFontSize18"
+            android:layout_width="@dimen/d180"
+            android:layout_height="@dimen/d40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d20"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="right|center"
+            android:background="@null"
+            android:paddingLeft="@dimen/d5"
+            android:paddingRight="@dimen/d5"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            tools:text="133********" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_update_password"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/d10">
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:padding="@dimen/d10"
+            android:text="修改密码" />
+
+        <ImageView
+            android:id="@+id/iv_update_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d20"
+            android:src="@mipmap/icon_right_arrow" />
+    </RelativeLayout>
+</android.support.v7.widget.LinearLayoutCompat>

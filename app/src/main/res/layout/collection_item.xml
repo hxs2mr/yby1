@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/person_select"
+    style="@style/BorderLess"
+    android:orientation="vertical"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="15dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/p_b_select"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/qin_qin_shape"
+            android:src="@mipmap/icon_img_load_pre" />
+
+        <LinearLayout
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/repair_username"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="#282828"
+                android:maxLines="1"
+                fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="2018-05-04"
+                    android:layout_marginRight="15dp"
+                    />
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/fbl_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/d5"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="60dp"
+                app:alignContent="flex_start"
+                app:alignItems="flex_start"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start">
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/location_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:maxLines="1"
+                android:layout_marginTop="5dp"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/look_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:textSize="11sp"
+                    fontPath="fonts/SourceHanSansCN-Normal.ttf"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="#e8e8e8"
+        />
+</LinearLayout>

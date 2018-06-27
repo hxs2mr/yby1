@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="10dp"
+    android:id="@+id/liwu_linear_header"
+    android:layout_marginLeft="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_gift"
+        android:layout_width="@dimen/d60"
+        android:layout_height="@dimen/d60"
+        android:src="@mipmap/icon_img_load_pre" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/d80"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="蛋糕"
+        android:layout_marginTop="@dimen/d5"
+        android:textColor="@color/colorNav"
+        />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="@dimen/d80"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:visibility="gone"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#fa8f13"
+        android:text="￥18.8" />
+</LinearLayout>

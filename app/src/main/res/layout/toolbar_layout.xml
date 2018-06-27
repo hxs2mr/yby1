@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/toolbar_all"
+android:layout_width="match_parent"
+android:layout_height="?attr/actionBarSize"
+android:gravity="center"
+android:theme="@style/ToolbarTheme"
+app:contentInsetStart="0dp"
+    android:fitsSystemWindows="true"
+android:background="@drawable/login_tool_bar"
+    >
+<!--
+    android:background="?attr/colorPrimary"
+    android:background="@drawable/bg_toolbar"
+    需要用代码控制
+app:navigationIcon="@mipmap/menu_back"-->
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/iv_back_linear"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@mipmap/icon_back"
+            android:layout_marginRight="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="@dimen/d0"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/d5"
+        android:layout_marginRight="@dimen/d5"
+        fontPath="fonts/NotoSansHans-DemiLight.ttf"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt18"
+        tools:text="@string/app_name"
+
+        tools:ignore="MissingPrefix" />
+    <!--android:background="?android:attr/selectableItemBackgroundBorderless"-->
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/iv_more_linear"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        >
+    <TextView
+        android:id="@+id/toolbar_more"
+        style="@style/BorderLess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        tools:text="更多"
+        />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <!--android:background="?android:attr/selectableItemBackgroundBorderless"-->
+    <!--<android.support.v7.widget.SearchView-->
+    <!--android:id="@+id/toolbar_search"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:imeOptions="actionSearch"-->
+    <!--app:searchHintIcon="@mipmap/menu_search"-->
+    <!--app:closeIcon="@mipmap/menu_close2"-->
+    <!--app:defaultQueryHint="搜索"-->
+    <!--/>-->
+</LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.Toolbar>

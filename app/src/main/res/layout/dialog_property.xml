@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="@dimen/d10">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d12"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="1个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_tow"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="2个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="3个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="4个月"
+            android:textSize="@dimen/txt15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_five"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="5个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_six"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="6个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_seven"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="7个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_eight"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="8个月"
+            android:textSize="@dimen/txt15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_nine"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="9个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_ten"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="10个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_eleven"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:layout_marginRight="@dimen/d8"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="11个月"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/tv_twelve"
+            android:layout_width="@dimen/d60"
+            android:layout_height="@dimen/d33"
+            android:background="@drawable/selector_tv_property_normal"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="12个月"
+            android:textSize="@dimen/txt15" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/BaseFontSize18"
+        android:layout_width="@dimen/d100"
+        android:layout_height="@dimen/d40"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/d20"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginRight="@dimen/d10"
+        android:layout_marginTop="@dimen/d20"
+        android:background="@drawable/shape_btn_login"
+        android:text="确定"
+        android:textColor="@color/colorWhite" />
+
+
+</LinearLayout>

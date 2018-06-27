@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="71dp"
+        android:layout_height="54dp"
+        android:scaleType="fitXY"
+        android:background="@mipmap/icon_img_laod_empty" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/TxtMatchWrap17"
+        android:layout_marginTop="@dimen/d10"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:padding="@dimen/d3"
+        android:text="这里还没有内容"
+        android:textColor="#cccccc" />
+
+</LinearLayout>

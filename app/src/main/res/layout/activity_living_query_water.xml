@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGrayEEE"
+    tools:context="com.itislevel.lyl.mvp.ui.livingexpensess.LivingExpensesRecordActivity">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d10"
+        android:layout_marginTop="@dimen/d10"
+        >
+
+        <TextView
+           style="@style/TxtWrapWrap18"
+            android:text="交费单位 :"
+
+            />
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:text="贵阳北控水务有限责任公司"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/d10"
+        android:layout_marginTop="@dimen/d10"
+        >
+
+        <TextView
+            style="@style/TxtWrapWrap18"
+            android:text="用户编号 :"
+
+            />
+
+        <EditText
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入户号"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_water_query"
+        style="@style/BaseFontSize18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d50"
+        android:layout_marginRight="@dimen/d50"
+        android:layout_marginTop="@dimen/d30"
+        android:background="@drawable/shape_btn_login"
+        android:text="查询户号"
+        android:textColor="@color/colorWhite" />
+</android.support.v7.widget.LinearLayoutCompat>

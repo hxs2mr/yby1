@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/lienar_select_qu"
+        android:layout_width="178dp"
+        android:orientation="vertical"
+        android:layout_height="230dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/select_qu_bg"
+        android:padding="8dp"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请选择单元"
+            android:textColor="#272828"
+            android:textSize="13sp"
+            android:layout_marginTop="17dp"
+            fontPath="fonts/SourceHanSansCN-Light.ttf"
+            android:paddingBottom="7dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#8ce8e8e8"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/select_recycle"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_height="wrap_content"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>
