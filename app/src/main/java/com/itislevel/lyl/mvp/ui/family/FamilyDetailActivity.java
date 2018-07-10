@@ -13,7 +13,9 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
@@ -49,6 +51,7 @@ import com.itislevel.lyl.mvp.model.bean.FamilySacrificeTypeBean;
 import com.itislevel.lyl.mvp.model.bean.FamilySendGiftRecordBean;
 import com.itislevel.lyl.mvp.model.bean.FamilyUsualLanguageBean;
 import com.itislevel.lyl.mvp.model.bean.FileUploadBean;
+import com.itislevel.lyl.mvp.model.bean.JPushFete;
 import com.itislevel.lyl.mvp.model.bean.LetterBean;
 import com.itislevel.lyl.mvp.model.bean.PlayEvent;
 import com.itislevel.lyl.mvp.model.bean.Song;
@@ -74,6 +77,7 @@ import com.vondear.rxtools.view.dialog.RxDialogLoading;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -85,15 +89,13 @@ import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import de.hdodenhof.circleimageview.CircleImageView;
 import pl.droidsonroids.gif.GifImageView;
 
 @UseRxBus
 public class FamilyDetailActivity extends RootActivity<FamilyPresenter>
         implements FamilyContract.View, MediaPlayer.OnCompletionListener{
-
     Bundle bundle = null;
-
-
     @BindView(R.id.iv_bianpao_left)
     GifImageView iv_bianpao_left;
 
@@ -153,6 +155,19 @@ public class FamilyDetailActivity extends RootActivity<FamilyPresenter>
     AppCompatImageView music_onclick;
     @BindView(R.id.tv_blessyu_temp)
     TextView tv_blessyu_temp;
+
+    //收到推送模块
+    @BindView(R.id.xiaoxi_linear_next)
+    LinearLayoutCompat xiaoxi_linear_next;
+
+    @BindView(R.id.xiaoxi_image)
+    CircleImageView xiaoxi_image;
+
+    @BindView(R.id.xiaoxi_message)
+    AppCompatTextView xiaoxi_message;
+
+
+
     private boolean is_music=true;
     TestAdapter testAdapter;
 
@@ -1097,7 +1112,7 @@ public class FamilyDetailActivity extends RootActivity<FamilyPresenter>
             TextView tv_nickname = view1.findViewById(R.id.tv_nickname);
 
             ImageView imageView = view1.findViewById(R.id.iv_url);
-
+            tv_nickname.setText(item.getBuyusername());
             tvName.setText(item.getGoodsname());
            // tv_nickname.setText(item.getNickname());
             ImageLoadProxy.getInstance()
@@ -1249,4 +1264,24 @@ public class FamilyDetailActivity extends RootActivity<FamilyPresenter>
 
         }
     };
+
+    @Subscribe
+    public  void onevent(JPushFete fete)
+    {
+        xiaoxi_linear_next.setVisibility(View.VISIBLE);
+        if(fete.getUrl().contains("wishe"))//祭语
+        {
+            xiaoxi_image.setBackgroundResource(R.mipmap.family_yu);
+            xiaoxi_message.setText("\\@收到新的祭语");
+        }else  if(fete.getUrl().contains("letter")){//祭事信
+            xiaoxi_image.setBackgroundResource(R.mipmap.family_xin);
+            xiaoxi_message.setText("\\@收到新的祭事信");
+        }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                xiaoxi_linear_next.setVisibility(View.GONE);
+            }
+        },1000);
+    }
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="63dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    >
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|left"
+    android:layout_marginLeft="15dp"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/shan_chon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff9100"
+            android:textSize="15sp"
+            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+            android:text="线下"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+            android:text="充值"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/shan_chon_time"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        fontPath="fonts/SourceHanSansCN-Normal.ttf"
+        android:text="2018-06-26"
+        />
+
+</android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/shan_chon_monkey"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:paddingRight="15dp"
+        android:textColor="#ff9100"
+        fontPath="fonts/SourceHanSansCN-Regular.ttf"
+        android:text="+ 100.00"
+        />
+</android.support.v7.widget.LinearLayoutCompat>

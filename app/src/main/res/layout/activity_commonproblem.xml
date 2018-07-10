@@ -4,19 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <include layout="@layout/toolbar_layout"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <android.support.v7.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@mipmap/icon_wenti"
-        />
-    </ScrollView>
 
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0"
+        android:layout_weight="1">
+</WebView>
 </android.support.v7.widget.LinearLayoutCompat>

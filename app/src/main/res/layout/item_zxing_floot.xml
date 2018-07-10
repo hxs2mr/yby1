@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:alpha="0.3"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/shao_linear"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/shao_btn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shao_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="扫码"
+            android:textColor="#38E6FF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/photo_linear"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:clickable="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/photo_btn"
+            android:layout_width="28dp"
+            android:clickable="false"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/photo_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="相册"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</LinearLayout>

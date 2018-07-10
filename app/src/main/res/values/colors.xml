@@ -27,7 +27,7 @@
 
 
     <color name="color0094ff">#0094ff</color>
-
+    <color name="key_normal_bg">#F5F5F5</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorRed">#ff0000</color>
     <color name="colorBlack">#000000</color>
@@ -292,6 +292,13 @@
     <!--special color-->
     <color name="black_a10_color">#1a000000</color>
 
-
+    <!-- QR_Code -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="system_bar_color">#fed952</color>
 
 </resources>

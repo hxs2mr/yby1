@@ -103,7 +103,7 @@ public class App extends Application {
         //初始化屏幕宽高
         getScreenSize();
         Frame.init(this)
-                .withApiHost("http://app.yobangyo.com/user/")
+                .withApiHost("http://119.27.169.152:6064/user/")
                 //.withInterceptor(new DebugInterceptor("index.html",R.raw.test))
                 .withWxchaAppId("wxace207babfef510d")//微信的APPID
                 .withWxchartSecRet("ec5f7134a2c99e34e9a0f90c896da95d")//微信的scret

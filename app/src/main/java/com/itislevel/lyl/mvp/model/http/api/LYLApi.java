@@ -38,6 +38,9 @@ import com.itislevel.lyl.mvp.model.bean.FamilySacrificeTypeBean;
 import com.itislevel.lyl.mvp.model.bean.FamilySendGiftRecordBean;
 import com.itislevel.lyl.mvp.model.bean.FamilyTonListBean;
 import com.itislevel.lyl.mvp.model.bean.FamilyUsualLanguageBean;
+import com.itislevel.lyl.mvp.model.bean.FanRecodeBean;
+import com.itislevel.lyl.mvp.model.bean.FanXianBean;
+import com.itislevel.lyl.mvp.model.bean.FanloginBean;
 import com.itislevel.lyl.mvp.model.bean.FileUploadBean;
 import com.itislevel.lyl.mvp.model.bean.FindistBean;
 import com.itislevel.lyl.mvp.model.bean.FollowListBean;
@@ -68,6 +71,7 @@ import com.itislevel.lyl.mvp.model.bean.PropretyLiveBean;
 import com.itislevel.lyl.mvp.model.bean.PropretyNoticeBean;
 import com.itislevel.lyl.mvp.model.bean.RegistBean;
 import com.itislevel.lyl.mvp.model.bean.SetOwnerPayMonth;
+import com.itislevel.lyl.mvp.model.bean.ShanHomeBean;
 import com.itislevel.lyl.mvp.model.bean.SpecialGiftByIdBean;
 import com.itislevel.lyl.mvp.model.bean.SpecialGiftListBean;
 import com.itislevel.lyl.mvp.model.bean.SpecialOrderCompleteBean;
@@ -86,8 +90,12 @@ import com.itislevel.lyl.mvp.model.bean.TroubleAdviserMyBean;
 import com.itislevel.lyl.mvp.model.bean.TroubleCommentAdd;
 import com.itislevel.lyl.mvp.model.bean.TroubleListBean;
 import com.itislevel.lyl.mvp.model.bean.TroubleTypeBean;
+import com.itislevel.lyl.mvp.model.bean.UserFanBean;
 import com.itislevel.lyl.mvp.model.bean.UserHeaderNickInfo;
+import com.itislevel.lyl.mvp.model.bean.UserHistoryBean;
 import com.itislevel.lyl.mvp.model.bean.UserInfoBean;
+import com.itislevel.lyl.mvp.model.bean.UserPlanBean;
+import com.itislevel.lyl.mvp.model.bean.UserPlanDetailBean;
 import com.itislevel.lyl.mvp.model.bean.VillageNameBean;
 import com.itislevel.lyl.mvp.model.bean.WeiXinPayTestBean;
 import com.itislevel.lyl.mvp.model.http.response.LYLResponse;
@@ -116,10 +124,10 @@ public interface LYLApi {
 //    String HOST = "http://192.168.1.222:8080/lyh_app_interface/user/";
 //String HOST = "http://192.168.1.108:28080/lyh_app_interface/user/";
 //    String HOST = "http://192.168.1.104:8888/user/";
-    String HOST="http://app.yobangyo.com/user/";//http://app.yobangyo.com/user/           //http://119.27.169.152:6064/user/ //http://192.168.1.119:8080/yby_app_interface/user/
+        String HOST="http://192.168.1.119:8080/yby_app_interface/user/";//http://app.yobangyo.com/user/           //http://119.27.169.152:6064/user/ //http://192.168.1.119:8080/yby_app_interface/user/
 
 //    String HOST_SHARE = "http://192.168.1.115:8080/lyh_app_interface/";
-    String HOST_SHARE = "http://app.yobangyo.com/";//http://app.yobangyo.com/
+        String HOST_SHARE = "http://192.168.1.119:8080/";//http://app.yobangyo.com/
 
     //测试
     /**
@@ -1017,4 +1025,48 @@ public interface LYLApi {
     @POST("clearMyDyPushList")
     @FormUrlEncoded
     Observable<LYLResponse<String>>  clearMyDyPushList(@Field("action")String action);//消息推送过来的数据
+
+    //商家返利模块
+
+    @POST("merchantlogin")
+    @FormUrlEncoded
+    Observable<LYLResponse<FanloginBean>>  merchantlogin(@Field("action")String action);//商家登录
+
+    @POST("merchantmainpage")
+    @FormUrlEncoded
+    Observable<LYLResponse<ShanHomeBean>>  merchantmainpage(@Field("action")String action);//商家主页
+
+
+    @POST("rechargeRecord")
+    @FormUrlEncoded
+    Observable<LYLResponse<FanRecodeBean>>  rechargeRecord(@Field("action")String action);//充值记录
+
+    @POST("cashbackist")
+    @FormUrlEncoded
+    Observable<LYLResponse<FanXianBean>>  cashbackist(@Field("action")String action);//返现记录
+
+    @POST("onlinerecharge")
+    @FormUrlEncoded
+    Observable<LYLResponse<String>>  onlinerecharge(@Field("action")String action);//在线充值
+    //用户的消费分期模块
+    @POST("cashbackPage")
+    @FormUrlEncoded
+    Observable<LYLResponse<UserFanBean>>  cashbackPage(@Field("action")String action);//消费分期列表
+
+    @POST("cashbackstages")
+    @FormUrlEncoded
+    Observable<LYLResponse<UserPlanBean>>  cashbackstages(@Field("action")String action);//分期计划
+
+    @POST("cashbackstagesDetails")
+    @FormUrlEncoded
+    Observable<LYLResponse<UserPlanDetailBean>>  cashbackstagesDetails(@Field("action")String action);//查看分期详情
+
+
+    @POST("cashbackRecord")
+    @FormUrlEncoded
+    Observable<LYLResponse<UserHistoryBean>>  cashbackRecord(@Field("action")String action);//用户的返现历史
+
+    @POST("clickreceive")
+    @FormUrlEncoded
+    Observable<LYLResponse<String>>  clickreceive(@Field("action")String action);//点击领取待发现的金钱
 }

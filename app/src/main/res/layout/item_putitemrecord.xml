@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:background="@drawable/person_select"
+    android:orientation="horizontal"
+    >
+    
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/ic_yuan"
+        android:layout_marginLeft="15dp"
+        />
+
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    >
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:gravity="bottom|left"
+            android:ellipsize="end"
+            fontPath="fonts/SourceHanSansCN-Regular.ttf"
+            android:text="零钱提现-来自工商银行"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            />
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:ellipsize="end"
+        android:text="05-12  21:00"
+        android:paddingTop="2dp"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        />
+</android.support.v7.widget.LinearLayoutCompat>
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:text="89.00"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        />
+</android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="63dp"
+        android:background="#e8e8e8"
+        />
+</android.support.v7.widget.LinearLayoutCompat>

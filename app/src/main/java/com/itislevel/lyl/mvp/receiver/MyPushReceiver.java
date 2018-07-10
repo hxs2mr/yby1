@@ -46,6 +46,12 @@ public class MyPushReceiver extends BroadcastReceiver {
         try {
             Bundle bundle = intent.getExtras();
             String string1 = bundle.getString(JPushInterface.EXTRA_EXTRA);
+
+            JPushBean jPushBean1 = GsonUtil.toObject(string1, JPushBean.class);
+            String type1 = jPushBean1.getType();
+            String[] split1 = type1.split(",");
+            String s1 = split1[0];
+            String i_or_t = "";//=split1[1];
             if(isApplicationBroughtToBackground(context))//判断APP是否进入后台
             {
                 if(string1!=null)
@@ -61,15 +67,12 @@ public class MyPushReceiver extends BroadcastReceiver {
                 }
             }else {
                 jiaobiao_number = 0;
-                JPushInterface.clearAllNotifications(context);//清楚极光推送的所有提示框消息
+                if(!s1.contains("fete"))
+                {
+                    JPushInterface.clearAllNotifications(context);//清楚极光推送的所有提示框消息
+                }
             }
             System.out.println("推送的内容1****************************"+string1);
-
-            JPushBean jPushBean1 = GsonUtil.toObject(string1, JPushBean.class);
-            String type1 = jPushBean1.getType();
-            String[] split1 = type1.split(",");
-            String s1 = split1[0];
-            String i_or_t = "";//=split1[1];
 
             if(split1.length>=2)
             {
@@ -125,7 +128,7 @@ public class MyPushReceiver extends BroadcastReceiver {
                 //fete_letter
                 if(s1.equals("fete_wishes")||s1.equals("fete_letter"))//送祭语
                 {
-                    EventBus.getDefault().post(new JPushFete(i_or_t));
+                    EventBus.getDefault().post(new JPushFete(s1));
                 }else if(s1.equals("fete_issue"))//发布祭事
                 {
                     EventBus.getDefault().post(new JPFetSendBean("1"));

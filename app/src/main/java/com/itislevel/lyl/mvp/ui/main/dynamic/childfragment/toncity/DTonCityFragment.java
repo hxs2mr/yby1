@@ -181,8 +181,6 @@ public class DTonCityFragment extends RootCancleFragment<DTonCityPresenter> impl
 
     String observer_name="";
 
-
-
     //推送消息的展示模块
     @BindView(R.id.xiaoxi_linear)
     LinearLayoutCompat xiaoxi_linear;
@@ -205,13 +203,11 @@ public class DTonCityFragment extends RootCancleFragment<DTonCityPresenter> impl
         super.onDestroyView();
         EventBus.getDefault().unregister(this);
     }
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EventBus.getDefault().register(this);
     }
-
     @Override
     protected void initEventAndData() {
         head_view = View.inflate(getContext(),R.layout.item_xiaoxi_header,null);//消息头部
@@ -784,7 +780,7 @@ public class DTonCityFragment extends RootCancleFragment<DTonCityPresenter> impl
         if (!isReady || !isVisible || isLoaded) {
             return;
         }
-        isLoaded = true;
+            isLoaded = true;
             refreshLayout.setRefreshing(true);//刷新效果
             loadData();
             loadGiftList();
@@ -854,7 +850,16 @@ public class DTonCityFragment extends RootCancleFragment<DTonCityPresenter> impl
             final ListTonCityItemBean.ListCommentItemBean item =  commentAdapter.getData().get(position);
 
             tonickname = item.getObserver();
-            int local_userid = Integer.parseInt(SharedPreferencedUtils.getStr(Constants.USER_ID));
+            boolean islogin1 = SharedPreferencedUtils.getBool("islogin", false);
+            if (!islogin1) {
+                ActivityUtil.getInstance().openActivity(getActivity(), LoginActivity.class);
+                return;
+            }
+            int local_userid=0;
+            if(SharedPreferencedUtils.getStr(Constants.USER_ID)!=null&&!SharedPreferencedUtils.getStr(Constants.USER_ID).equals(""))
+            {
+                local_userid = Integer.parseInt(SharedPreferencedUtils.getStr(Constants.USER_ID));
+            }
             if (local_userid == item.getUserid()){//点击的是自己回复的
                 switch (view.getId()) {
                     case R.id.tv_comment_content:

@@ -9,6 +9,7 @@ import com.itislevel.lyl.R;
 import com.itislevel.lyl.app.Constants;
 import com.itislevel.lyl.base.RootActivity;
 import com.itislevel.lyl.mvp.model.bean.BlessOrderBean;
+import com.itislevel.lyl.mvp.model.bean.FanPayBean;
 import com.itislevel.lyl.mvp.model.bean.PayALiResultBean;
 import com.itislevel.lyl.mvp.model.bean.PayBillBean;
 import com.itislevel.lyl.mvp.model.bean.PropertyUpdateStatusBean;
@@ -291,7 +292,6 @@ public class PayInfoActivity extends RootActivity<PayInfoPresenter> implements
                                                     RxBus.TAG_UPDATE), "close");
 
                                 }
-
                                 RxBus.getInstance().post(RxBus.getInstance().getTag
                                         (SpecialConfirmDownOrderActivity.class,
                                                 RxBus.TAG_UPDATE), "close");
@@ -312,9 +312,10 @@ public class PayInfoActivity extends RootActivity<PayInfoPresenter> implements
                                                 RxBus.TAG_UPDATE), "refresh");
 
                                 break;
-
+                            case Constants.PAY_FROM_FAN_PROPERTY://来之商家在线充值的界面
+                                EventBus.getDefault().post(new FanPayBean(totalPrice));
+                                break;
                         }
-
                         //关闭当前界面
                         ActivityUtil.getInstance().closeActivity(PayInfoActivity.this);
                     }
@@ -423,6 +424,9 @@ public class PayInfoActivity extends RootActivity<PayInfoPresenter> implements
                             RxBus.getInstance().post(RxBus.getInstance().getTag
                                     (LivingPropertyListActivity.class,
                                             RxBus.TAG_UPDATE), "refresh");*/
+                            break;
+                        case Constants.PAY_FROM_FAN_PROPERTY://来之商家在线充值的界面
+                            EventBus.getDefault().post(new FanPayBean(totalPrice));
                             break;
                         case Constants.PAY_FROM_SPECIAL_GIFT://特产礼品
                             boolean isfromCart = bundle.getBoolean("isfromCart");

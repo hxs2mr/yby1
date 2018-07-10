@@ -296,7 +296,6 @@ public class ChildFragmentHome extends RootFragment<PropertyPresenter>implements
         super.onResume();
         banner.start();
     }
-
     @Override
     public void onClick(View view) {
         switch (view.getId())
@@ -330,7 +329,6 @@ public class ChildFragmentHome extends RootFragment<PropertyPresenter>implements
                 }else {
                     ActivityUtil.getInstance().openActivity(getActivity(), PropertyRepairActivity.class);
                 }
-
                 break;
         }
     }

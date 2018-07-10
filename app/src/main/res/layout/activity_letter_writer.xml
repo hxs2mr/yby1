@@ -127,6 +127,7 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:theme="@style/MyEditText"
+            android:minWidth="80dp"
             android:hint="姓名"
             />
 
@@ -148,6 +149,7 @@
             tools:ignore="MissingPrefix"
             android:textColor="#2c2c2c"
             android:textSize="15sp"
+
             android:text="日期:"
             />
 

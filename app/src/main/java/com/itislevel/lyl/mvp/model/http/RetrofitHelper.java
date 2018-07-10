@@ -864,6 +864,56 @@ public class RetrofitHelper implements HttpHelper{
     }
 
     @Override
+    public Observable<LYLResponse<FanloginBean>> merchantlogin(String action) {
+        return mLylApi.merchantlogin(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<ShanHomeBean>> merchantmainpage(String action) {
+        return mLylApi.merchantmainpage(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<FanRecodeBean>> rechargeRecord(String action) {
+        return mLylApi.rechargeRecord(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<FanXianBean>> cashbackist(String action) {
+        return mLylApi.cashbackist(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<String>> onlinerecharge(String action) {
+        return mLylApi.onlinerecharge(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<UserFanBean>> cashbackPage(String action) {
+        return mLylApi.cashbackPage(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<UserPlanBean>> cashbackstages(String action) {
+        return mLylApi.cashbackstages(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<UserPlanDetailBean>> cashbackstagesDetails(String action) {
+        return mLylApi.cashbackstagesDetails(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<UserHistoryBean>> cashbackRecord(String action) {
+        return mLylApi.cashbackRecord(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<String>> clickreceive(String action) {
+        return mLylApi.clickreceive(action);
+    }
+
+    @Override
     public Observable<LYLResponse<String>> happyCartAdd(String action) {
         return mLylApi.happyCartAdd(action);
     }

@@ -53,7 +53,10 @@ public class HomRightActivity extends RootActivity<HomeRightPresenter>implements
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                refreshLayout.setRefreshing(false);
+                if(refreshLayout!=null)
+                {
+                    refreshLayout.setRefreshing(false);
+                }
             }
         },1500);
     }

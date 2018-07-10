@@ -127,9 +127,139 @@
 
 
         <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/person_qian_linear"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal"
+            android:background="@drawable/person_select"
+            >
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/person_qian"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#282828"
+                android:textSize="17sp"
+                android:text="余额"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#999999"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:text="500.00"
+                />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="9dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/person_left"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/person_shan_linear"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/person_select"
+            >
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/person_shan"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#282828"
+                android:textSize="17sp"
+                android:text="我是商家"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="9dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/person_left"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5"
+            android:layout_marginLeft="18dp"
+            />
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/person_fan_linear"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal"
+            android:background="@drawable/person_select"
+            >
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/person_fan"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#282828"
+                android:textSize="17sp"
+                android:text="我的返现"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="9dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/person_left"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <android.support.v7.widget.LinearLayoutCompat
             android:id="@+id/linear_lipin"
             android:layout_width="match_parent"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_height="49dp"
             android:orientation="horizontal"
             android:background="@drawable/person_select"

@@ -7,7 +7,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -85,6 +88,7 @@ import com.itislevel.lyl.mvp.ui.special.SpecialHomeActivity;
 import com.itislevel.lyl.mvp.ui.team.TeamHomeActivity;
 import com.itislevel.lyl.mvp.ui.troublesolution.TroublesolutionActivity;
 import com.itislevel.lyl.mvp.ui.user.LoginActivity;
+import com.itislevel.lyl.mvp.ui.zxing.ZxingActivity;
 import com.itislevel.lyl.net.RestClent;
 import com.itislevel.lyl.net.callback.IFailure;
 import com.itislevel.lyl.net.callback.ISuccess;
@@ -295,39 +299,37 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
         return R.layout.fragment_home_new;
     }
 
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         rxPermissions = new RxPermissions(getActivity());
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-            theme = savedInstanceState.getInt(KEY);
-        }
-
         // -----------location config ------------
         locationService =  new LocationService(getContext());
         //获取locationservice实例，建议应用中只初始化1个location实例，然后使用，可以参考其他示例的activity，都是通过此种方式获取locationservice实例的
         locationService.registerListener(mListener);
         locationService.setLocationOption(locationService.getDefaultLocationClientOption());
+
+        if (savedInstanceState != null) {
+            theme = savedInstanceState.getInt(KEY);
+        }
     }
     @Override
     public void onStop() {
         super.onStop();
         // TODO Auto-generated method stub
+        locationService.stop(); //停止定位服务
+    }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        EventBus.getDefault().unregister(this);
         locationService.unregisterListener(mListener); //注销掉监听
         locationService.stop(); //停止定位服务
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        EventBus.getDefault().unregister(this);
-    }
-
-    @Override
     protected void initEventAndData() {
         home_data = new ArrayList<>();
-        init_home_location();//百度定位
         if(ISLIUHAN)//刘海屏适配
         {
             home_tollbar.setPadding(0, ISLIUHANNUMBER-50,0,0);
@@ -347,15 +349,38 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
         // initVie   wListener();
         init_head();
         init_viewpager_id();
-        getNetIp();//获取外网ip
+        init_home_location();//百度定位
+        //getNetIp();//获取外网ip
         InitViewPagerAdapter adapter =   new InitViewPagerAdapter(group,view_list,imageViews,getContext(),imageView);//初始化viewpager下标
         home_vewpage.setAdapter(new MyAdapter());
         home_vewpage.addOnPageChangeListener(new InitViewPagerAdapter.GuidePageChangeListener());
     }
 
     private void init_home_location() {
-        locationService.start();// 定位SDK
-
+        home_refresh.setRefreshing(true);
+        home_location_tv.setText("定位中");
+        Map<String, String> request = new HashMap<>();
+        request.put("token", SharedPreferencedUtils.getStr(Constants.USER_TOKEN));
+        request.put("usernum", SharedPreferencedUtils.getStr(Constants.USER_NUM));
+        request.put("cityid", CITY_ID);
+        mPresenter.firstPage(GsonUtil.obj2JSON(request));
+        if (Build.VERSION.SDK_INT>=23)
+        {
+                // 未打开位置开关，可能导致定位失败或定位不准，提示用户或做相应处理
+                rxPermissions.requestEach(Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION)
+                        .subscribe(permission -> {
+                            if (permission.granted) {
+                                if(permission.name.equals(Manifest.permission.ACCESS_COARSE_LOCATION)||permission.name.equals(Manifest.permission.ACCESS_FINE_LOCATION))
+                                {
+                                    locationService.start();// 定位SDK
+                                }
+                            } else {
+                                home_location_tv.setText("定位失败");
+                            }
+                        });
+        }else {
+            locationService.start();// 定位SDK
+        }
     }
 
     @Override
@@ -436,9 +461,21 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
 
     @Override
     public void onRefresh() {
-        if(home_location_tv.getText().toString().contains("失败"))
+        if(home_location_tv.getText().toString().contains("失败")||home_location_tv.getText().toString().contains("中"))
         {
-            getNetIp();
+            home_refresh.setRefreshing(true);
+            // 未打开位置开关，可能导致定位失败或定位不准，提示用户或做相应处理
+            rxPermissions.requestEach(Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION)
+                    .subscribe(permission -> {
+                        if (permission.granted) {
+                            if(permission.name.equals(Manifest.permission.ACCESS_COARSE_LOCATION)||permission.name.equals(Manifest.permission.ACCESS_FINE_LOCATION))
+                            {
+                                locationService.start();// 定位SDK
+                            }
+                        } else {
+                            home_location_tv.setText("定位失败");
+                        }
+                    });
         }else {
             Map<String, String> request = new HashMap<>();
             request.put("token", SharedPreferencedUtils.getStr(Constants.USER_TOKEN));
@@ -491,13 +528,10 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
     public void initInject() {
         getFragmentComponent().inject(this);
     }
-
-
     @Override
     public void showContent(String msg) {
         ToastUtil.Success(msg);
     }
-
     @Override
     public void firstPage(HomeBean message) {
         customer_service_phone= message.getCustomer_service_phone();//客户电话
@@ -615,7 +649,7 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
                 break;
             case R.id.home_qr://二维码扫描
                 need_permissions();
-                SAToast.makeText(getContext(),"敬请期待!").show();
+                ActivityUtil.getInstance().openActivity(getActivity(), ZxingActivity.class);
                 break;
             case R.id.home_location_linear://手动选择城市和再定位
                 Bundle bundle = new Bundle();
@@ -624,7 +658,6 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
                 bundle.putString(Constants.CITY_NAME, CITY_NAME);
                 bundle.putString(Constants.CITY_ID, CITY_ID);
                 ActivityUtil.getInstance().openActivity(getActivity(), Location_CityPickerActivity.class,bundle);
-
                // init_select_location();//选择城市 进行定位暂时不用
                 break;
             case R.id.home_search://客户
@@ -891,13 +924,13 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
     @Override
     public void onStart() {
         super.onStart();
-
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
+        locationService.unregisterListener(mListener); //注销掉监听
+        locationService.stop(); //停止定位服务
     }
     public void refreshBadgeViewCount() {
        // refreshbadge();
@@ -986,6 +1019,7 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
     @Subscribe
     public void Event_ViewPage(Home_ViewPager messageEvent)
     {
+
     }
     @SuppressLint("WrongViewCast")
     private void init_viewpager_id(){
@@ -1247,8 +1281,8 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
                 sb.append(location.getLatitude());
                 sb.append("\n经度 : ");// 经度
                 sb.append(location.getLongitude());
-                sb.append("\n半径 : ");// 半径
-                sb.append(location.getRadius());
+          /*      sb.append("\n半径 : ");// 半径
+                sb.append(location.getRadius());*/
                 sb.append("\n国家码 : ");// 国家码
                 sb.append(location.getCountryCode());
                 sb.append("\n国际名称 : ");// 国家名称
@@ -1276,6 +1310,14 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
                 sb.append(location.getLocationDescribe());// 位置语义化信息
                 sb.append("\nPoi: ");// POI信息
 
+                String city_data = location.getAdCode();
+                if(city_data.length()>0)
+                {
+                    CITY_NAME = location.getCity();
+                    CITY_ID =city_data.substring(0,city_data.length()-2)+"00";
+                    P_ID = city_data.substring(0,city_data.length()-4)+"0000";
+                    P_NAME =location.getProvince();//
+                }
                 if (location.getPoiList() != null && !location.getPoiList().isEmpty()) {
                     for (int i = 0; i < location.getPoiList().size(); i++) {
                         Poi poi = (Poi) location.getPoiList().get(i);
@@ -1299,9 +1341,9 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
                         sb.append("\nheight : ");
                         sb.append(location.getAltitude());// 单位：米
                     }
-                    sb.append("\noperationers : ");// 运营商信息
-                    sb.append(location.getOperators());
-                    sb.append("\ndescribe : ");
+//                    sb.append("\noperationers : ");// 运营商信息
+//                    sb.append(location.getOperators());
+//                    sb.append("\ndescribe : ");
                     sb.append("网络定位成功");
                 } else if (location.getLocType() == BDLocation.TypeOffLineLocation) {// 离线定位结果
                     sb.append("\ndescribe : ");
@@ -1316,9 +1358,27 @@ public class HomeFragment extends RootFragment<HomePresenter> implements HomeCon
                     sb.append("\ndescribe : ");
                     sb.append("无法获取有效定位依据导致定位失败，一般是由于手机的原因，处于飞行模式下一般会造成这种结果，可以试着重启手机");
                 }
-                locationService.unregisterListener(mListener); //注销掉监听
+                if(CITY_ID.equals("0"))
+                {
+                    home_location_tv.setText("定位失败");
+                }else {
+                    home_location_tv.setText(CITY_NAME);
+                }
+
+                Map<String, String> request = new HashMap<>();
+                request.put("token", SharedPreferencedUtils.getStr(Constants.USER_TOKEN));
+                request.put("usernum", SharedPreferencedUtils.getStr(Constants.USER_NUM));
+                request.put("cityid", CITY_ID);
+                mPresenter.firstPage(GsonUtil.obj2JSON(request));
                 locationService.stop(); //停止定位服务
                 System.out.println("定位之后返回的结果******************************************************"+sb.toString());
+            }else {
+                home_location_tv.setText("定位失败");
+                Map<String, String> request = new HashMap<>();
+                request.put("token", SharedPreferencedUtils.getStr(Constants.USER_TOKEN));
+                request.put("usernum", SharedPreferencedUtils.getStr(Constants.USER_NUM));
+                request.put("cityid", CITY_ID);
+                mPresenter.firstPage(GsonUtil.obj2JSON(request));
             }
         }
 

@@ -277,7 +277,7 @@ public class LoginActivity extends RootActivity<UserPresenter> implements UserCo
                 RxBus.TAG_UPDATE), "refreshheader");
 
         EventBus.getDefault().post(new RefreshHeadBean("refresh"));
-        ActivityUtil.getInstance().openActivityTop(this, MainActivity.class);
+        //ActivityUtil.getInstance().openActivityTop(this, MainActivity.class);
         ActivityUtil.getInstance().closeActivity(this);
        // ActivityUtil.getInstance().closeActivity(this);
     }

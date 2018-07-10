@@ -88,38 +88,36 @@ public class DynamicFollowAdapter extends BaseQuickAdapter<ListItemBean,
         RecyclerView recycler_gift = helper.getView(R.id.recycler_gift);
 
         int size1 = item.getGiftList().size();
-        DynamicFollowGiftAdapter   detailGiftAdapter0;
-   /*     if(helper.getAdapterPosition()==0)
+        DynamicFollowGiftAdapter detailGiftAdapter= new DynamicFollowGiftAdapter(R.layout.item_bless_detail_gift);
+        detailGiftAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN); //切换动画
+        detailGiftAdapter.setEnableLoadMore(false);
+        detailGiftAdapter.setOnItemClickListener(followreceiveGiftClickListener);
+        detailGiftAdapter.setOnItemChildClickListener(followreceiveGiftClickListener);
+        StaggeredGridLayoutManager layoutManager1 = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL);
+        recycler_gift.setLayoutManager(layoutManager1);
+        recycler_gift.setAdapter(detailGiftAdapter);
+        if(helper.getAdapterPosition()==0)
         {
                 if(size1!=0)
                 {
                     gift_linear.setVisibility(View.VISIBLE);
                     shou_gift_tv.setVisibility(View.VISIBLE);
-                    detailGiftAdapter0 = new DynamicFollowGiftAdapter(R.layout.item_bless_detail_gift);
-                    detailGiftAdapter0.openLoadAnimation(BaseQuickAdapter.ALPHAIN); //切换动画
-                    detailGiftAdapter0.setEnableLoadMore(false);
-                    detailGiftAdapter0.setOnItemClickListener(followreceiveGiftClickListener);
-                    detailGiftAdapter0.setOnItemChildClickListener(followreceiveGiftClickListener);
-     *//*       LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);*//*
-                    StaggeredGridLayoutManager layoutManager1 = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL);
-                    recycler_gift.setLayoutManager(layoutManager1);
-                    recycler_gift.setAdapter(detailGiftAdapter0);
-
+     /*       LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);*/
                     List<ListItemBean.GiftListBean> listBeans = new ArrayList<>();
                     int size = item.getGiftList().size();
                     for(int i = size-1; i >=0;i--)
                     {
                         listBeans.add(item.getGiftList().get(i));
                     }
-                    detailGiftAdapter0.setNewData(listBeans);
+                    detailGiftAdapter.setNewData(listBeans);
 
                 }else {
                     gift_linear.setVisibility(View.GONE);
                     shou_gift_tv.setVisibility(View.GONE);
                 }
 
-        }else {*/
+        }else {
             if(size1!=0)
             {
                 gift_linear.setVisibility(View.VISIBLE);
@@ -128,16 +126,8 @@ public class DynamicFollowAdapter extends BaseQuickAdapter<ListItemBean,
                 gift_linear.setVisibility(View.GONE);
                 shou_gift_tv.setVisibility(View.GONE);
             }
-            DynamicFollowGiftAdapter   detailGiftAdapter = new DynamicFollowGiftAdapter(R.layout.item_bless_detail_gift);
-            detailGiftAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN); //切换动画
-            detailGiftAdapter.setEnableLoadMore(false);
-            detailGiftAdapter.setOnItemClickListener(followreceiveGiftClickListener);
-            detailGiftAdapter.setOnItemChildClickListener(followreceiveGiftClickListener);
      /*       LinearLayoutManager layoutManager = new LinearLayoutManager(this);
             layoutManager.setOrientation(LinearLayoutManager.VERTICAL);*/
-            StaggeredGridLayoutManager layoutManager1 = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL);
-            recycler_gift.setLayoutManager(layoutManager1);
-            recycler_gift.setAdapter(detailGiftAdapter);
             List<ListItemBean.GiftListBean> listBeans = new ArrayList<>();
             int size = item.getGiftList().size();
             for(int i = size-1; i >=0;i--)
@@ -145,7 +135,7 @@ public class DynamicFollowAdapter extends BaseQuickAdapter<ListItemBean,
                 listBeans.add(item.getGiftList().get(i));
             }
             detailGiftAdapter.setNewData(listBeans);
-      //  }
+        }
         if(item.getIsfollow()!=null)
         {
         if(item.getIsfollow().equals("0"))//表示未关注
@@ -159,7 +149,7 @@ public class DynamicFollowAdapter extends BaseQuickAdapter<ListItemBean,
             guan_zhu_image.setBackgroundResource(R.mipmap.share_yeguan);
             guan_zhu_tv.setText("已关注");
             guan_zhu_tv.setTextColor(Color.parseColor("#666666"));
-        }
+            }
         }
         FlexboxLayout fbl_parent = helper.getView(R.id.fbl_parent);
         if (item.getNmpointlist() != null && item.getNmpointlist().size() > 0) {

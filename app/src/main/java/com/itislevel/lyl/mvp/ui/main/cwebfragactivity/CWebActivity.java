@@ -323,7 +323,6 @@ public class CWebActivity extends RootActivity<ChildPresenter> implements ChildC
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             if (newProgress == 100) {
-                addlooknum();//添加浏览量
                 load_cfpinlist();//获取评论的列表
                 if (pb != null) {
                     pb.setVisibility(View.GONE);
@@ -541,6 +540,7 @@ public class CWebActivity extends RootActivity<ChildPresenter> implements ChildC
 
     @Override
     public void cfcommentlist(CFPinBean bean) {//获取的评论列表
+        addlooknum();//添加浏览量
         HEAD_BEAN = bean;
     if(bean.getList().size()==0||bean.getList()==null) {
         cf_pin_linear1.setVisibility(View.GONE);

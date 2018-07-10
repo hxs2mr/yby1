@@ -186,7 +186,6 @@
                         android:layout_centerInParent="true"
                         android:layout_gravity="center"
                         android:scaleType="centerCrop"
-                        android:background="@mipmap/test_jishi"
                         />
 
                     <ImageView

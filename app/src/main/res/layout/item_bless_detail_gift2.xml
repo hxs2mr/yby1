@@ -47,14 +47,30 @@
         android:textColor="#666666"
         android:text="x1" />
 
-    <TextView
-        android:id="@+id/tv_send_name"
-        android:layout_width="@dimen/d100"
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:gravity="center"
-        android:maxLines="1"
-        android:textColor="@color/colorNav"
         android:layout_marginBottom="15dp"
-        tools:text="itisi" />
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNav"
+            android:text="赠送人:"
+            android:textSize="11sp"
+            />
+        <TextView
+            android:id="@+id/tv_send_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:maxLines="1"
+            android:textColor="@color/colorNav"
+            tools:text="xxx" />
+    </android.support.v7.widget.LinearLayoutCompat>
 </LinearLayout>

@@ -4,6 +4,7 @@ package com.itislevel.lyl.mvp.ui.main.mine;
 import com.itislevel.lyl.base.RxPresenter;
 import com.itislevel.lyl.common.RxUtil;
 import com.itislevel.lyl.mvp.model.DataManager;
+import com.itislevel.lyl.mvp.model.bean.FanloginBean;
 import com.itislevel.lyl.mvp.model.bean.MeiZiBean;
 import com.itislevel.lyl.mvp.model.http.response.GankResponse;
 import com.orhanobut.logger.Logger;
@@ -60,5 +61,31 @@ public class MinePresenter extends RxPresenter<MineContract.View> implements Min
                     }
                 });
 
+    }
+
+    @Override
+    public void merchantlogin(String msg) {
+        mDataManager.merchantlogin(msg)
+                .compose(RxUtil.rxSchedulerObservableHelper())
+                .compose(RxUtil.handlerLYLResult())
+                .subscribeWith(new ResourceObserver<FanloginBean>() {
+                    @Override
+                    public void onNext(FanloginBean bean) {
+                        mView.merchantlogin(bean);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        if(mView!=null)
+                        {
+                            mView.stateError(e);
+                        }
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
     }
 }

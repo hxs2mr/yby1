@@ -30,7 +30,7 @@ public class FamilyCateAdapter extends BaseQuickAdapter<FamilySacrificeTypeBean.
 
         helper.addOnClickListener(R.id.tv_name).addOnClickListener(R.id.iv_icon);
 
-        helper.setText(R.id.tv_name,item.getCatename());
+        helper.setText(R.id.tv_name,item.getGoodsname());
         ImageLoadProxy.getInstance()
                 .load(new ImageLoadConfiguration.Builder(App.getInstance())
                         .defaultImageResId(R.mipmap.icon_img_load_pre)

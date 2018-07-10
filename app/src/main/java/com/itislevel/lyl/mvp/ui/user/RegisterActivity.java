@@ -57,6 +57,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import qiu.niorgai.StatusBarCompat;
 
+import static com.itislevel.lyl.utils.FormatUtil.isMobileNO;
+
 @UseRxBus
 public class RegisterActivity extends RootActivity<UserPresenter> implements
         UserContract
@@ -132,7 +134,12 @@ public class RegisterActivity extends RootActivity<UserPresenter> implements
                 regist();
                 break;
             case R.id.forget_miao://获取验证码
-                getValidate();
+             if(isMobileNO( et_phone.getText().toString()))
+                {
+                    getValidate();
+                }else {
+                 et_phone.setError("手机格式不合法！");
+                }
                 break;
             case R.id.tv_agreement://跳转 注册协议
                 readAgreement();

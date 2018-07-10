@@ -66,7 +66,7 @@ import static com.itislevel.lyl.utils.DateUtil.timeSpanToDate_han;
  * Created by microtech on 2017/11/20.主界面的Adapter
  */
 
-public class MultipleRecyclerAdapter extends BaseMultiItemQuickAdapter<MultipleItemEntity,MultipViewHolder> implements BaseQuickAdapter.SpanSizeLookup{
+public class  MultipleRecyclerAdapter extends BaseMultiItemQuickAdapter<MultipleItemEntity,MultipViewHolder> implements BaseQuickAdapter.SpanSizeLookup{
     /**
      * Same as QuickAdapter#QuickAdapter(Context,int) but with
      * some initialization data.

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="horizontal"
+    android:background="#fff"
+    >
+<android.support.v7.widget.AppCompatTextView
+    android:id="@+id/qi_time"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:textColor="#999999"
+    android:textSize="15sp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:text="第2018-04期"
+    />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/qi_type"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="#999999"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="超期未领取"
+        />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/qi_monkey"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="#999999"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="¥200"
+        />
+</android.support.v7.widget.LinearLayoutCompat>

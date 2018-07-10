@@ -796,7 +796,9 @@ public class MainActivity extends RootActivity<MainPresenter> implements MainCon
     @Override
     public void onBackPressed() {
         if (System.currentTimeMillis() - TOUCH_TIME < WAIT_TIME) {
-            mActivity.finish();
+
+            App.getInstance().exitApp();
+           // mActivity.finish();
         } else {
             TOUCH_TIME = System.currentTimeMillis();
             ToastUtil.Info("再按一次退出");

@@ -9,6 +9,7 @@ import com.itislevel.lyl.mvp.ui.about.AboutActivity;
 import com.itislevel.lyl.mvp.ui.address.CityActivity;
 import com.itislevel.lyl.mvp.ui.address.CountyActivity;
 import com.itislevel.lyl.mvp.ui.address.ProvinceActivity;
+import com.itislevel.lyl.mvp.ui.backmonkey.FanxianLoginActivity;
 import com.itislevel.lyl.mvp.ui.blessing.BlessReceiveBlessGiftActivity;
 import com.itislevel.lyl.mvp.ui.blessing.BlessReceiveBlessYuActivity;
 import com.itislevel.lyl.mvp.ui.blessing.BlessReceiveGiftActivity;
@@ -30,6 +31,7 @@ import com.itislevel.lyl.mvp.ui.family.FamilyReceiveBlessActivity;
 import com.itislevel.lyl.mvp.ui.family.FamilyReceiveGiftActivity;
 import com.itislevel.lyl.mvp.ui.family.FamilyReceiveSacrificeActivity;
 import com.itislevel.lyl.mvp.ui.family.writer_letter.FamilyLetterWriterActivity;
+import com.itislevel.lyl.mvp.ui.findmonkey.FindMonkeyActivity;
 import com.itislevel.lyl.mvp.ui.funsharing.FunsharingAddActivity;
 import com.itislevel.lyl.mvp.ui.funsharing.FunsharingDetailActivity;
 import com.itislevel.lyl.mvp.ui.funsharing.FunsharingHomeActivity;
@@ -43,6 +45,12 @@ import com.itislevel.lyl.mvp.ui.main.cwebfragactivity.CWebAllPinActivity;
 import com.itislevel.lyl.mvp.ui.main.dynamic.childfragment.DynamicReceiveGiftActivity;
 import com.itislevel.lyl.mvp.ui.main.dynamic.childfragment.message.MessageshouActivity;
 import com.itislevel.lyl.mvp.ui.main.home.homeright.HomRightActivity;
+import com.itislevel.lyl.mvp.ui.main.mine.fan.PersonChonjiluActivity;
+import com.itislevel.lyl.mvp.ui.main.mine.fan.PersonFanActivity;
+import com.itislevel.lyl.mvp.ui.main.mine.fan.PersonFanUserDetailAcivity;
+import com.itislevel.lyl.mvp.ui.main.mine.fan.PersonMonkeyActivity;
+import com.itislevel.lyl.mvp.ui.main.mine.fan.PersonShanActivity;
+import com.itislevel.lyl.mvp.ui.main.mine.fan.PersonFanjiluActivity;
 import com.itislevel.lyl.mvp.ui.mygift.MyGiftActivity;
 import com.itislevel.lyl.mvp.ui.housekeep.HouseKeepActivity;
 import com.itislevel.lyl.mvp.ui.housekeep.HouseKeepDetailActivity;
@@ -131,6 +139,18 @@ import com.itislevel.lyl.mvp.ui.user.CompleteUserInfoActivity;
 import com.itislevel.lyl.mvp.ui.user.UpdateHeaderActivity;
 import com.itislevel.lyl.mvp.ui.user.UpdatePasswordActivity;
 import com.itislevel.lyl.mvp.ui.user.UpdateUserInfoActivity;
+import com.itislevel.lyl.mvp.ui.userfan.UserFanActivity;
+import com.itislevel.lyl.mvp.ui.userfan.UserFanDetailActivity;
+import com.itislevel.lyl.mvp.ui.userfan.UserFanHistoryActivity;
+import com.itislevel.lyl.mvp.ui.userfan.UserPlanActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.UserAllMonkeyActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.UserMonkeyQActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.UserMonkeyShouActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.UserMonkeyTiXianActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.putrecord.PutRecordActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.putrecord.PutRecordDetailActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.setting.SettingUserDataActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.setting.UserMonkeySettingActivity;
 
 import dagger.Component;
 
@@ -408,4 +428,39 @@ public interface ActivityComponent {
     void inject(MessageshouActivity activity);
 
     void inject(HistoricalBillActivity activity);
+
+    //商品返现模块
+    void inject(FindMonkeyActivity activity);
+
+    void inject(PersonFanActivity activity);
+
+    void inject(PersonFanUserDetailAcivity acivity);
+
+    void inject(FanxianLoginActivity activity);
+
+    void inject(PersonShanActivity activity);
+
+    void inject(PersonFanjiluActivity activity);
+    void inject(PersonChonjiluActivity activity);
+    void inject(PersonMonkeyActivity activity);
+
+    //用户返现
+    void inject(UserFanActivity activity);
+    void inject(UserFanHistoryActivity activity);
+    void inject(UserPlanActivity activity);
+    void  inject(UserFanDetailActivity activity);
+
+    //用户钱包模块
+    void  inject(UserMonkeyQActivity activity);
+    void inject(UserAllMonkeyActivity activity);//全额体现
+    void  inject(UserMonkeyShouActivity activity);//收支明细
+    void inject(UserMonkeyTiXianActivity activity);
+
+    //用户钱包提现记录
+    void inject(PutRecordActivity activity);
+    void inject(PutRecordDetailActivity activity);
+
+    //设置模块
+    void inject(UserMonkeySettingActivity activity);
+    void inject(SettingUserDataActivity activity);
 }

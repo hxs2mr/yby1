@@ -462,7 +462,7 @@ public class DFindFragment extends RootCancleFragment<DFindPresenter> implements
                 request.put("dynamicid", this.adapter.getItem(position).getId()+"");
                 request.put("reluserid", this.adapter.getItem(position).getUserid() + "");
                 request.put("relnickname", SharedPreferencedUtils.getStr(Constants.USER_NICK_NAME));
-                request.put("relheadimg", SharedPreferencedUtils.getStr(Constants.USER_HEADER,"").equals("")?"hxs.jpg":SharedPreferencedUtils.getStr(Constants.USER_HEADER));
+                             request.put("relheadimg", SharedPreferencedUtils.getStr(Constants.USER_HEADER,"").equals("")?"hxs.jpg":SharedPreferencedUtils.getStr(Constants.USER_HEADER));
 
                 String imge = this.adapter.getItem(position).getImge();
                 if (!TextUtils.isEmpty(imge)) {
@@ -936,7 +936,13 @@ public class DFindFragment extends RootCancleFragment<DFindPresenter> implements
              ListFollowItemBean.ListCommentItemBean item =commentAdapter.getData().get(position);
             tonickname = item.getObserver();
             int local_userid=0;
-            if(SharedPreferencedUtils.getStr(Constants.USER_ID)!=null)
+            boolean islogin = SharedPreferencedUtils.getBool("islogin", false);
+            if (!islogin) {
+                ActivityUtil.getInstance().openActivity(getActivity(), LoginActivity.class);
+                return;
+            }
+
+            if(SharedPreferencedUtils.getStr(Constants.USER_ID)!=null&&!SharedPreferencedUtils.getStr(Constants.USER_ID).equals(""))
             {
                 local_userid = Integer.parseInt(SharedPreferencedUtils.getStr(Constants.USER_ID));
             }
@@ -1289,7 +1295,7 @@ public class DFindFragment extends RootCancleFragment<DFindPresenter> implements
             bundle.putString("model","find");
             giftListBeans = adapter.getData();
             ActivityUtil.getInstance().openActivity(getActivity(),DynamicReceiveGiftActivity.class,bundle);
-    }
+        }
     }
     private void share(String name,String share_url,String comment,String image_url) {
         if (Build.VERSION.SDK_INT >= 23) {

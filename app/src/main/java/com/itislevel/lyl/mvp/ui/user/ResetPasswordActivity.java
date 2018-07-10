@@ -37,6 +37,8 @@ import java.util.TimerTask;
 import butterknife.BindView;
 import qiu.niorgai.StatusBarCompat;
 
+import static com.itislevel.lyl.utils.FormatUtil.isMobileNO;
+
 public class ResetPasswordActivity extends RootActivity<UserPresenter> implements UserContract.View
         , View.OnClickListener {
 
@@ -79,7 +81,12 @@ public class ResetPasswordActivity extends RootActivity<UserPresenter> implement
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.forget_miao:
-                getValidate();
+                if(isMobileNO( et_phone.getText().toString()))
+                {
+                    getValidate();
+                }else {
+                    et_phone.setError("手机格式不合法！");
+                }
                 break;
 
             case R.id.forget_ok:

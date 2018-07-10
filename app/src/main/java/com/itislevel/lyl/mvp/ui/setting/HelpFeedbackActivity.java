@@ -51,7 +51,6 @@ public class HelpFeedbackActivity extends RootActivity<SettingPresenter> impleme
                 break;
             case R.id.tv_problem:
                 ActivityUtil.getInstance().openActivity(HelpFeedbackActivity.this,CommonproblemActivity.class);
-
                 break;
             case R.id.tv_operate:
                 ActivityUtil.getInstance().openActivity(HelpFeedbackActivity.this,OperationmanualActivity.class);

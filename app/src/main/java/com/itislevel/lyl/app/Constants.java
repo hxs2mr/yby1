@@ -164,7 +164,7 @@ public class Constants {
     public static final String CART_MODEL_ZIXUN = "zixun";//咨询
     public static final String CART_MODEL_GIFT = "lipin";//礼品
     public static final String CART_MODEL_PROPERTY = "estate";//物业
-
+    public static final String CART_MODEL_FAN = "recharge";//物业
     public static final  String CART_MODEL_DYNAMIC = "dynamic";
 
     //支付
@@ -205,7 +205,7 @@ public class Constants {
     public static final int PAY_FROM_SPECIAL_GIFT = 888;//来自于特产礼品
     public static final int PAY_FROM_TROUBLE_ADD = 889;//来自于烦恼提问
     public static final int PAY_FROM_SPECIAL_ORDER = 991;//来自于特产礼品的订单
-
+    public static final int PAY_FROM_FAN_PROPERTY = 992;//来自于商家在线充值
 
     //订单状态
     public static final int SPECIAL_ORDER_ALL = -1;//所有订单

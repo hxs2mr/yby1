@@ -319,7 +319,7 @@ public class Dynamic_personFragment  extends RootCancleFragment<DFindPresenter> 
                         request.put("touserid", touserid);
                         request.put("reluserid", reluserid);
                         request.put("relnickname", SharedPreferencedUtils.getStr(Constants.USER_NICK_NAME));
-                        request.put("relheadimg",request.put("relheadimg", SharedPreferencedUtils.getStr(Constants.USER_HEADER,"").equals("")?"hxs.jpg":SharedPreferencedUtils.getStr(Constants.USER_HEADER)));
+                        request.put("relheadimg", SharedPreferencedUtils.getStr(Constants.USER_HEADER,"").equals("")?"hxs.jpg":SharedPreferencedUtils.getStr(Constants.USER_HEADER));
                         String imge="";
                         if (adapter.getItem(operatorPosition) != null)
                         {
@@ -370,7 +370,7 @@ public class Dynamic_personFragment  extends RootCancleFragment<DFindPresenter> 
                 request.put("reluserid", this.adapter.getItem(position).getUserid() + "");
                 request.put("dynamicid", this.adapter.getItem(position).getId()+"");
                 request.put("relnickname", SharedPreferencedUtils.getStr(Constants.USER_NICK_NAME));
-                request.put("relheadimg",request.put("relheadimg", SharedPreferencedUtils.getStr(Constants.USER_HEADER,"").equals("")?"hxs.jpg":SharedPreferencedUtils.getStr(Constants.USER_HEADER)));
+                request.put("relheadimg", SharedPreferencedUtils.getStr(Constants.USER_HEADER,"").equals("")?"hxs.jpg":SharedPreferencedUtils.getStr(Constants.USER_HEADER));
                 String imge = this.adapter.getItem(position).getImge();
                 if (!TextUtils.isEmpty(imge)) {
                     String[] split = imge.split(",");
@@ -487,6 +487,20 @@ public class Dynamic_personFragment  extends RootCancleFragment<DFindPresenter> 
         request.put("goodsname", giftBean.getList().get(location).getGiftname() );
         request.put("imgurl", giftBean.getList().get(location).getImgurl() );
         request.put("buyusername",nick_name);
+        request.put("buyersheadimg", SharedPreferencedUtils.getStr(Constants.USER_HEADER,"").equals("")?"hxs.jpg":SharedPreferencedUtils.getStr(Constants.USER_HEADER));
+        String imge="";
+        if (adapter.getItem(operatorPosition) != null)
+        {
+            imge = adapter.getItem(operatorPosition).getImge();
+            if (!TextUtils.isEmpty(imge)) {
+                String[] split = imge.split(",");
+                request.put("dyimgorct", "1@"+split[0]);
+            }else {
+                request.put("dyimgorct", "0@"+adapter.getItem(operatorPosition).getContent());
+            }
+        }else {
+            request.put("dyimgorct", "0@"+SharedPreferencedUtils.getStr(Constants.USER_HEADER,""));
+        }
         giftListBean = new ListPersonBean.GiftListBean(giftBean.getList().get(location).getGiftname(),bus_id
                 ,1,giftBean.getList().get(location).getGiftid(), giftBean.getList().get(location).getGiftname(),giftBean.getList().get(location).getImgurl());
         mPresenter.immediateOrder(GsonUtil.obj2JSON(request));
@@ -620,7 +634,7 @@ public class Dynamic_personFragment  extends RootCancleFragment<DFindPresenter> 
         mEditText.setText("");
         if(fabulous == 0)
         {
-            SAToast.makeText(getContext(),""+operatorPosition).show();
+            //SAToast.makeText(getContext(),""+operatorPosition).show();
             ListPersonBean.ListCommentItemBean commentItemBean = new ListPersonBean.ListCommentItemBean(dynamicCommnetAddBean.getId(),dynamicCommnetAddBean.getCreatedtime(),
                     dynamicCommnetAddBean.getUserid(),dynamicCommnetAddBean.getShareid(),dynamicCommnetAddBean.getTouserid(),
                     dynamicCommnetAddBean.getAnswerer(),dynamicCommnetAddBean.getParentid(),dynamicCommnetAddBean.getComment(),dynamicCommnetAddBean.getObserver(),
@@ -724,7 +738,7 @@ public class Dynamic_personFragment  extends RootCancleFragment<DFindPresenter> 
         @Override
         public void onItemChildClick(BaseQuickAdapter adapter, View view, final int position) {
             comment_view  = view;
-            SAToast.makeText(getContext(),"点击了"+position).show();
+            //SAToast.makeText(getContext(),"点击了"+position).show();
             commentAdapter = (DYPersonCommentAdapter) adapter;
             comment_postion = position;
             final ListPersonBean.ListCommentItemBean item = commentAdapter.getItem(position);

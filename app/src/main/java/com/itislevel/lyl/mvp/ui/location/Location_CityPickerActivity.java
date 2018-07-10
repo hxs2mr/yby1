@@ -125,7 +125,6 @@ public class Location_CityPickerActivity extends RootActivity<Location_CityPicke
         location_qiannan.setOnClickListener(this);
         location_qiandn.setOnClickListener(this);
         location_lbs.setOnClickListener(this);
-
     }
     private void read_json() {
       String json =   getJson ("resultvalue.json");//读取本地的json数据

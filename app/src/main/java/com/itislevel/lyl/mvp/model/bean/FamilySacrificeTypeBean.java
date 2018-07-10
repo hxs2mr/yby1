@@ -27,11 +27,19 @@ public class FamilySacrificeTypeBean {
          * icon : 73BDC04B-1B48-457B-B8E5-5D7B25A3E995.png
          * catename : 贡品
          */
-
         private String sign;
         private int id;
         private String icon;
         private String catename;
+        private String goodsname;
+
+        public String getGoodsname() {
+            return goodsname;
+        }
+
+        public void setGoodsname(String goodsname) {
+            this.goodsname = goodsname;
+        }
 
         public String getSign() {
             return sign;

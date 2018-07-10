@@ -31,7 +31,7 @@ android {
             // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
 
             //指定所用cpu架构 可有效降低apk体积,但是就适用其他cpu了
-            abiFilters 'armeabi', 'armeabi-v7a'
+            abiFilters 'armeabi', 'armeabi-v7a','x86'
         }
 
         manifestPlaceholders = [

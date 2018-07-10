@@ -871,6 +871,55 @@ public class DataManager implements HttpHelper,DBHelper,PreferencesHelper{
     public Observable<LYLResponse<String>> clearMyDyPushList(String action) {
         return mHttpHelper.clearMyDyPushList(action);
     }
+    @Override
+    public Observable<LYLResponse<FanloginBean>> merchantlogin(String action) {
+        return mHttpHelper.merchantlogin(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<ShanHomeBean>> merchantmainpage(String action) {
+        return mHttpHelper.merchantmainpage(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<FanRecodeBean>> rechargeRecord(String action) {
+        return mHttpHelper.rechargeRecord(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<FanXianBean>> cashbackist(String action) {
+        return mHttpHelper.cashbackist(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<String>> onlinerecharge(String action) {
+        return mHttpHelper.onlinerecharge(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<UserFanBean>> cashbackPage(String action) {
+        return mHttpHelper.cashbackPage(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<UserPlanBean>> cashbackstages(String action) {
+        return mHttpHelper.cashbackstages(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<UserPlanDetailBean>> cashbackstagesDetails(String action) {
+        return mHttpHelper.cashbackstagesDetails(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<UserHistoryBean>> cashbackRecord(String action) {
+        return mHttpHelper.cashbackRecord(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<String>> clickreceive(String action) {
+        return mHttpHelper.clickreceive(action);
+    }
 
     @Override
     public Observable<LYLResponse<String>> happyCartAdd(String action) {

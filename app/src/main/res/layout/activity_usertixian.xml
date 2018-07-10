@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"
+        />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/bank_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:textSize="14sp"
+        android:text="中国工商银行(3065)"
+        />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/bank_monkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#f9a032"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:text="¥1.00"
+            />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="17sp"
+        android:textColor="#333333"
+        fontPath="fonts/SourceHanSansCN-Regular.ttf"
+        android:text="申请成功,已提交银行处理"
+        />
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="13sp"
+        android:textColor="#999999"
+        android:text="预计2个工作日内到账"
+        android:layout_marginTop="8dp"
+        />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        >
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:button="@null"
+        android:checked="true"
+        android:background="@drawable/p_b_select"
+        />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="105dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="#f9a032"
+            />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:button="@null"
+            android:checked="true"
+            android:background="@drawable/p_b_select"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="105dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="#cccccc"
+            />
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:button="@null"
+            android:background="@drawable/p_b_select"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#333333"
+            android:layout_gravity="center"
+            android:text="申请成功"
+            />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:layout_gravity="center"
+                android:textColor="#999999"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:text="银行处理中"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:layout_gravity="center"
+                android:textColor="#999999"
+                android:text="07-06 14:16"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#999999"
+                android:layout_gravity="center"
+                android:text="提现成功"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:layout_gravity="center"
+                android:textColor="#999999"
+                android:text="07-06 14:16"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/login_ok"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:text="完成"
+        />
+
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,9 +1,13 @@
 package com.itislevel.lyl.mvp.ui.family;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -259,7 +263,11 @@ public class FamilyBlessYuListActivity extends RootActivity<FamilyPresenter> imp
     @Override
     public void familyUsualLanguage(FamilyUsualLanguageBean familyUsualLanguageBean) {
         List<FamilyUsualLanguageBean.ModelvolistBean> list = familyUsualLanguageBean.getModelvolist();
-
+        WindowManager windowManager = getWindowManager ();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        windowManager.getDefaultDisplay ().getMetrics (displayMetrics);
+        int widthPixels = displayMetrics.widthPixels;
+        int heightPixels = displayMetrics.heightPixels;
         ViewGroup.LayoutParams layoutParams = tv_family_temp.getLayoutParams();
         if (list!=null&&list.size()>0){
 
@@ -268,6 +276,9 @@ public class FamilyBlessYuListActivity extends RootActivity<FamilyPresenter> imp
                 textView.setLayoutParams(layoutParams);
                 textView.setText(item.getValue());
                 textView.setTextSize(18);
+                textView.setMaxLines(1);
+                textView.setWidth(widthPixels/2-50);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTextColor(getResources().getColor(R.color.colorNav));
                 textView.setPadding(5,5,5,5);
                 textView.setBackground(getResources().getDrawable(R.drawable.yu_normal_shape));

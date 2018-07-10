@@ -94,13 +94,12 @@ private RxPermissions rxPermissions;
         public void run() {
             Intent intent = new Intent(SplashActivity.this,MainActivity.class);
             startActivity(intent);
-            finish();
         }
     };
     @Override
     protected void initEventAndData() {
         rxPermissions = new RxPermissions(this);
-
+       // need_permissions();
         timer = new Timer();
         timer.schedule(timerTask,2000);
     }
@@ -108,19 +107,15 @@ private RxPermissions rxPermissions;
     @Override
     protected void onResume() {
         super.onResume();
-
     }
 
     private void need_permissions() {//需要的权限
         rxPermissions
-                .requestEach(Manifest.permission.CAMERA,
-                        Manifest.permission.ACCESS_FINE_LOCATION,
-                        Manifest.permission.ACCESS_COARSE_LOCATION)
+                .requestEach(Manifest.permission.ACCESS_COARSE_LOCATION)
                 .subscribe(permission -> {
                     if (permission.granted) {
                         //权限获取成功
                     } else {
-                        ToastUtil.Error("打开定位权限进行定位!");
                     }
                 });
     }

@@ -32,19 +32,19 @@
         android:id="@+id/fbl_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/d5"
-        android:paddingRight="@dimen/d5"
         android:paddingTop="@dimen/d10"
-        app:alignContent="stretch"
-        app:alignItems="stretch"
         app:flexWrap="wrap"
         android:background="#ffffff"
-        app:justifyContent="center">
+        app:justifyContent="center"
+        >
 
         <TextView
             android:id="@+id/tv_family_temp"
             style="@style/TxtWrapWrap18"
             android:layout_marginRight="@dimen/d5"
+            android:maxLines="1"
+            android:ellipsize = "end"
+            android:maxLength="11"
             android:layout_marginBottom="10dp"
             android:background="@drawable/shape_order_tv_select"
             android:padding="@dimen/d2"

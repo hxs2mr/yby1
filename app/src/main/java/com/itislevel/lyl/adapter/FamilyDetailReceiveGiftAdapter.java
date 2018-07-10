@@ -30,8 +30,8 @@ public class FamilyDetailReceiveGiftAdapter extends BaseQuickAdapter<FamilyRecei
     protected void convert(BaseViewHolder helper, FamilyReceiveGiftBean.ListBean item) {
         //     iv_icon
 
-        helper.setText(R.id.tv_name,item.getBuyusername());
-        helper.setText(R.id.tv_goodsname,item.getGoodsname());
+        helper.setText(R.id.tv_name,item.getGoodsname());
+        //helper.setText(R.id.tv_goodsname,item.getGoodsname());
         ImageLoadProxy.getInstance()
                 .load(new ImageLoadConfiguration.Builder(App.getInstance())
                         .defaultImageResId(R.mipmap.icon_img_load_pre)

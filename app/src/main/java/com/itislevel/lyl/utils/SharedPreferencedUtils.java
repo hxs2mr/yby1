@@ -10,12 +10,6 @@ import com.itislevel.lyl.app.Constants;
 /**
  ***********************
  * 功 能:SharedPreferencedUtils
- * 创建人:itisi
- * 邮  箱:itisivip@qq.com
- * 创建时间:2017/8/3 11:38
- * 修改人:itisi
- * 修改时间: 2017/8/3 11:38
- * 修改内容:itisi
  * *********************
  */
 public class SharedPreferencedUtils {

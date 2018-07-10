@@ -12,6 +12,7 @@ import com.itislevel.lyl.di.component.DaggerFragmentComponent;
 import com.itislevel.lyl.di.component.FragmentComponent;
 import com.itislevel.lyl.di.module.FragmentModule;
 import com.itislevel.lyl.mvp.model.http.exception.ApiException;
+import com.itislevel.lyl.mvp.ui.backmonkey.FanxianLoginActivity;
 import com.itislevel.lyl.mvp.ui.property.PropertLoginActivity;
 import com.itislevel.lyl.mvp.ui.user.LoginActivity;
 import com.itislevel.lyl.utils.ActivityUtil;
@@ -109,7 +110,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends NoMVPFragmen
                 ToastUtil.Error("请先登录！");
                 // ActivityUtil.getInstance().finishAll();
                 ActivityUtil.getInstance().openActivity(getActivity(), PropertLoginActivity.class);
-            } else {
+            }else {
                 ToastUtil.Error(apiException.getMessage());
             }
         } else {

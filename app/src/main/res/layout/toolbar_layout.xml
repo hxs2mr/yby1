@@ -8,7 +8,7 @@ android:layout_height="?attr/actionBarSize"
 android:gravity="center"
 android:theme="@style/ToolbarTheme"
 app:contentInsetStart="0dp"
-    android:fitsSystemWindows="true"
+android:fitsSystemWindows="true"
 android:background="@drawable/login_tool_bar"
     >
 <!--
@@ -31,8 +31,8 @@ app:navigationIcon="@mipmap/menu_back"-->
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
-    android:layout_marginBottom="10dp"
+    android:layout_gravity="center"
+    android:gravity="bottom"
     android:orientation="horizontal"
     >
     <android.support.v7.widget.LinearLayoutCompat
@@ -40,13 +40,9 @@ app:navigationIcon="@mipmap/menu_back"-->
         android:layout_width="50dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingBottom="5dp"
         android:layout_gravity="center"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            />
         <ImageView
             android:id="@+id/iv_back"
             android:layout_width="12dp"
@@ -55,22 +51,46 @@ app:navigationIcon="@mipmap/menu_back"-->
             android:background="@mipmap/icon_back"
             android:layout_marginRight="5dp"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            />
     </android.support.v7.widget.LinearLayoutCompat>
+
+    <FrameLayout
+        android:id="@+id/search_fragment"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/d5"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/toolbar_top_shape"
+            android:hint="搜索商品号/订单号"
+            android:gravity="center|left"
+            android:paddingLeft="40dp"
+            android:layout_gravity="center|left"
+            android:textColorHint="#999999"
+            android:textSize="14sp"
+            />
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="11dp"
+            android:background="@mipmap/search"
+            />
+    </FrameLayout>
     <TextView
         android:id="@+id/toolbar_title"
         android:layout_width="@dimen/d0"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="@dimen/d5"
-        android:layout_marginRight="@dimen/d5"
+        android:paddingBottom="5dp"
         fontPath="fonts/NotoSansHans-DemiLight.ttf"
         android:layout_weight="1"
-        android:clickable="true"
         android:ellipsize="end"
         android:focusableInTouchMode="true"
         android:gravity="center"
@@ -78,17 +98,17 @@ app:navigationIcon="@mipmap/menu_back"-->
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/txt18"
         tools:text="@string/app_name"
-
         tools:ignore="MissingPrefix" />
     <!--android:background="?android:attr/selectableItemBackgroundBorderless"-->
     <android.support.v7.widget.LinearLayoutCompat
         android:id="@+id/iv_more_linear"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
+        android:minWidth="50dp"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_gravity="center"
         android:visibility="invisible"
+        android:layout_gravity="center"
         >
     <TextView
         android:id="@+id/toolbar_more"
@@ -99,7 +119,8 @@ app:navigationIcon="@mipmap/menu_back"-->
         android:layout_gravity="center"
         android:textColor="@color/colorWhite"
         android:textSize="14sp"
-        tools:text="更多"
+        tools:text="查看详情"
+        android:paddingRight="15dp"
         />
     </android.support.v7.widget.LinearLayoutCompat>
 

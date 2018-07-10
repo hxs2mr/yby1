@@ -92,7 +92,6 @@ public class UtilsStyle {
     public static void setStatusBarMode(Activity activity, boolean bDark) {
 
 //6.0以上
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
             View decorView = activity.getWindow().getDecorView();
@@ -114,10 +113,6 @@ public class UtilsStyle {
                 decorView.setSystemUiVisibility(vis);
 
             }
-
-
-
-
         }
 
     }

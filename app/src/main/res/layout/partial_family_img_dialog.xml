@@ -30,18 +30,34 @@
         android:ellipsize="end"
         android:text="感谢一生" />
 
+
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/d10"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:text="赠送人:"
+        />
     <TextView
         android:id="@+id/tv_nickname"
-        android:layout_width="@dimen/d150"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorWhite"
-        android:layout_marginTop="@dimen/d10"
         android:gravity="center"
         android:textSize="@dimen/txt18"
         android:maxLines="1"
-        android:visibility="gone"
         android:ellipsize="end"
-        android:text="itisi" />
+        android:text="" />
+
+</android.support.v7.widget.LinearLayoutCompat>
 
 
 </LinearLayout>

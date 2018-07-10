@@ -40,7 +40,6 @@ public class RecordListAdapter extends BaseQuickAdapter<PayLuBean, BaseViewHolde
         super(layoutResId);
         this.mActivity = activity;
     }
-
     @Override
     protected void convert(BaseViewHolder helper,PayLuBean item) {
             RecyclerView recyclerView= helper.getView(R.id.recyclerview);

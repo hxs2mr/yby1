@@ -2,11 +2,14 @@ package com.itislevel.lyl.base;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatEditText;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.ContentFrameLayout;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
@@ -15,6 +18,7 @@ import android.util.Log;
 import android.view.DisplayCutout;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -76,6 +80,14 @@ public abstract class NoMVPActivity extends SwipeBackActivity { //SwipeBackActiv
 
     @BindView(R.id.iv_back)
     ImageView mImageViewBack;
+
+    @BindView(R.id.search_edit)
+    AppCompatTextView search_edit;//搜索框
+
+    @BindView(R.id.search_fragment)
+    FrameLayout search_fragment;//搜索的布局
+
+
     public static  boolean ISLIUHAN = false;
     public static  int ISLIUHANNUMBER = 0;
     @Override
@@ -249,13 +261,27 @@ public abstract class NoMVPActivity extends SwipeBackActivity { //SwipeBackActiv
         mToolbar.setTitle(title);
     }
 
+    protected void setToolbarVisible() {
+        mToolbarTitle.setVisibility(View.GONE);
+        search_fragment.setVisibility(View.VISIBLE);
+    }
+    protected void setToolKON() {
+        mToolbar.setBackgroundColor(Color.parseColor("#00000000"));
+    }
+
+    protected void setToolWight(String title) {
+        mToolbar.setBackgroundColor(Color.parseColor("#ffffff"));
+        mToolbarTitle.setText(title);
+        mToolbarTitle.setTextColor(Color.parseColor("#333333"));
+        mImageViewBack.setBackgroundResource(R.mipmap.iv_back_yellow);
+    }
+
     /**
      * 标题点击事件
      * @param clickListener
      */
     protected void setToolbarTvClickListener(View.OnClickListener clickListener) {
         mToolbarTitle.setOnClickListener(clickListener);
-
     }
 
     /**
@@ -288,6 +314,14 @@ public abstract class NoMVPActivity extends SwipeBackActivity { //SwipeBackActiv
      */
     protected void setToolbarMoreClickListener(View.OnClickListener clickListener) {
         iv_more_linear.setOnClickListener(clickListener);
+    }
+
+    /*
+    * 搜索框的点击事件
+    */
+    protected  void  setSearchOnclick(View.OnClickListener clickListener)
+    {
+        search_fragment.setOnClickListener(clickListener);
     }
     /**
      * 设置溢出菜单布局---

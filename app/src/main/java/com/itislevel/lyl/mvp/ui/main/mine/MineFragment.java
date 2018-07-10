@@ -1,6 +1,7 @@
 package com.itislevel.lyl.mvp.ui.main.mine;
 
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -21,10 +22,14 @@ import com.itislevel.lyl.R;
 import com.itislevel.lyl.app.App;
 import com.itislevel.lyl.app.Constants;
 import com.itislevel.lyl.base.RootFragment;
+import com.itislevel.lyl.mvp.model.bean.FanloginBean;
 import com.itislevel.lyl.mvp.model.bean.JPOnclick;
 import com.itislevel.lyl.mvp.model.bean.RefreshHeadBean;
 import com.itislevel.lyl.mvp.model.bean.UpdataUserBean;
 import com.itislevel.lyl.mvp.ui.about.AboutActivity;
+import com.itislevel.lyl.mvp.ui.backmonkey.FanxianLoginActivity;
+import com.itislevel.lyl.mvp.ui.main.mine.fan.PersonFanActivity;
+import com.itislevel.lyl.mvp.ui.main.mine.fan.PersonShanActivity;
 import com.itislevel.lyl.mvp.ui.mygift.MyGiftActivity;
 import com.itislevel.lyl.mvp.ui.myaddress.MyAddressActivity;
 import com.itislevel.lyl.mvp.ui.mymessage.MyMessageActivity;
@@ -33,15 +38,22 @@ import com.itislevel.lyl.mvp.ui.setting.SettingActivity;
 import com.itislevel.lyl.mvp.ui.user.LoginActivity;
 import com.itislevel.lyl.mvp.ui.user.QRCodeActivity;
 import com.itislevel.lyl.mvp.ui.user.UpdateUserInfoActivity;
+import com.itislevel.lyl.mvp.ui.userfan.UserFanActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.UserMonkeyQActivity;
 import com.itislevel.lyl.utils.ActivityUtil;
 import com.itislevel.lyl.utils.ChatUtil;
+import com.itislevel.lyl.utils.GsonUtil;
 import com.itislevel.lyl.utils.SharedPreferencedUtils;
+import com.itislevel.lyl.utils.ToastUtil;
 import com.itislevel.lyl.utils.imageload.ImageLoadConfiguration;
 import com.itislevel.lyl.utils.imageload.ImageLoadProxy;
 import com.itislevel.lyl.utils.rxbus.annotation.UseRxBus;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -77,6 +89,15 @@ public class MineFragment extends RootFragment<MinePresenter> implements MineCon
 
     @BindView(R.id.iv_team)
     AppCompatImageView iv_team;
+
+    @BindView(R.id.person_qian_linear)
+    LinearLayoutCompat person_qian_linear;
+
+    @BindView(R.id.person_fan_linear)
+    LinearLayoutCompat person_fan_linear;
+
+    @BindView(R.id.person_shan_linear)
+    LinearLayoutCompat person_shan_linear;
 
     Badge badge;
 
@@ -175,10 +196,10 @@ public class MineFragment extends RootFragment<MinePresenter> implements MineCon
 
     @OnClick({R.id.iv_header, R.id.iv_right_arrow, R.id.iv_qr_code, R.id.linear_lipin,
             R.id.linear_xiaoxi, R.id.linear_address, R.id.linear_guan, R.id.linear_setting,
-            R.id.linear_gu, R.id.tv_nickname, R.id.tv_regist_num})
+            R.id.linear_gu, R.id.tv_nickname, R.id.tv_regist_num,R.id.person_qian_linear,R.id.person_fan_linear,R.id.person_shan_linear})
     public void click(View v) {
         boolean islogin = SharedPreferencedUtils.getBool("islogin", false);
-        if (!islogin) {
+       if (!islogin) {
             ActivityUtil.getInstance().openActivity(getActivity(), LoginActivity.class);
             return;
         }
@@ -215,9 +236,32 @@ public class MineFragment extends RootFragment<MinePresenter> implements MineCon
             case R.id.linear_setting:
                 ActivityUtil.getInstance().openActivity(getActivity(), SettingActivity.class);
                 break;
+            case R.id.person_fan_linear://我的返现
+                ActivityUtil.getInstance().openActivity(getActivity(), UserFanActivity.class);
+                break;
+            case R.id.person_qian_linear://我的钱包
+                ActivityUtil.getInstance().openActivity(getActivity(), UserMonkeyQActivity.class);
+                break;
+            case R.id.person_shan_linear://我是商家
+                boolean fan_login = SharedPreferencedUtils.getBool("fan_login", false);
+                if(fan_login)
+                {
+                    ActivityUtil.getInstance().openActivity(getActivity(),PersonShanActivity.class);
+                }else {
+                    login();
+                }
+                break;
         }
     }
-
+    private void login() {
+        loadingDialog.show();
+        Map<String,String> request = new HashMap<>();
+        request.put("token", SharedPreferencedUtils.getStr(Constants.USER_TOKEN,""));
+        request.put("usernum", SharedPreferencedUtils.getStr(Constants.USER_NUM,""));
+        request.put("phone",  SharedPreferencedUtils.getStr(Constants.USER_PHONE,""));
+        request.put("randcode", "");
+        mPresenter.merchantlogin(GsonUtil.obj2JSON(request));
+    }
     @Override
     public void useNightMode(boolean isNight) {
 
@@ -235,12 +279,13 @@ public class MineFragment extends RootFragment<MinePresenter> implements MineCon
 
     @Override
     public void stateError() {
-
     }
 
     @Override
     public void stateError(Throwable e) {
-
+        loadingDialog.dismiss();
+        ToastUtil.Info("当前APP账号不是商家账号!");
+        ActivityUtil.getInstance().openActivity(getActivity(),FanxianLoginActivity.class);
     }
 
     @Override
@@ -251,6 +296,22 @@ public class MineFragment extends RootFragment<MinePresenter> implements MineCon
     @Override
     public void showContent(String msg) {
 
+    }
+
+    @Override
+    public void merchantlogin(FanloginBean bean) {
+        loadingDialog.dismiss();
+        SharedPreferencedUtils.setBool("fan_login", true);
+        SharedPreferencedUtils.setStr("fan_merchantid", bean.getMerchantid()+"");
+        SharedPreferencedUtils.setStr("fan_provname", bean.getProvname()+"");
+        SharedPreferencedUtils.setStr("fan_cityname", bean.getCityname()+"");
+        SharedPreferencedUtils.setStr("fan_companyname", bean.getCompanyname()+"");
+        SharedPreferencedUtils.setStr("fan_cuntryname", bean.getCuntryname()+"");
+        SharedPreferencedUtils.setLong("fan_createdtime", bean.getCreatedtime());
+        SharedPreferencedUtils.setStr("fan_linkman", bean.getLinkman()+"");
+        SharedPreferencedUtils.setStr("fan_linkaddress", bean.getLinkaddress()+"");
+        SharedPreferencedUtils.setStr("fan_linkphone", bean.getLinkphone()+"");
+        ActivityUtil.getInstance().openActivity(getActivity(),PersonShanActivity.class);
     }
 
     @Override

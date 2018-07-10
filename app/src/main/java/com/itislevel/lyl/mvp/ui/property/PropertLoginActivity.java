@@ -38,6 +38,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.finalteam.rxgalleryfinal.ui.widget.HorizontalDividerItemDecoration;
 
+import static com.itislevel.lyl.utils.FormatUtil.isMobileNO;
+
 
 /**
  * Created by Administrator on 2018\5\22 0022.
@@ -93,8 +95,7 @@ public class PropertLoginActivity extends RootActivity<PropertyPresenter>impleme
             adapter.setOnItemClickListener(this);
             adapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_BOTTOM); //切换动画
             adapter.setEnableLoadMore(false);
-            select_recycle.addItemDecoration(new HorizontalDividerItemDecoration.Builder(this)
-                    .build());
+            select_recycle.addItemDecoration(new HorizontalDividerItemDecoration.Builder(this).build());
             select_recycle.setAdapter(adapter);
         }
         /*
@@ -125,7 +126,12 @@ public class PropertLoginActivity extends RootActivity<PropertyPresenter>impleme
                 ActivityUtil.getInstance().closeActivity(this);
                 break;
             case R.id.p_huoqu:
-                getValidate();
+                if(isMobileNO( p_login_phone.getText().toString()))
+                {
+                    getValidate();
+                }else {
+                    p_login_phone.setError("手机格式不合法！");
+                }
                 break;
         }
     }

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/person_select"
+    >
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.itislevel.lyl.widget.YuanImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="109dp"
+            android:layout_height="123dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/test1"
+            />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:text="618返现活动"
+                    android:textColor="#ff7a00"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    android:paddingTop="10dp"
+                    android:maxLines="1"
+                    android:textSize="17sp"
+                    tools:ignore="MissingPrefix" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:ellipsize="end"
+                    android:text="在京东/淘宝购买的商品可以来
+这里返现"
+                    fontPath="fonts/SourceHanSansCN-Regular.ttf"
+                    />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#333333"
+                        fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                        tools:ignore="MissingPrefix"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:clickable="false"
+                        android:text="商品号:7589099808we-9r0890r" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:clickable="false"
+                android:maxLines="1"
+                android:text="订单号:2222333444555" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333333"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    tools:ignore="MissingPrefix"
+                    android:textSize="14sp"
+                    android:clickable="false"
+                    android:maxLines="1"
+                    android:text="商品价钱:"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:textColor="#ec5858"
+                    android:text="￥40"
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/linear_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                >
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:text="坚果"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:text="可味食品旗舰店"
+                    fontPath="fonts/NotoSansHans-DemiLight.ttf"
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

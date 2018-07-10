@@ -167,7 +167,6 @@ public class DyNamicGiftDialog extends BottomBaseDialog<DyNamicGiftDialog> imple
     public void setCount(String count) {
         tv_count.setText(count );
     }
-
     private BaseAnimatorSet mWindowInAs;
     private BaseAnimatorSet mWindowOutAs;
 

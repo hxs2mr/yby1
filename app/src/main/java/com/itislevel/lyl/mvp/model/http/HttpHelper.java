@@ -300,4 +300,25 @@ public interface HttpHelper {
     Observable<LYLResponse<HistoricalBean>> querybillrecord (@Field("action") String action);//历史账单
 
     Observable<LYLResponse<String>>  clearMyDyPushList(@Field("action")String action);//清楚推送过来的数据
+
+    //商家返利模块
+    Observable<LYLResponse<FanloginBean>>  merchantlogin(@Field("action")String action);//商家登录
+
+    Observable<LYLResponse<ShanHomeBean>>  merchantmainpage(@Field("action")String action);//商家主页
+
+    Observable<LYLResponse<FanRecodeBean>>  rechargeRecord(@Field("action")String action);//充值记录
+
+    Observable<LYLResponse<FanXianBean>>  cashbackist(@Field("action")String action);//返现记录
+
+    Observable<LYLResponse<String>>  onlinerecharge(@Field("action")String action);//在线充值
+
+    Observable<LYLResponse<UserFanBean>>  cashbackPage(@Field("action")String action);//消费分期列表
+
+    Observable<LYLResponse<UserPlanBean>>  cashbackstages(@Field("action")String action);//分期计划
+
+    Observable<LYLResponse<UserPlanDetailBean>>  cashbackstagesDetails(@Field("action")String action);//查看分期详情
+
+    Observable<LYLResponse<UserHistoryBean>>  cashbackRecord(@Field("action")String action);//用户的返现历史
+
+    Observable<LYLResponse<String>>  clickreceive(@Field("action")String action);//点击领取待发现的金钱
 }

@@ -154,6 +154,7 @@
         android:paddingBottom="@dimen/d2"
         android:paddingLeft="@dimen/d10"
         android:paddingRight="@dimen/d10"
+        android:visibility="gone"
         android:paddingTop="@dimen/d2">
 
         <TextView

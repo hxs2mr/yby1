@@ -167,7 +167,7 @@ public class RxUtil {
                     public ObservableSource<T> apply(@NonNull LYLResponse<T> lylResponse) throws
                             Exception {
                         // TODO: 2018-01-16  删除输出
-                        Logger.e("response:" + GsonUtil.obj2JSON(lylResponse));
+                        System.out.println("response***************************:" + GsonUtil.obj2JSON(lylResponse));
                         String res = SharedPreferencedUtils.getStr(Constants.LYL_DETAIL);
                         if (res.equals("success")) {
                             return Observable.error(new ApiException(TextUtils.isEmpty

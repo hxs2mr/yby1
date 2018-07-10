@@ -70,6 +70,77 @@
             android:fadingEdge="none"
             android:scrollbars="none"
             />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/xiaoxi_linear"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/xiaoxi_linear_next"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/dynamic_xiaoxi_shape"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/xiaoxi_image"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:text="收到"
+                    android:paddingLeft="5dp"
+                    android:maxLength="2"
+                    android:layout_gravity="center|right"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/xiaoxi_number"
+                    android:layout_width="wrap_content"
+                    android:gravity="center|right"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:text="0"
+                    android:layout_gravity="center|right"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/push_leibie"
+                    android:layout_width="wrap_content"
+                    android:gravity="center|right"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:text="封祭祀信"
+                    android:layout_gravity="center|right"
+                    />
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:background="@mipmap/xiaoxi_right"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+
         <FrameLayout
             android:id="@+id/fadon_frame"
             android:layout_width="68dp"

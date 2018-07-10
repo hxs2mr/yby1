@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#f5f5f5"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_barlayout"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.ContentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:transitionName="transition_book_img"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="1"
+                android:background="@mipmap/shan_back"
+                >
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    >
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        android:background="@mipmap/icon_qian"
+                        />
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:text="返现金额"
+                            android:layout_marginTop="5dp"
+                            fontPath="fonts/SourceHanSansCN-Medium.ttf"
+                            />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+                       <android.support.v7.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="#ffffff"
+                           android:layout_marginLeft="5dp"
+                           android:layout_marginRight="5dp"
+                           android:gravity="center"
+                           android:text="领取"
+                           android:textSize="15sp"
+                           android:drawableBottom="@mipmap/icon_jian"
+                           />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        android:background="@mipmap/icon_qianbao"
+                        />
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:layout_gravity="center"
+                        android:text="我的钱包"
+                        android:layout_marginTop="5dp"
+                        fontPath="fonts/SourceHanSansCN-Medium.ttf"
+                        />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp"
+                        ><android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/user_fen_jihua"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="#68c5b0"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="分期计划"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            fontPath="fonts/SourceHanSansCN-Medium.ttf"
+                            android:background="@drawable/userfan_select"
+                            />
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/user_fan_lishi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="#68c5b0"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="返现历史"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            fontPath="fonts/SourceHanSansCN-Medium.ttf"
+                            android:background="@drawable/userfan_select"
+                            />
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.ContentFrameLayout>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+            <include layout="@layout/toolbar_layout" />
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:background="#f5f5f5"
+                android:layout_height="wrap_content"
+                />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.design.widget.CoordinatorLayout>

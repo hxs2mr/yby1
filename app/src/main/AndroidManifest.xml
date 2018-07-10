@@ -94,6 +94,23 @@
             android:windowSoftInputMode="adjustPan"
             />
         <activity android:name=".mvp.ui.test.TestActivity" />
+        <activity android:name=".mvp.ui.main.mine.fan.PersonShanActivity" />
+        <activity android:name=".mvp.ui.backmonkey.FanxianLoginActivity" />
+        <activity android:name=".mvp.ui.main.mine.fan.PersonFanjiluActivity" />
+        <activity android:name=".mvp.ui.main.mine.fan.PersonFanUserDetailAcivity" />
+        <activity android:name=".mvp.ui.main.mine.fan.PersonChonjiluActivity" />
+        <activity android:name=".mvp.ui.main.mine.fan.PersonFanActivity"/>
+        <activity android:name=".mvp.ui.userfan.UserFanActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.UserMonkeyQActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.putrecord.PutRecordDetailActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.putrecord.PutRecordActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.UserAllMonkeyActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.setting.SettingUserDataActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.setting.UserMonkeySettingActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.UserMonkeyTiXianActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.UserMonkeyShouActivity"/>
+        <activity android:name=".mvp.ui.userfan.UserFanDetailActivity"/>
+        <activity android:name=".mvp.ui.main.mine.fan.PersonMonkeyActivity"/>
         <activity android:name=".mvp.ui.user.LoginActivity" />
         <activity android:name=".mvp.ui.user.RegisterActivity" />
         <activity android:name=".mvp.ui.user.CompleteUserInfoActivity" />
@@ -343,6 +360,7 @@
         <activity android:name=".mvp.ui.blessing.BlessingSendRecordActivity" />
         <activity android:name=".mvp.ui.myteam.TeamAnswerActivity" />
         <activity android:name=".mvp.ui.family.FamilyAddActivity" />
+        <activity android:name=".mvp.ui.zxing.ZxingActivity" />
         <activity android:name=".mvp.ui.family.FamilyMySendGiftRecordActivity" />
         <activity android:name=".mvp.ui.family.FamilyAddedActivity" />
         <activity android:name=".mvp.ui.family.FamilyReceiveSacrificeActivity" />
@@ -547,6 +565,8 @@
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".mvp.ui.userfan.UserFanHistoryActivity" />
+        <activity android:name=".mvp.ui.userfan.UserPlanActivity" />
     </application>
 
 </manifest>

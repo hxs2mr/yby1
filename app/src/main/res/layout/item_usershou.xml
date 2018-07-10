@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="63dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|left"
+        android:layout_marginLeft="15dp"
+        >
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/shan_jiaoyi_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+            android:text="返现"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/shan_jiaoyi_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:layout_marginTop="3dp"
+            android:textSize="12sp"
+            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+            android:text="2018-06-26 14:23:00  "
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/shan_jiaoyi_monkey"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:layout_marginRight="15dp"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:gravity="right"
+            fontPath="fonts/SourceHanSansCN-Regular.ttf"
+            android:text="+100.00"
+            />
+
+</android.support.v7.widget.LinearLayoutCompat>

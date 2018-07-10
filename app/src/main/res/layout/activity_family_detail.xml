@@ -275,11 +275,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-
-                    <LinearLayout
+                    <FrameLayout
                         android:layout_width="@dimen/d0"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:orientation="vertical">
                         <ScrollView
                             android:layout_width="match_parent"
@@ -311,9 +313,9 @@
 
                             </LinearLayout>
                         </ScrollView>
-
                     </LinearLayout>
 
+                    </FrameLayout>
                     <LinearLayout
                         android:layout_width="55dp"
                         android:layout_height="match_parent"
@@ -343,6 +345,39 @@
                         android:layout_gravity="top|right"
                         android:background="@mipmap/music_on"
                         />
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:id="@+id/xiaoxi_linear_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="41dp"
+                        android:layout_gravity="left|bottom"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:background="@drawable/familydetail_xiaoxi_shape"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/xiaoxi_image"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="6dp"
+                            android:background="@mipmap/family_xin"
+                            />
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/xiaoxi_message"
+                            android:layout_width="wrap_content"
+                            android:gravity="center|right"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:text="\@收到新的祭祀信"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_gravity="center"
+                            />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
                 </FrameLayout>
 
             </LinearLayout>

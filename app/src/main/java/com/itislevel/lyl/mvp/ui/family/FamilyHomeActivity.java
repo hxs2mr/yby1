@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -34,6 +36,8 @@ import com.itislevel.lyl.mvp.model.bean.FamilySacrificeTypeBean;
 import com.itislevel.lyl.mvp.model.bean.FamilySendGiftRecordBean;
 import com.itislevel.lyl.mvp.model.bean.FamilyUsualLanguageBean;
 import com.itislevel.lyl.mvp.model.bean.FileUploadBean;
+import com.itislevel.lyl.mvp.model.bean.JPFetSendBean;
+import com.itislevel.lyl.mvp.model.bean.JPushFete;
 import com.itislevel.lyl.mvp.model.bean.LetterBean;
 import com.itislevel.lyl.mvp.ui.dynamicmyperson.Dynamic_MypersonActivity;
 import com.itislevel.lyl.mvp.ui.family.childhomefragment.dfind.FFindFragment;
@@ -44,13 +48,18 @@ import com.itislevel.lyl.mvp.ui.user.LoginActivity;
 import com.itislevel.lyl.utils.ActivityUtil;
 import com.itislevel.lyl.utils.SAToast;
 import com.itislevel.lyl.utils.SharedPreferencedUtils;
+import com.itislevel.lyl.utils.ToastUtil;
 import com.itislevel.lyl.utils.rxbus.annotation.UseRxBus;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static com.itislevel.lyl.widget.UIUtil.dip2px;
@@ -74,6 +83,28 @@ public class FamilyHomeActivity extends RootActivity<FamilyPresenter>
     CircleImageView dynamic_hear_image;
     @BindView(R.id.fadon_frame)
     FrameLayout fadon_frame;
+
+    //推送消息的展示模块
+    @BindView(R.id.xiaoxi_linear)
+    LinearLayoutCompat xiaoxi_linear;
+
+    @BindView(R.id.xiaoxi_image)
+    CircleImageView xiaoxi_image;
+
+    @BindView(R.id.xiaoxi_linear_next)
+    LinearLayoutCompat xiaoxi_linear_next;
+
+    @BindView(R.id.xiaoxi_number)
+    AppCompatTextView xiaoxi_number;
+
+    @BindView(R.id.push_leibie)
+    AppCompatTextView push_leibie;//祭事信还是祭语 或者是礼物
+
+
+    private int letter_number=0;//用来统计祭事信的数量
+    private int yu_number = 0;//用来统计祭语的数量
+    private int gif_number = 0 ;//统计礼物的数量
+
     private List<Fragment> fragments = new ArrayList<>();
     private String[] tabTitle = new String[]{"关注","发现","同城"};
 
@@ -85,12 +116,15 @@ public class FamilyHomeActivity extends RootActivity<FamilyPresenter>
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EventBus.getDefault().register(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
+
     @Override
     protected int getLayoutId() {
         return R.layout.family_home_activity;
@@ -265,6 +299,7 @@ public class FamilyHomeActivity extends RootActivity<FamilyPresenter>
     }
     private void int_title_tablayout() {
         fadon_frame.setOnClickListener(this);
+        xiaoxi_linear_next.setOnClickListener(this);
         dynamic_hear_image.setOnClickListener(this);
         fragments.add(new FFollowFragment());
         fragments.add(new FFindFragment());
@@ -598,6 +633,13 @@ public class FamilyHomeActivity extends RootActivity<FamilyPresenter>
     public void onClick(View view) {
         switch (view.getId())
         {
+            case R.id.xiaoxi_linear_next:
+                xiaoxi_linear.setVisibility(View.GONE);
+                xiaoxi_number.setText("0");
+                letter_number = 0;
+                yu_number = 0;
+                ToastUtil.Info("暂时没有跳转!");
+                break;
             case R.id.dynamic_hear_image://个人中心
                 boolean islogin = SharedPreferencedUtils.getBool("islogin", false);
                 if (!islogin) {
@@ -629,5 +671,24 @@ public class FamilyHomeActivity extends RootActivity<FamilyPresenter>
                 }
                 break;
         }
+    }
+
+    @Subscribe
+    public  void onevent(JPushFete fete)
+    {
+        xiaoxi_linear.setVisibility(View.VISIBLE);
+        if(fete.getUrl().contains("wishe"))//祭语
+        {
+            yu_number++;
+            xiaoxi_image.setBackgroundResource(R.mipmap.family_yu);
+            xiaoxi_number.setText(yu_number+"");
+            push_leibie.setText("条寄语");
+        }else  if(fete.getUrl().contains("letter")){//祭事信
+            letter_number++;
+            xiaoxi_image.setBackgroundResource(R.mipmap.family_xin);
+            xiaoxi_number.setText(letter_number+"");
+            push_leibie.setText("封祭祀信");
+        }
+        int size =  Integer.parseInt(xiaoxi_number.getText().toString());
     }
 }

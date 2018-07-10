@@ -212,20 +212,6 @@ public class DFollowFragment extends RootCancleFragment<DFollowPresenter> implem
         refreshLayout.setOnRefreshListener(this);
         isReady= true;
         lazyLoad();
-
-           recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-                if(newState == SCROLL_STATE_IDLE)
-                {
-                    adapter.setScrolling(false);
-                    adapter.notifyDataSetChanged();
-                }else {
-                    adapter.setScrolling(true);
-                }
-            }
-        });
     }
     /**
      * 初始化adapter
@@ -242,7 +228,7 @@ public class DFollowFragment extends RootCancleFragment<DFollowPresenter> implem
             adapter = new DynamicFollowAdapter(R.layout.item_funsharing, getActivity());
             adapter.setOnItemClickListener(this);
             adapter.setOnItemChildClickListener(this);
-//            adapter.openLoadAnimation();
+            adapter.openLoadAnimation();
             adapter.setEnableLoadMore(false);
 //        adapter.isFirstOnly(false);//动画默认只执行一次
 //        adapter.setNotDoAnimationCount(count);//设置不显示动画数量
@@ -529,6 +515,7 @@ public class DFollowFragment extends RootCancleFragment<DFollowPresenter> implem
     }
     @Override
     public void firstPage(FindistBean bean) {
+        loadGiftList();
         load_more++;
         if(load_more==1)
         {
@@ -676,10 +663,10 @@ public class DFollowFragment extends RootCancleFragment<DFollowPresenter> implem
         String nick_name =SharedPreferencedUtils.getStr(Constants.USER_NICK_NAME);
         request.put("token", SharedPreferencedUtils.getStr(Constants.USER_TOKEN));
         request.put("usernum", SharedPreferencedUtils.getStr(Constants.USER_NUM));
-        request.put("buyuserid",bus_id+"");
+        request.put("buyuserid",bus_id+ "");
         request.put("modelename", Constants.CART_MODEL_DYNAMIC);
         request.put("moduleid", blessid);
-        request.put("receiveuserid", this.adapter.getData().get(operatorPosition).getUserid()+"");
+        request.put("receiveuserid", this.adapter.getItem(operatorPosition).getTouserid()+"");
         request.put("goodsid", giftBean.getList().get(location).getGiftid() + "");
         request.put("cateid", giftBean.getList().get(location).getFirstcateid() + "");
         request.put("price", giftBean.getList().get(location).getSellprice() );
@@ -751,7 +738,6 @@ public class DFollowFragment extends RootCancleFragment<DFollowPresenter> implem
                 isLoaded = true;
                 refreshLayout.setRefreshing(true);//刷新效果
                 loadData();
-                loadGiftList();
                 isfrist =false;
                 //获取礼品list
     }
@@ -782,7 +768,11 @@ public class DFollowFragment extends RootCancleFragment<DFollowPresenter> implem
             final ListItemBean.ListCommentItemBean item = commentAdapter.getData().get(position);
 
             tonickname = item.getObserver();
-            int local_userid = Integer.parseInt(SharedPreferencedUtils.getStr(Constants.USER_ID));
+            int local_userid=0;
+            if(SharedPreferencedUtils.getStr(Constants.USER_ID)!=null&&!SharedPreferencedUtils.getStr(Constants.USER_ID).equals(""))
+            {
+                local_userid = Integer.parseInt(SharedPreferencedUtils.getStr(Constants.USER_ID));
+            }
             if (local_userid == item.getUserid()){//点击的是自己回复的
                 switch (view.getId()) {
                     case R.id.tv_comment_content:
@@ -1099,7 +1089,6 @@ public class DFollowFragment extends RootCancleFragment<DFollowPresenter> implem
         pageIndex = 1;
         isRefreshing = true;
         loadData();
-        loadGiftList();
     }
 
     @Override
