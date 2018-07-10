@@ -35,7 +35,7 @@ public class UserMonkeySettingActivity extends RootActivity<UserMonkeyPresenter>
 
     @Override
     protected void initEventAndData() {
-            setToolWight("支付管理");
+       setToolWight("支付管理");
     }
     @Override
     public void stateEmpty() {
