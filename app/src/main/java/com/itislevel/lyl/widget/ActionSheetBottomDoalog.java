@@ -68,8 +68,6 @@ public class ActionSheetBottomDoalog extends BottomBaseDialog<ActionSheetBottomD
         dismissAnim(null);
         View inflate = View.inflate(mContext, R.layout.dialog_action_sheet_bottom, null);
         ButterKnife.bind(this, inflate);
-
-
         return inflate;
     }
 

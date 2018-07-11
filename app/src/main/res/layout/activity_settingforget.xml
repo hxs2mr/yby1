@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/toolbar_layout" />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/forget_title"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:paddingLeft="15dp"
+        fontPath="fonts/SourceHanSansCN-Light.ttf"
+        android:text="请重新绑定银行卡找回密码"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/forget_next_linear"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/person_select"
+        android:orientation="horizontal"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/forget_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="中国建设银行(2565)"
+            android:textColor="#333333"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            fontPath="fonts/SourceHanSansCN-Normal.ttf"
+            android:textSize="17sp"
+            />
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="8dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/home_two_right"
+                />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.LinearLayoutCompat>

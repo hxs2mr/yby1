@@ -914,6 +914,26 @@ public class RetrofitHelper implements HttpHelper{
     }
 
     @Override
+    public Observable<LYLResponse<BlankNameBean>> queryBankNameByIdCard(String action) {
+        return mLylApi.queryBankNameByIdCard(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<BlankListBean>> queryBankBranchList(String action) {
+        return mLylApi.queryBankBranchList(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<BankCardBean>> bankCardVerification(String action) {
+        return mLylApi.bankCardVerification(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<String>> finishVerification(String action) {
+        return mLylApi.finishVerification(action);
+    }
+
+    @Override
     public Observable<LYLResponse<String>> happyCartAdd(String action) {
         return mLylApi.happyCartAdd(action);
     }

@@ -55,6 +55,7 @@ public class Constants {
     //用户token
     public static final String USER_TOKEN = "USER_TOKEN";
     public static final String RONGCLOUD_TOKEN = "RONGCLOUD_TOKEN";
+    public static final String IS_REN = "0";
     //用户id
     public static final String USER_ID = "USER_ID";
     //用户编号

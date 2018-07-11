@@ -9,36 +9,24 @@ package com.itislevel.lyl.mvp.model.bean;
 public class RegistBean {
 
     /**
-     * usernum : 63C34CBE25BA
-     * password : e10adc3949ba59abbe56e057f20f883e
-     * phone : 18823852027
-     * randcode : 179876
-     * recommendphone : 18823852024
-     * username : tt4
+     * phone : 18385655626
+     * token : 8F63FA4F23891528F958053FC81252875667E169BF3C9440E36C74A69B0E000A0B09C09552A2D513FC3F446C9BD22B8B027CF5C28C0D18B23ED25005CF56A69972CA421469724274B4E4EAF44B1046AD
+     * nickname : yby_29234504942
+     * userid : 5
+     * randcode : 548496
+     * recommendphone :
+     * usernum : 29234451019
+     * password : 46a40eb9c01f2a0c3995ca871e4f8600
      */
 
-    private String usernum;
-    private String password;
     private String phone;
+    private String token;
+    private String nickname;
+    private int userid;
     private String randcode;
     private String recommendphone;
-    private String username;
-
-    public String getUsernum() {
-        return usernum;
-    }
-
-    public void setUsernum(String usernum) {
-        this.usernum = usernum;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    private String usernum;
+    private String password;
 
     public String getPhone() {
         return phone;
@@ -46,6 +34,30 @@ public class RegistBean {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public String getRandcode() {
@@ -64,11 +76,19 @@ public class RegistBean {
         this.recommendphone = recommendphone;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUsernum() {
+        return usernum;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsernum(String usernum) {
+        this.usernum = usernum;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

@@ -264,13 +264,9 @@ public class ResetPasswordActivity extends RootActivity<UserPresenter> implement
 
     @Override
     public void userForgetPassword(String message) {
-
         ToastUtil.Success("密码重置成功");
         ActivityUtil.getInstance().closeActivity(this);
     }
-
-
-
     @Override
     public void stateEmpty() {
 

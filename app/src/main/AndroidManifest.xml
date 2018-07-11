@@ -106,7 +106,10 @@
         <activity android:name=".mvp.ui.usermonkey.putrecord.PutRecordActivity"/>
         <activity android:name=".mvp.ui.usermonkey.UserAllMonkeyActivity"/>
         <activity android:name=".mvp.ui.usermonkey.setting.SettingUserDataActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.setting.SettingChangePwdActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.setting.SettingUserDataNextActivity"/>
         <activity android:name=".mvp.ui.usermonkey.setting.UserMonkeySettingActivity"/>
+        <activity android:name=".mvp.ui.usermonkey.setting.SettingForgeActivity"/>
         <activity android:name=".mvp.ui.usermonkey.UserMonkeyTiXianActivity"/>
         <activity android:name=".mvp.ui.usermonkey.UserMonkeyShouActivity"/>
         <activity android:name=".mvp.ui.userfan.UserFanDetailActivity"/>

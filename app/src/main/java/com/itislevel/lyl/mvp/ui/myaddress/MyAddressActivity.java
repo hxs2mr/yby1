@@ -93,7 +93,6 @@ public class MyAddressActivity extends RootActivity<MyAddressPresenter> implemen
     android.os.Handler handler;
 
     //城市
-
     private ArrayList<BaseProvaceBean> options1Items = new ArrayList<>();
     private ArrayList<ArrayList<CityBean>> options2Items = new ArrayList<>();
     private ArrayList<ArrayList<ArrayList<BaseProvaceBean.CitylistBean.ArealistBean>>> options3Items = new ArrayList<>();

@@ -23,6 +23,7 @@
         android:layout_height="@dimen/d0"
         android:layout_weight="1"
         android:background="#ffffff"
+
         >
 
         <android.support.v7.widget.LinearLayoutCompat

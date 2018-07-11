@@ -49,6 +49,16 @@ public class UserInfoBean {
     private int iscustom; // 0用户 1客服
     private int isadviser;//是否是顾问
 
+    private String iscertification;
+
+    public String getIscertification() {
+        return iscertification;
+    }
+
+    public void setIscertification(String iscertification) {
+        this.iscertification = iscertification;
+    }
+
     public int getIsadviser() {
         return isadviser;
     }

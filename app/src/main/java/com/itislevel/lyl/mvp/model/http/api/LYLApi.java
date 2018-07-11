@@ -1,103 +1,7 @@
 package com.itislevel.lyl.mvp.model.http.api;
 
 import com.itislevel.lyl.adapter.LiveAddressBean;
-import com.itislevel.lyl.mvp.model.bean.AddressBean;
-import com.itislevel.lyl.mvp.model.bean.AliPayBean;
-import com.itislevel.lyl.mvp.model.bean.AppUpdate;
-import com.itislevel.lyl.mvp.model.bean.BillsBean;
-import com.itislevel.lyl.mvp.model.bean.BlessAddBean;
-import com.itislevel.lyl.mvp.model.bean.BlessAddLikeBean;
-import com.itislevel.lyl.mvp.model.bean.BlessCartListBean;
-import com.itislevel.lyl.mvp.model.bean.BlessCommentBean;
-import com.itislevel.lyl.mvp.model.bean.BlessDetailGiftListBean;
-import com.itislevel.lyl.mvp.model.bean.BlessGiftBean;
-import com.itislevel.lyl.mvp.model.bean.BlessListBean;
-import com.itislevel.lyl.mvp.model.bean.BlessOrderBean;
-import com.itislevel.lyl.mvp.model.bean.BlessReceiveGiftBean;
-import com.itislevel.lyl.mvp.model.bean.BlessReceiveYuBean;
-import com.itislevel.lyl.mvp.model.bean.BlessSendGiftBean;
-import com.itislevel.lyl.mvp.model.bean.CFChildBean;
-import com.itislevel.lyl.mvp.model.bean.CFPinBean;
-import com.itislevel.lyl.mvp.model.bean.CFTabBean;
-import com.itislevel.lyl.mvp.model.bean.CartUpdateBean;
-import com.itislevel.lyl.mvp.model.bean.ComSearchBean;
-import com.itislevel.lyl.mvp.model.bean.ComplaintTypeBean;
-import com.itislevel.lyl.mvp.model.bean.DynamicCommnetAddBean;
-import com.itislevel.lyl.mvp.model.bean.DynamicPersonBean;
-import com.itislevel.lyl.mvp.model.bean.DynimacLinkBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyBlessListBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyBlessListRecevieBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyFollowListBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyGiftListBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyListBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyPersonListBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyPhotoFrameBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyQueryFramBackBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyReceiveGiftBean;
-import com.itislevel.lyl.mvp.model.bean.FamilySacrificeTypeBean;
-import com.itislevel.lyl.mvp.model.bean.FamilySendGiftRecordBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyTonListBean;
-import com.itislevel.lyl.mvp.model.bean.FamilyUsualLanguageBean;
-import com.itislevel.lyl.mvp.model.bean.FanRecodeBean;
-import com.itislevel.lyl.mvp.model.bean.FanXianBean;
-import com.itislevel.lyl.mvp.model.bean.FanloginBean;
-import com.itislevel.lyl.mvp.model.bean.FileUploadBean;
-import com.itislevel.lyl.mvp.model.bean.FindistBean;
-import com.itislevel.lyl.mvp.model.bean.FollowListBean;
-import com.itislevel.lyl.mvp.model.bean.FunsharingAddBean;
-import com.itislevel.lyl.mvp.model.bean.FunsharingCommnetAddBean;
-import com.itislevel.lyl.mvp.model.bean.FunsharingLikeBean;
-import com.itislevel.lyl.mvp.model.bean.FunsharingListBean;
-import com.itislevel.lyl.mvp.model.bean.FunsharingMyBean;
-import com.itislevel.lyl.mvp.model.bean.GiftBean;
-import com.itislevel.lyl.mvp.model.bean.HappyBlessUsualLanguageBean;
-import com.itislevel.lyl.mvp.model.bean.HomeBean;
-import com.itislevel.lyl.mvp.model.bean.HomeDetailBean;
-import com.itislevel.lyl.mvp.model.bean.HouseKeepBean;
-import com.itislevel.lyl.mvp.model.bean.LetterBean;
-import com.itislevel.lyl.mvp.model.bean.MessageBean;
-import com.itislevel.lyl.mvp.model.bean.MyGiftBean;
-import com.itislevel.lyl.mvp.model.bean.MyReceiveAddrBean;
-import com.itislevel.lyl.mvp.model.bean.MyTeamBean;
-import com.itislevel.lyl.mvp.model.bean.PersonalCommunBean;
-import com.itislevel.lyl.mvp.model.bean.PlaceBean;
-import com.itislevel.lyl.mvp.model.bean.PropertLoginBean;
-import com.itislevel.lyl.mvp.model.bean.PropertyBillBean;
-import com.itislevel.lyl.mvp.model.bean.PropertyQueryInfo;
-import com.itislevel.lyl.mvp.model.bean.PropertyQueryInfoBean;
-import com.itislevel.lyl.mvp.model.bean.PropertyRecordBean;
-import com.itislevel.lyl.mvp.model.bean.PropertyUpdateStatusBean;
-import com.itislevel.lyl.mvp.model.bean.PropretyLiveBean;
-import com.itislevel.lyl.mvp.model.bean.PropretyNoticeBean;
-import com.itislevel.lyl.mvp.model.bean.RegistBean;
-import com.itislevel.lyl.mvp.model.bean.SetOwnerPayMonth;
-import com.itislevel.lyl.mvp.model.bean.ShanHomeBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialGiftByIdBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialGiftListBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialOrderCompleteBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialOrderDetailBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialReceiveAddressBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialReturnBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialTuiKuanDetailBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialTuiKuanUpdateBean;
-import com.itislevel.lyl.mvp.model.bean.SpecialTypeBean;
-import com.itislevel.lyl.mvp.model.bean.TeamListBean;
-import com.itislevel.lyl.mvp.model.bean.TeamStatusBean;
-import com.itislevel.lyl.mvp.model.bean.TeamTypeBean;
-import com.itislevel.lyl.mvp.model.bean.TonCityListBean;
-import com.itislevel.lyl.mvp.model.bean.TroubleAddBean;
-import com.itislevel.lyl.mvp.model.bean.TroubleAdviserMyBean;
-import com.itislevel.lyl.mvp.model.bean.TroubleCommentAdd;
-import com.itislevel.lyl.mvp.model.bean.TroubleListBean;
-import com.itislevel.lyl.mvp.model.bean.TroubleTypeBean;
-import com.itislevel.lyl.mvp.model.bean.UserFanBean;
-import com.itislevel.lyl.mvp.model.bean.UserHeaderNickInfo;
-import com.itislevel.lyl.mvp.model.bean.UserHistoryBean;
-import com.itislevel.lyl.mvp.model.bean.UserInfoBean;
-import com.itislevel.lyl.mvp.model.bean.UserPlanBean;
-import com.itislevel.lyl.mvp.model.bean.UserPlanDetailBean;
-import com.itislevel.lyl.mvp.model.bean.VillageNameBean;
-import com.itislevel.lyl.mvp.model.bean.WeiXinPayTestBean;
+import com.itislevel.lyl.mvp.model.bean.*;
 import com.itislevel.lyl.mvp.model.http.response.LYLResponse;
 import com.itislevel.lyl.mvp.model.http.response.LYLResponse_PIN;
 import com.itislevel.lyl.mvp.model.http.response.LYLResponse_Two;
@@ -1069,4 +973,22 @@ public interface LYLApi {
     @POST("clickreceive")
     @FormUrlEncoded
     Observable<LYLResponse<String>>  clickreceive(@Field("action")String action);//点击领取待发现的金钱
+
+    @POST("queryBankNameByIdCard")
+    @FormUrlEncoded
+    Observable<LYLResponse<BlankNameBean>>  queryBankNameByIdCard(@Field("action")String action);//根据卡号获取银行卡名称
+
+    @POST("queryBankBranchList")
+    @FormUrlEncoded
+    Observable<LYLResponse<BlankListBean>>  queryBankBranchList(@Field("action")String action);//通过银行名称、省州市、关键字获取银行网点
+
+    @POST("bankCardVerification")
+    @FormUrlEncoded
+    Observable<LYLResponse<BankCardBean>>  bankCardVerification(@Field("action")String action);//银行卡信息验证
+
+
+    @POST("finishVerification")
+    @FormUrlEncoded
+    Observable<LYLResponse<String>>  finishVerification(@Field("action")String action);//设置密码完成绑定
+
 }

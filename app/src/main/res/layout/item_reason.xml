@@ -2,23 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="45dp"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorWhite"
+    android:background="@drawable/person_select"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:orientation="vertical">
-
-
-
     <TextView
         android:id="@+id/tv_reason"
-        style="@style/BaseFontSize18"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="1"
         android:ellipsize="end"
-        android:padding="@dimen/d10"
-        tools:text="奥代兼学霸奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸"
-        android:textColor="@color/colorNav" />
-
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        fontPath="fonts/NotoSansHans-DemiLight.ttf"
+        android:text="奥代兼学霸奥巴马大女儿与小伙当众接吻 对方是英富二代兼学霸"
+        android:textColor="@color/colorNav"
+        tools:ignore="MissingPrefix" />
 
 </LinearLayout>

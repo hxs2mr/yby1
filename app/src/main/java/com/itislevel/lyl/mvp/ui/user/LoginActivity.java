@@ -221,7 +221,7 @@ public class LoginActivity extends RootActivity<UserPresenter> implements UserCo
 
         SharedPreferencedUtils.setStr(Constants.USER_TOKEN, response.getToken());
         SharedPreferencedUtils.setStr(Constants.RONGCLOUD_TOKEN, response.getRytoken());
-
+        SharedPreferencedUtils.setStr(Constants.IS_REN, response.getIscertification());
 
         SharedPreferencedUtils.setStr(Constants.USER_ID, response.getUserid() + "");
         SharedPreferencedUtils.setStr(Constants.USER_NUM, response.getUsernum());
@@ -383,7 +383,7 @@ public class LoginActivity extends RootActivity<UserPresenter> implements UserCo
     @Subscribe(tag = RxBus.TAG_CREATE, thread = EventThread.MAIN_THREAD)
     public void testRx(String message) {
         if ("registSuccess".equals(message)){
-            et_name.setText(SharedPreferencedUtils.getStr(Constants.USER_NAME));
+            et_name.setText(SharedPreferencedUtils.getStr(Constants.USER_PHONE));
             et_password.setText("");
             et_password.requestFocus();
             // TODO: 2017/11/29  密码框获取焦点

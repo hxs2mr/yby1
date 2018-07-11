@@ -922,6 +922,26 @@ public class DataManager implements HttpHelper,DBHelper,PreferencesHelper{
     }
 
     @Override
+    public Observable<LYLResponse<BlankNameBean>> queryBankNameByIdCard(String action) {
+        return mHttpHelper.queryBankNameByIdCard(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<BlankListBean>> queryBankBranchList(String action) {
+        return mHttpHelper.queryBankBranchList(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<BankCardBean>> bankCardVerification(String action) {
+        return mHttpHelper.bankCardVerification(action);
+    }
+
+    @Override
+    public Observable<LYLResponse<String>> finishVerification(String action) {
+        return mHttpHelper.finishVerification(action);
+    }
+
+    @Override
     public Observable<LYLResponse<String>> happyCartAdd(String action) {
         return mHttpHelper.happyCartAdd(action);
     }

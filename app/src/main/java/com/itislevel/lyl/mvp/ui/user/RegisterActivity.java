@@ -180,16 +180,16 @@ public class RegisterActivity extends RootActivity<UserPresenter> implements
      * 注册
      */
     private void regist() {
-        String name = et_name.getText().toString().trim();
+        //String name = et_name.getText().toString().trim();
         String password = et_password.getText().toString().trim();
         String reassword = et_repassword.getText().toString().trim();
         String phone = et_phone.getText().toString().trim();
         String smscode = et_validate.getText().toString().trim();
 
-        if (TextUtils.isEmpty(name)) {//用户名还应该有一定的规则
+      /*  if (TextUtils.isEmpty(name)) {//用户名还应该有一定的规则
             ToastUtil.Info("用户名不能为空");
             return;
-        }
+        }*/
         if (TextUtils.isEmpty(password)) {//密码
             ToastUtil.Info("密码不能为空");
             return;
@@ -234,10 +234,9 @@ public class RegisterActivity extends RootActivity<UserPresenter> implements
         request.put("password", password);
         request.put("randcode", smscode);
         request.put("recommendphone",et_recomment_phone.getText().toString().trim());*/
-
             RegistRequest request = new RegistRequest();
 
-            request.setUsername(name);
+            //request.setUsername(name);
             request.setPassword(password);
             request.setPhone(phone);
             request.setRandcode(smscode);
@@ -246,8 +245,15 @@ public class RegisterActivity extends RootActivity<UserPresenter> implements
             String recommendPhone = et_recomment_phone.getText().toString().trim()+"";
             request.setRecommendphone(recommendPhone);
 
-        mPresenter.regist(GsonUtil.obj2JSON(request));
+             System.out.println("注册的JSON数据***************************"+GsonUtil.obj2JSON(request));
+            mPresenter.regist(GsonUtil.obj2JSON(request));
 
+    }
+
+    @Override
+    public void stateError(Throwable e) {
+        super.stateError(e);
+       // ToastUtil.Info(e.getMessage());
     }
 
     /**
@@ -464,7 +470,7 @@ public class RegisterActivity extends RootActivity<UserPresenter> implements
     public void regist(RegistBean registBean) {
         ToastUtil.Info("注册成功");
 
-        SharedPreferencedUtils.setStr(Constants.USER_NAME,registBean.getUsername());
+        SharedPreferencedUtils.setStr(Constants.USER_NAME,registBean.getNickname());
         SharedPreferencedUtils.setStr(Constants.USER_PHONE,registBean.getPhone());
         SharedPreferencedUtils.setStr(Constants.USER_NUM,registBean.getUsernum());
         SharedPreferencedUtils.setStr(Constants.USER_RECOMMEND_PHONE,registBean.getRecommendphone());

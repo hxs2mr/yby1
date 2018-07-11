@@ -149,7 +149,10 @@ import com.itislevel.lyl.mvp.ui.usermonkey.UserMonkeyShouActivity;
 import com.itislevel.lyl.mvp.ui.usermonkey.UserMonkeyTiXianActivity;
 import com.itislevel.lyl.mvp.ui.usermonkey.putrecord.PutRecordActivity;
 import com.itislevel.lyl.mvp.ui.usermonkey.putrecord.PutRecordDetailActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.setting.SettingChangePwdActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.setting.SettingForgeActivity;
 import com.itislevel.lyl.mvp.ui.usermonkey.setting.SettingUserDataActivity;
+import com.itislevel.lyl.mvp.ui.usermonkey.setting.SettingUserDataNextActivity;
 import com.itislevel.lyl.mvp.ui.usermonkey.setting.UserMonkeySettingActivity;
 
 import dagger.Component;
@@ -462,5 +465,9 @@ public interface ActivityComponent {
 
     //设置模块
     void inject(UserMonkeySettingActivity activity);
-    void inject(SettingUserDataActivity activity);
+
+    void inject(SettingUserDataActivity activity);//认证信息
+    void  inject(SettingUserDataNextActivity activity);//认证之后输入密码
+    void inject(SettingChangePwdActivity activity);//修改支付密码
+    void inject(SettingForgeActivity activity);
 }

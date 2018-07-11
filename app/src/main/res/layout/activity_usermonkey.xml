@@ -141,7 +141,7 @@
             android:textColor="#333333"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
-            android:text="提现记录"
+            android:text="设置"
             />
         <android.support.v7.widget.AppCompatImageView
             android:layout_width="8dp"

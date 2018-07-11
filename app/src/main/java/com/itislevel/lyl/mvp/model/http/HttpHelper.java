@@ -321,4 +321,13 @@ public interface HttpHelper {
     Observable<LYLResponse<UserHistoryBean>>  cashbackRecord(@Field("action")String action);//用户的返现历史
 
     Observable<LYLResponse<String>>  clickreceive(@Field("action")String action);//点击领取待发现的金钱
+
+    Observable<LYLResponse<BlankNameBean>>  queryBankNameByIdCard(@Field("action")String action);//根据卡号获取银行卡名称
+
+    Observable<LYLResponse<BlankListBean>>  queryBankBranchList(@Field("action")String action);//通过银行名称、省州市、关键字获取银行网点
+
+    Observable<LYLResponse<BankCardBean>>  bankCardVerification(@Field("action")String action);//银行卡信息验证
+
+
+    Observable<LYLResponse<String>>  finishVerification(@Field("action")String action);//设置密码完成绑定
 }

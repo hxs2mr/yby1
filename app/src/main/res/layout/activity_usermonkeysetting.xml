@@ -9,6 +9,7 @@
     <include layout="@layout/toolbar_layout" />
 
 <android.support.v7.widget.LinearLayoutCompat
+    android:id="@+id/renzhen_linear"
     android:layout_width="match_parent"
     android:layout_height="46dp"
     android:layout_marginTop="10dp"
@@ -49,6 +50,7 @@
 </android.support.v7.widget.LinearLayoutCompat>
 
     <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/setting_password_linear"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
@@ -90,6 +92,7 @@
     </android.support.v7.widget.LinearLayoutCompat>
 
     <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/settforget_linear"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginTop="1dp"
@@ -131,6 +134,7 @@
     </android.support.v7.widget.LinearLayoutCompat>
 
     <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/help_linear"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginTop="1dp"

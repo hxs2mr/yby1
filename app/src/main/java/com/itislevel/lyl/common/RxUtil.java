@@ -181,7 +181,12 @@ public class RxUtil {
                             return Observable.error(new ApiException(TextUtils.isEmpty
                                     (lylResponse.getMsg()) ? "服务端异常" : lylResponse.getMsg(),
                                     lylResponse.getStatus()));
-                        } else {
+                        } else if(lylResponse.getStatus()==1)
+                        {
+                            return Observable.error(new ApiException(TextUtils.isEmpty
+                                    (lylResponse.getMsg()) ? "服务端异常" : lylResponse.getMsg(),
+                                    lylResponse.getStatus()));
+                        }else {
                             return createObservable(lylResponse.getData());
                         }
 //                        else {

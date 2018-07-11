@@ -34,11 +34,13 @@
             />
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/blank_idcard"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:textColor="#999999"
             android:textSize="16sp"
+            android:text=""
             android:maxLines="1"
             fontPath="fonts/SourceHanSansCN-Normal.ttf"
             android:hint="请输入身份证号码"
@@ -68,6 +70,7 @@
         />
 
     <android.support.design.widget.TextInputEditText
+        android:id="@+id/blank_number"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
@@ -76,6 +79,7 @@
         android:maxLines="1"
         fontPath="fonts/SourceHanSansCN-Normal.ttf"
         android:hint="请输入银行卡号"
+        android:text=""
         android:background="@null"
         android:layout_gravity="center"
         android:gravity="center|left"
@@ -101,6 +105,7 @@
             />
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/blank_open_name"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -133,6 +138,7 @@
             />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/blank_name"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -147,6 +153,7 @@
     </android.support.v7.widget.LinearLayoutCompat>
 
     <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/address_linear"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginTop="1dp"
@@ -166,12 +173,13 @@
             />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/blank_address"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:textColor="#999999"
             android:textSize="16sp"
-            android:text="请选择地区"
+            android:text="请选择银行卡所属地区"
             android:layout_gravity="center"
             android:gravity="center|left"
             />
@@ -187,6 +195,7 @@
     </android.support.v7.widget.LinearLayoutCompat>
 
     <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/blank_dian_linear"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginTop="1dp"
@@ -206,12 +215,13 @@
             />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/blank_dian"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:textColor="#999999"
             android:textSize="16sp"
-            android:text="请选择银行网点"
+            android:text="请选择银行所属网点"
             android:layout_gravity="center"
             android:gravity="center|left"
             />
@@ -256,6 +266,7 @@
             />
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/blank_phone"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -266,8 +277,9 @@
             android:hint="请输入银行预留手机号"
             android:background="@null"
             android:layout_gravity="center"
+
             android:gravity="center|left"
-            android:inputType="number"
+            android:inputType="phone"
             />
     </android.support.v7.widget.LinearLayoutCompat>
 
@@ -290,6 +302,7 @@
             />
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/blank_code"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -326,12 +339,24 @@
             fontPath="fonts/NotoSansHans-DemiLight.ttf"
             android:paddingRight="3dp"
             android:text="获取验证码"
+            android:layout_marginRight="15dp"
             />
 
     </android.support.v7.widget.LinearLayoutCompat>
 
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#cccccc"
+            fontPath="fonts/NotoSansHans-DemiLight.ttf"
+            android:text="若绑定他人的银行卡信息, 本人就不能再绑定,只
+能联系管理人员重新绑定   电话: 0851-84857055"
+            />
 
     <android.support.v7.widget.AppCompatButton
+        android:id="@+id/setting_next_linear"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@drawable/login_ok"
@@ -341,7 +366,9 @@
         android:textSize="17sp"
         android:text="下一步"
         android:textColor="#fff"
+        android:layout_marginBottom="20dp"
         />
+
     </android.support.v7.widget.LinearLayoutCompat>
     </android.support.v4.widget.NestedScrollView>
 </android.support.v7.widget.LinearLayoutCompat>

@@ -60,6 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#ffffff"
+        android:visibility="gone"
         android:paddingLeft="15dp"
         >
         <android.support.design.widget.TextInputEditText
